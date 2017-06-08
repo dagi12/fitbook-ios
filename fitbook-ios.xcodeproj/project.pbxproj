@@ -16,6 +16,7 @@
 		8E19DFF61EE9DF470085084D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E19DFF41EE9DF470085084D /* LaunchScreen.storyboard */; };
 		8E19E0011EE9DF470085084D /* fitbook_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E19E0001EE9DF470085084D /* fitbook_iosTests.swift */; };
 		8E19E00C1EE9DF470085084D /* fitbook_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E19E00B1EE9DF470085084D /* fitbook_iosUITests.swift */; };
+		8E19E01A1EEA03A90085084D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E19E0191EEA03A90085084D /* MapKit.framework */; };
 		9E804957B28CCCB389BEBE19 /* Pods_fitbook_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 831D8269665DEC42207F6359 /* Pods_fitbook_ios.framework */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +57,7 @@
 		8E19E0071EE9DF470085084D /* fitbook-iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "fitbook-iosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E19E00B1EE9DF470085084D /* fitbook_iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fitbook_iosUITests.swift; sourceTree = "<group>"; };
 		8E19E00D1EE9DF470085084D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8E19E0191EEA03A90085084D /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		99D12BFCE5DEE3ED35F178E2 /* Pods-fitbook-iosUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fitbook-iosUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-fitbook-iosUITests/Pods-fitbook-iosUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B57EF155F274628F3B4350A1 /* Pods_fitbook_iosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fitbook_iosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDDC3CE0B8B549DAA3911ADE /* Pods-fitbook-iosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fitbook-iosTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-fitbook-iosTests/Pods-fitbook-iosTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E19E01A1EEA03A90085084D /* MapKit.framework in Frameworks */,
 				9E804957B28CCCB389BEBE19 /* Pods_fitbook_ios.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -92,6 +95,7 @@
 		1A5197A0E43FF31147AD106C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8E19E0191EEA03A90085084D /* MapKit.framework */,
 				831D8269665DEC42207F6359 /* Pods_fitbook_ios.framework */,
 				5BD9B8235962A57DE5F3B523 /* Pods_fitbook_iosTests.framework */,
 				B57EF155F274628F3B4350A1 /* Pods_fitbook_iosUITests.framework */,
