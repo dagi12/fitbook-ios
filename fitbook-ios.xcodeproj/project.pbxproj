@@ -1,0 +1,539 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8E19DFEC1EE9DF470085084D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E19DFEB1EE9DF470085084D /* AppDelegate.swift */; };
+		8E19DFEE1EE9DF470085084D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E19DFED1EE9DF470085084D /* ViewController.swift */; };
+		8E19DFF11EE9DF470085084D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E19DFEF1EE9DF470085084D /* Main.storyboard */; };
+		8E19DFF31EE9DF470085084D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E19DFF21EE9DF470085084D /* Assets.xcassets */; };
+		8E19DFF61EE9DF470085084D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E19DFF41EE9DF470085084D /* LaunchScreen.storyboard */; };
+		8E19E0011EE9DF470085084D /* fitbook_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E19E0001EE9DF470085084D /* fitbook_iosTests.swift */; };
+		8E19E00C1EE9DF470085084D /* fitbook_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E19E00B1EE9DF470085084D /* fitbook_iosUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8E19DFFD1EE9DF470085084D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8E19DFE01EE9DF470085084D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8E19DFE71EE9DF470085084D;
+			remoteInfo = "fitbook-ios";
+		};
+		8E19E0081EE9DF470085084D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8E19DFE01EE9DF470085084D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8E19DFE71EE9DF470085084D;
+			remoteInfo = "fitbook-ios";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8E19DFE81EE9DF470085084D /* fitbook-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "fitbook-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E19DFEB1EE9DF470085084D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8E19DFED1EE9DF470085084D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8E19DFF01EE9DF470085084D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8E19DFF21EE9DF470085084D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8E19DFF51EE9DF470085084D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8E19DFF71EE9DF470085084D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8E19DFFC1EE9DF470085084D /* fitbook-iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "fitbook-iosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E19E0001EE9DF470085084D /* fitbook_iosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fitbook_iosTests.swift; sourceTree = "<group>"; };
+		8E19E0021EE9DF470085084D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8E19E0071EE9DF470085084D /* fitbook-iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "fitbook-iosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E19E00B1EE9DF470085084D /* fitbook_iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fitbook_iosUITests.swift; sourceTree = "<group>"; };
+		8E19E00D1EE9DF470085084D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8E19DFE51EE9DF470085084D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8E19DFF91EE9DF470085084D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8E19E0041EE9DF470085084D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8E19DFDF1EE9DF470085084D = {
+			isa = PBXGroup;
+			children = (
+				8E19DFEA1EE9DF470085084D /* fitbook-ios */,
+				8E19DFFF1EE9DF470085084D /* fitbook-iosTests */,
+				8E19E00A1EE9DF470085084D /* fitbook-iosUITests */,
+				8E19DFE91EE9DF470085084D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8E19DFE91EE9DF470085084D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8E19DFE81EE9DF470085084D /* fitbook-ios.app */,
+				8E19DFFC1EE9DF470085084D /* fitbook-iosTests.xctest */,
+				8E19E0071EE9DF470085084D /* fitbook-iosUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8E19DFEA1EE9DF470085084D /* fitbook-ios */ = {
+			isa = PBXGroup;
+			children = (
+				8E19DFEB1EE9DF470085084D /* AppDelegate.swift */,
+				8E19DFED1EE9DF470085084D /* ViewController.swift */,
+				8E19DFEF1EE9DF470085084D /* Main.storyboard */,
+				8E19DFF21EE9DF470085084D /* Assets.xcassets */,
+				8E19DFF41EE9DF470085084D /* LaunchScreen.storyboard */,
+				8E19DFF71EE9DF470085084D /* Info.plist */,
+			);
+			path = "fitbook-ios";
+			sourceTree = "<group>";
+		};
+		8E19DFFF1EE9DF470085084D /* fitbook-iosTests */ = {
+			isa = PBXGroup;
+			children = (
+				8E19E0001EE9DF470085084D /* fitbook_iosTests.swift */,
+				8E19E0021EE9DF470085084D /* Info.plist */,
+			);
+			path = "fitbook-iosTests";
+			sourceTree = "<group>";
+		};
+		8E19E00A1EE9DF470085084D /* fitbook-iosUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8E19E00B1EE9DF470085084D /* fitbook_iosUITests.swift */,
+				8E19E00D1EE9DF470085084D /* Info.plist */,
+			);
+			path = "fitbook-iosUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8E19DFE71EE9DF470085084D /* fitbook-ios */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8E19E0101EE9DF470085084D /* Build configuration list for PBXNativeTarget "fitbook-ios" */;
+			buildPhases = (
+				8E19DFE41EE9DF470085084D /* Sources */,
+				8E19DFE51EE9DF470085084D /* Frameworks */,
+				8E19DFE61EE9DF470085084D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "fitbook-ios";
+			productName = "fitbook-ios";
+			productReference = 8E19DFE81EE9DF470085084D /* fitbook-ios.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8E19DFFB1EE9DF470085084D /* fitbook-iosTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8E19E0131EE9DF470085084D /* Build configuration list for PBXNativeTarget "fitbook-iosTests" */;
+			buildPhases = (
+				8E19DFF81EE9DF470085084D /* Sources */,
+				8E19DFF91EE9DF470085084D /* Frameworks */,
+				8E19DFFA1EE9DF470085084D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8E19DFFE1EE9DF470085084D /* PBXTargetDependency */,
+			);
+			name = "fitbook-iosTests";
+			productName = "fitbook-iosTests";
+			productReference = 8E19DFFC1EE9DF470085084D /* fitbook-iosTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8E19E0061EE9DF470085084D /* fitbook-iosUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8E19E0161EE9DF470085084D /* Build configuration list for PBXNativeTarget "fitbook-iosUITests" */;
+			buildPhases = (
+				8E19E0031EE9DF470085084D /* Sources */,
+				8E19E0041EE9DF470085084D /* Frameworks */,
+				8E19E0051EE9DF470085084D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8E19E0091EE9DF470085084D /* PBXTargetDependency */,
+			);
+			name = "fitbook-iosUITests";
+			productName = "fitbook-iosUITests";
+			productReference = 8E19E0071EE9DF470085084D /* fitbook-iosUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8E19DFE01EE9DF470085084D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Eryk Mariankowski";
+				TargetAttributes = {
+					8E19DFE71EE9DF470085084D = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 28J8R24SUR;
+						ProvisioningStyle = Automatic;
+					};
+					8E19DFFB1EE9DF470085084D = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 28J8R24SUR;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 8E19DFE71EE9DF470085084D;
+					};
+					8E19E0061EE9DF470085084D = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 28J8R24SUR;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 8E19DFE71EE9DF470085084D;
+					};
+				};
+			};
+			buildConfigurationList = 8E19DFE31EE9DF470085084D /* Build configuration list for PBXProject "fitbook-ios" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8E19DFDF1EE9DF470085084D;
+			productRefGroup = 8E19DFE91EE9DF470085084D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8E19DFE71EE9DF470085084D /* fitbook-ios */,
+				8E19DFFB1EE9DF470085084D /* fitbook-iosTests */,
+				8E19E0061EE9DF470085084D /* fitbook-iosUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8E19DFE61EE9DF470085084D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E19DFF61EE9DF470085084D /* LaunchScreen.storyboard in Resources */,
+				8E19DFF31EE9DF470085084D /* Assets.xcassets in Resources */,
+				8E19DFF11EE9DF470085084D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8E19DFFA1EE9DF470085084D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8E19E0051EE9DF470085084D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8E19DFE41EE9DF470085084D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E19DFEE1EE9DF470085084D /* ViewController.swift in Sources */,
+				8E19DFEC1EE9DF470085084D /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8E19DFF81EE9DF470085084D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E19E0011EE9DF470085084D /* fitbook_iosTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8E19E0031EE9DF470085084D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E19E00C1EE9DF470085084D /* fitbook_iosUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8E19DFFE1EE9DF470085084D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8E19DFE71EE9DF470085084D /* fitbook-ios */;
+			targetProxy = 8E19DFFD1EE9DF470085084D /* PBXContainerItemProxy */;
+		};
+		8E19E0091EE9DF470085084D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8E19DFE71EE9DF470085084D /* fitbook-ios */;
+			targetProxy = 8E19E0081EE9DF470085084D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8E19DFEF1EE9DF470085084D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8E19DFF01EE9DF470085084D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8E19DFF41EE9DF470085084D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8E19DFF51EE9DF470085084D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8E19E00E1EE9DF470085084D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8E19E00F1EE9DF470085084D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8E19E0111EE9DF470085084D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 28J8R24SUR;
+				INFOPLIST_FILE = "fitbook-ios/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "pl.edu.amu.wmi.fitbook-ios";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		8E19E0121EE9DF470085084D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 28J8R24SUR;
+				INFOPLIST_FILE = "fitbook-ios/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "pl.edu.amu.wmi.fitbook-ios";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		8E19E0141EE9DF470085084D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 28J8R24SUR;
+				INFOPLIST_FILE = "fitbook-iosTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "pl.edu.amu.wmi.fitbook-iosTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/fitbook-ios.app/fitbook-ios";
+			};
+			name = Debug;
+		};
+		8E19E0151EE9DF470085084D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 28J8R24SUR;
+				INFOPLIST_FILE = "fitbook-iosTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "pl.edu.amu.wmi.fitbook-iosTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/fitbook-ios.app/fitbook-ios";
+			};
+			name = Release;
+		};
+		8E19E0171EE9DF470085084D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 28J8R24SUR;
+				INFOPLIST_FILE = "fitbook-iosUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "pl.edu.amu.wmi.fitbook-iosUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "fitbook-ios";
+			};
+			name = Debug;
+		};
+		8E19E0181EE9DF470085084D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 28J8R24SUR;
+				INFOPLIST_FILE = "fitbook-iosUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "pl.edu.amu.wmi.fitbook-iosUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "fitbook-ios";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8E19DFE31EE9DF470085084D /* Build configuration list for PBXProject "fitbook-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8E19E00E1EE9DF470085084D /* Debug */,
+				8E19E00F1EE9DF470085084D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8E19E0101EE9DF470085084D /* Build configuration list for PBXNativeTarget "fitbook-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8E19E0111EE9DF470085084D /* Debug */,
+				8E19E0121EE9DF470085084D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		8E19E0131EE9DF470085084D /* Build configuration list for PBXNativeTarget "fitbook-iosTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8E19E0141EE9DF470085084D /* Debug */,
+				8E19E0151EE9DF470085084D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		8E19E0161EE9DF470085084D /* Build configuration list for PBXNativeTarget "fitbook-iosUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8E19E0171EE9DF470085084D /* Debug */,
+				8E19E0181EE9DF470085084D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8E19DFE01EE9DF470085084D /* Project object */;
+}
