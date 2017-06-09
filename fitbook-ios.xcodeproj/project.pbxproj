@@ -20,6 +20,7 @@
 		8EE604CB1EEAAF820022CD82 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE604CA1EEAAF820022CD82 /* SearchViewController.swift */; };
 		8EE604CD1EEAAFAF0022CD82 /* snippet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE604CC1EEAAFAF0022CD82 /* snippet.swift */; };
 		8EE604D11EEAB1AA0022CD82 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE604D01EEAB1AA0022CD82 /* MapViewController.swift */; };
+		8EE604D41EEABC8E0022CD82 /* TrainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE604D31EEABC8E0022CD82 /* TrainerViewController.swift */; };
 		9E804957B28CCCB389BEBE19 /* Pods_fitbook_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 831D8269665DEC42207F6359 /* Pods_fitbook_ios.framework */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +65,7 @@
 		8EE604CA1EEAAF820022CD82 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		8EE604CC1EEAAFAF0022CD82 /* snippet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = snippet.swift; sourceTree = "<group>"; };
 		8EE604D01EEAB1AA0022CD82 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		8EE604D31EEABC8E0022CD82 /* TrainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainerViewController.swift; sourceTree = "<group>"; };
 		99D12BFCE5DEE3ED35F178E2 /* Pods-fitbook-iosUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fitbook-iosUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-fitbook-iosUITests/Pods-fitbook-iosUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B57EF155F274628F3B4350A1 /* Pods_fitbook_iosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fitbook_iosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDDC3CE0B8B549DAA3911ADE /* Pods-fitbook-iosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fitbook-iosTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-fitbook-iosTests/Pods-fitbook-iosTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 		8EE604BD1EEAAD150022CD82 /* main */ = {
 			isa = PBXGroup;
 			children = (
+				8EE604D21EEABC830022CD82 /* trainer */,
 				8EE604C31EEAAE3F0022CD82 /* search */,
 				8EE604BE1EEAAD560022CD82 /* map */,
 				8E19DFED1EE9DF470085084D /* ViewController.swift */,
@@ -200,6 +203,14 @@
 				8EE604CA1EEAAF820022CD82 /* SearchViewController.swift */,
 			);
 			name = search;
+			sourceTree = "<group>";
+		};
+		8EE604D21EEABC830022CD82 /* trainer */ = {
+			isa = PBXGroup;
+			children = (
+				8EE604D31EEABC8E0022CD82 /* TrainerViewController.swift */,
+			);
+			name = trainer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -488,6 +499,7 @@
 			files = (
 				8E19DFEE1EE9DF470085084D /* ViewController.swift in Sources */,
 				8EE604CB1EEAAF820022CD82 /* SearchViewController.swift in Sources */,
+				8EE604D41EEABC8E0022CD82 /* TrainerViewController.swift in Sources */,
 				8EE604CD1EEAAFAF0022CD82 /* snippet.swift in Sources */,
 				8EE604D11EEAB1AA0022CD82 /* MapViewController.swift in Sources */,
 				8E19DFEC1EE9DF470085084D /* AppDelegate.swift in Sources */,

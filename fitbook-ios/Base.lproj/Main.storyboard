@@ -26,7 +26,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ol5-AV-aNs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="24.800000000000001" y="864.91754122938539"/>
+            <point key="canvasLocation" x="-674" y="832"/>
         </scene>
         <!--Map-->
         <scene sceneID="Yjc-cq-B15">
@@ -58,6 +58,25 @@
             </objects>
             <point key="canvasLocation" x="1034" y="36"/>
         </scene>
+        <!--Trainer-->
+        <scene sceneID="PCp-Q9-7PA">
+            <objects>
+                <viewController id="vHW-Te-SlD" userLabel="Trainer" customClass="TrainerViewController" customModule="FitBook" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="G6f-xK-hL8"/>
+                        <viewControllerLayoutGuide type="bottom" id="pm9-vg-9Kj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="O7b-94-ScY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Trainer" image="Trainer" id="zQG-zD-ANY" userLabel="Trainer"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x10-Jw-kL4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="998" y="832"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="EFc-Ib-2vP">
             <objects>
@@ -70,6 +89,7 @@
                     <connections>
                         <segue destination="jn2-5b-jmn" kind="relationship" relationship="viewControllers" id="Udr-bh-4O6"/>
                         <segue destination="bVd-48-RQw" kind="relationship" relationship="viewControllers" id="9Lo-hc-01g"/>
+                        <segue destination="vHW-Te-SlD" kind="relationship" relationship="viewControllers" id="ERo-gx-wtH"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xEf-tg-vKv" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -78,5 +98,6 @@
     </scenes>
     <resources>
         <image name="Map" width="32" height="32"/>
+        <image name="Trainer" width="25" height="25"/>
     </resources>
 </document>
