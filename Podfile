@@ -11,8 +11,10 @@ target 'fitbook-ios' do
   pod 'FBSDKCoreKit', '~> 4.22.1'
   pod 'FBSDKLoginKit', '~> 4.22.1'
   pod 'FBSDKShareKit', '~> 4.22.1'
-  pod 'Alamofire'
-
+  pod 'Alamofire', '~> 4.1'
+  pod 'ObjectMapper', '~> 2.0'
+  pod 'AlamofireObjectMapper', '~> 4.1.0'
+  pod 'SwiftyJSON', '~> 3.1.4'
 
   # Pods for fitbook-ios
 

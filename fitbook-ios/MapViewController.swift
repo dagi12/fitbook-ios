@@ -15,16 +15,35 @@ struct FacebookButtonCoords {
     static let height = CGFloat(40)
 }
 
-class MapViewController: UIViewController {
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+class MapViewController: UIViewController, FacebookLoginResultProtocol, FitbookLoginProtocol {
+    
+    var loginDelegate: LoginButtonDelegate?
+    let loginButton = LoginButton(readPermissions: [ .publicProfile, .email ])
+    let alertService = AlertViewService.sharedInstance
+    let fitbookService = FitbookLoginService.shared
+    
+    func loginSuccess() {
+        
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        let loginButton = LoginButton(readPermissions: [ .publicProfile, .email ])
+    func loginFailed() {
+        alertService.showError("Facebook login has been cancelled", self)
+    }
+    
+    func logout() {
+        alertService.showInfo("Logged out", self)
+    }
+    
+    func onLogin() {
+        loginButton.isHidden = true
+
+    }
+    
+    func onLogout() {
+        loginButton.isHidden = false
+    }
+    
+    func setLoginButton() -> LoginButton {
         let frameHeight = UIScreen.main.bounds.height
         let buttonHeight = loginButton.frame.height
         let yCoord = frameHeight - buttonHeight - FacebookButtonCoords.marginBottom
@@ -33,20 +52,22 @@ class MapViewController: UIViewController {
         loginButtonFrame.size.height = FacebookButtonCoords.height
         loginButton.frame = loginButtonFrame
         loginButton.center = CGPoint(x: view.center.x, y: yCoord)
-        view.addSubview(loginButton)
+        loginButton.delegate = loginDelegate
+        return loginButton;
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
-    */
-
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        loginDelegate = FacebookLoginService(loginResultProtocol: self)
+        view.addSubview(setLoginButton())
+        fitbookService.checkLogin(loginProtocol: self)
+    }
     
 
 }

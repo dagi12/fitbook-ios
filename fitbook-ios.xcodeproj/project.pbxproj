@@ -21,6 +21,21 @@
 		8EE604CD1EEAAFAF0022CD82 /* snippet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE604CC1EEAAFAF0022CD82 /* snippet.swift */; };
 		8EE604D11EEAB1AA0022CD82 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE604D01EEAB1AA0022CD82 /* MapViewController.swift */; };
 		8EE604D41EEABC8E0022CD82 /* TrainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE604D31EEABC8E0022CD82 /* TrainerViewController.swift */; };
+		8EE604D71EEAC98D0022CD82 /* FacebookLoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE604D61EEAC98D0022CD82 /* FacebookLoginService.swift */; };
+		8EE604D91EEAD1060022CD82 /* FacebookLoginResultProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE604D81EEAD1060022CD82 /* FacebookLoginResultProtocol.swift */; };
+		8EE604DB1EEAD5560022CD82 /* FitbookLoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE604DA1EEAD5560022CD82 /* FitbookLoginService.swift */; };
+		8EE604DD1EEAD6A90022CD82 /* UserContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE604DC1EEAD6A90022CD82 /* UserContext.swift */; };
+		8EE604DF1EEAD74C0022CD82 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE604DE1EEAD74C0022CD82 /* User.swift */; };
+		8EE604E21EEADB380022CD82 /* ImagePair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE604E11EEADB380022CD82 /* ImagePair.swift */; };
+		8EE604EA1EEAF3DF0022CD82 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE604E91EEAF3DF0022CD82 /* AlertViewController.swift */; };
+		8EE604EC1EEB00D20022CD82 /* FitbookLoginResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE604EB1EEB00D20022CD82 /* FitbookLoginResult.swift */; };
+		8EE604EF1EEB033C0022CD82 /* UserDefaultsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE604EE1EEB033C0022CD82 /* UserDefaultsService.swift */; };
+		8EE604F11EEB0BD70022CD82 /* FitbookLoginResultWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE604F01EEB0BD70022CD82 /* FitbookLoginResultWrapper.swift */; };
+		8EE604F31EEB11CD0022CD82 /* FitbookLoginProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE604F21EEB11CD0022CD82 /* FitbookLoginProtocol.swift */; };
+		8EE604F51EEB1C0C0022CD82 /* AlamoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE604F41EEB1C0C0022CD82 /* AlamoService.swift */; };
+		8EE604F71EEB1CCC0022CD82 /* FitbookAlamoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE604F61EEB1CCC0022CD82 /* FitbookAlamoService.swift */; };
+		8EE604F91EEB22390022CD82 /* AlamoCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE604F81EEB22390022CD82 /* AlamoCallback.swift */; };
+		8EE604FB1EEB23C30022CD82 /* FacebookToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE604FA1EEB23C30022CD82 /* FacebookToken.swift */; };
 		9E804957B28CCCB389BEBE19 /* Pods_fitbook_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 831D8269665DEC42207F6359 /* Pods_fitbook_ios.framework */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +81,21 @@
 		8EE604CC1EEAAFAF0022CD82 /* snippet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = snippet.swift; sourceTree = "<group>"; };
 		8EE604D01EEAB1AA0022CD82 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		8EE604D31EEABC8E0022CD82 /* TrainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainerViewController.swift; sourceTree = "<group>"; };
+		8EE604D61EEAC98D0022CD82 /* FacebookLoginService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookLoginService.swift; sourceTree = "<group>"; };
+		8EE604D81EEAD1060022CD82 /* FacebookLoginResultProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookLoginResultProtocol.swift; sourceTree = "<group>"; };
+		8EE604DA1EEAD5560022CD82 /* FitbookLoginService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FitbookLoginService.swift; sourceTree = "<group>"; };
+		8EE604DC1EEAD6A90022CD82 /* UserContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserContext.swift; sourceTree = "<group>"; };
+		8EE604DE1EEAD74C0022CD82 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		8EE604E11EEADB380022CD82 /* ImagePair.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePair.swift; sourceTree = "<group>"; };
+		8EE604E91EEAF3DF0022CD82 /* AlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
+		8EE604EB1EEB00D20022CD82 /* FitbookLoginResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FitbookLoginResult.swift; sourceTree = "<group>"; };
+		8EE604EE1EEB033C0022CD82 /* UserDefaultsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsService.swift; sourceTree = "<group>"; };
+		8EE604F01EEB0BD70022CD82 /* FitbookLoginResultWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FitbookLoginResultWrapper.swift; sourceTree = "<group>"; };
+		8EE604F21EEB11CD0022CD82 /* FitbookLoginProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FitbookLoginProtocol.swift; sourceTree = "<group>"; };
+		8EE604F41EEB1C0C0022CD82 /* AlamoService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamoService.swift; sourceTree = "<group>"; };
+		8EE604F61EEB1CCC0022CD82 /* FitbookAlamoService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FitbookAlamoService.swift; sourceTree = "<group>"; };
+		8EE604F81EEB22390022CD82 /* AlamoCallback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamoCallback.swift; sourceTree = "<group>"; };
+		8EE604FA1EEB23C30022CD82 /* FacebookToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookToken.swift; sourceTree = "<group>"; };
 		99D12BFCE5DEE3ED35F178E2 /* Pods-fitbook-iosUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fitbook-iosUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-fitbook-iosUITests/Pods-fitbook-iosUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B57EF155F274628F3B4350A1 /* Pods_fitbook_iosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fitbook_iosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDDC3CE0B8B549DAA3911ADE /* Pods-fitbook-iosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fitbook-iosTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-fitbook-iosTests/Pods-fitbook-iosTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -150,6 +180,7 @@
 		8E19DFEA1EE9DF470085084D /* fitbook-ios */ = {
 			isa = PBXGroup;
 			children = (
+				8EE604E01EEADB0F0022CD82 /* common */,
 				8EE604BD1EEAAD150022CD82 /* main */,
 				8E19DFEB1EE9DF470085084D /* AppDelegate.swift */,
 				8E19DFEF1EE9DF470085084D /* Main.storyboard */,
@@ -192,6 +223,7 @@
 		8EE604BE1EEAAD560022CD82 /* map */ = {
 			isa = PBXGroup;
 			children = (
+				8EE604D51EEAC9610022CD82 /* login */,
 				8EE604D01EEAB1AA0022CD82 /* MapViewController.swift */,
 			);
 			name = map;
@@ -211,6 +243,59 @@
 				8EE604D31EEABC8E0022CD82 /* TrainerViewController.swift */,
 			);
 			name = trainer;
+			sourceTree = "<group>";
+		};
+		8EE604D51EEAC9610022CD82 /* login */ = {
+			isa = PBXGroup;
+			children = (
+				8EE604D61EEAC98D0022CD82 /* FacebookLoginService.swift */,
+				8EE604D81EEAD1060022CD82 /* FacebookLoginResultProtocol.swift */,
+				8EE604DA1EEAD5560022CD82 /* FitbookLoginService.swift */,
+				8EE604DC1EEAD6A90022CD82 /* UserContext.swift */,
+				8EE604DE1EEAD74C0022CD82 /* User.swift */,
+				8EE604EB1EEB00D20022CD82 /* FitbookLoginResult.swift */,
+				8EE604F01EEB0BD70022CD82 /* FitbookLoginResultWrapper.swift */,
+				8EE604F21EEB11CD0022CD82 /* FitbookLoginProtocol.swift */,
+				8EE604F61EEB1CCC0022CD82 /* FitbookAlamoService.swift */,
+				8EE604FA1EEB23C30022CD82 /* FacebookToken.swift */,
+			);
+			name = login;
+			sourceTree = "<group>";
+		};
+		8EE604E01EEADB0F0022CD82 /* common */ = {
+			isa = PBXGroup;
+			children = (
+				8EE604ED1EEB02D50022CD82 /* service */,
+				8EE604E81EEAF38F0022CD82 /* model */,
+				8EE604E71EEAF3370022CD82 /* alert */,
+			);
+			name = common;
+			sourceTree = "<group>";
+		};
+		8EE604E71EEAF3370022CD82 /* alert */ = {
+			isa = PBXGroup;
+			children = (
+				8EE604E91EEAF3DF0022CD82 /* AlertViewController.swift */,
+			);
+			name = alert;
+			sourceTree = "<group>";
+		};
+		8EE604E81EEAF38F0022CD82 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				8EE604E11EEADB380022CD82 /* ImagePair.swift */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		8EE604ED1EEB02D50022CD82 /* service */ = {
+			isa = PBXGroup;
+			children = (
+				8EE604EE1EEB033C0022CD82 /* UserDefaultsService.swift */,
+				8EE604F41EEB1C0C0022CD82 /* AlamoService.swift */,
+				8EE604F81EEB22390022CD82 /* AlamoCallback.swift */,
+			);
+			name = service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -497,12 +582,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EE604DD1EEAD6A90022CD82 /* UserContext.swift in Sources */,
+				8EE604F11EEB0BD70022CD82 /* FitbookLoginResultWrapper.swift in Sources */,
 				8E19DFEE1EE9DF470085084D /* ViewController.swift in Sources */,
+				8EE604D91EEAD1060022CD82 /* FacebookLoginResultProtocol.swift in Sources */,
+				8EE604EC1EEB00D20022CD82 /* FitbookLoginResult.swift in Sources */,
+				8EE604F91EEB22390022CD82 /* AlamoCallback.swift in Sources */,
 				8EE604CB1EEAAF820022CD82 /* SearchViewController.swift in Sources */,
+				8EE604FB1EEB23C30022CD82 /* FacebookToken.swift in Sources */,
 				8EE604D41EEABC8E0022CD82 /* TrainerViewController.swift in Sources */,
 				8EE604CD1EEAAFAF0022CD82 /* snippet.swift in Sources */,
+				8EE604F71EEB1CCC0022CD82 /* FitbookAlamoService.swift in Sources */,
+				8EE604F51EEB1C0C0022CD82 /* AlamoService.swift in Sources */,
 				8EE604D11EEAB1AA0022CD82 /* MapViewController.swift in Sources */,
 				8E19DFEC1EE9DF470085084D /* AppDelegate.swift in Sources */,
+				8EE604D71EEAC98D0022CD82 /* FacebookLoginService.swift in Sources */,
+				8EE604E21EEADB380022CD82 /* ImagePair.swift in Sources */,
+				8EE604F31EEB11CD0022CD82 /* FitbookLoginProtocol.swift in Sources */,
+				8EE604DB1EEAD5560022CD82 /* FitbookLoginService.swift in Sources */,
+				8EE604EF1EEB033C0022CD82 /* UserDefaultsService.swift in Sources */,
+				8EE604EA1EEAF3DF0022CD82 /* AlertViewController.swift in Sources */,
+				8EE604DF1EEAD74C0022CD82 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
