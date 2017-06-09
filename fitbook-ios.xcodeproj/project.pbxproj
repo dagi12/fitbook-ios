@@ -17,6 +17,7 @@
 		8E19E0011EE9DF470085084D /* fitbook_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E19E0001EE9DF470085084D /* fitbook_iosTests.swift */; };
 		8E19E00C1EE9DF470085084D /* fitbook_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E19E00B1EE9DF470085084D /* fitbook_iosUITests.swift */; };
 		8E19E01A1EEA03A90085084D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E19E0191EEA03A90085084D /* MapKit.framework */; };
+		8E500CA91EEA23EC00A810D3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E500CA81EEA23EC00A810D3 /* Default-568h@2x.png */; };
 		9E804957B28CCCB389BEBE19 /* Pods_fitbook_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 831D8269665DEC42207F6359 /* Pods_fitbook_ios.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,7 +45,7 @@
 		25BD4A7D440E64CF845AF9C1 /* Pods-fitbook-iosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fitbook-iosTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-fitbook-iosTests/Pods-fitbook-iosTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5BD9B8235962A57DE5F3B523 /* Pods_fitbook_iosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fitbook_iosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		831D8269665DEC42207F6359 /* Pods_fitbook_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fitbook_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8E19DFE81EE9DF470085084D /* fitbook-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "fitbook-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E19DFE81EE9DF470085084D /* FitBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E19DFEB1EE9DF470085084D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8E19DFED1EE9DF470085084D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8E19DFF01EE9DF470085084D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -58,6 +59,7 @@
 		8E19E00B1EE9DF470085084D /* fitbook_iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fitbook_iosUITests.swift; sourceTree = "<group>"; };
 		8E19E00D1EE9DF470085084D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8E19E0191EEA03A90085084D /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		8E500CA81EEA23EC00A810D3 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		99D12BFCE5DEE3ED35F178E2 /* Pods-fitbook-iosUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fitbook-iosUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-fitbook-iosUITests/Pods-fitbook-iosUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B57EF155F274628F3B4350A1 /* Pods_fitbook_iosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fitbook_iosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDDC3CE0B8B549DAA3911ADE /* Pods-fitbook-iosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fitbook-iosTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-fitbook-iosTests/Pods-fitbook-iosTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 		8E19DFDF1EE9DF470085084D = {
 			isa = PBXGroup;
 			children = (
+				8E500CA81EEA23EC00A810D3 /* Default-568h@2x.png */,
 				8E19DFEA1EE9DF470085084D /* fitbook-ios */,
 				8E19DFFF1EE9DF470085084D /* fitbook-iosTests */,
 				8E19E00A1EE9DF470085084D /* fitbook-iosUITests */,
@@ -131,7 +134,7 @@
 		8E19DFE91EE9DF470085084D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8E19DFE81EE9DF470085084D /* fitbook-ios.app */,
+				8E19DFE81EE9DF470085084D /* FitBook.app */,
 				8E19DFFC1EE9DF470085084D /* fitbook-iosTests.xctest */,
 				8E19E0071EE9DF470085084D /* fitbook-iosUITests.xctest */,
 			);
@@ -189,7 +192,7 @@
 			);
 			name = "fitbook-ios";
 			productName = "fitbook-ios";
-			productReference = 8E19DFE81EE9DF470085084D /* fitbook-ios.app */;
+			productReference = 8E19DFE81EE9DF470085084D /* FitBook.app */;
 			productType = "com.apple.product-type.application";
 		};
 		8E19DFFB1EE9DF470085084D /* fitbook-iosTests */ = {
@@ -289,6 +292,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E19DFF61EE9DF470085084D /* LaunchScreen.storyboard in Resources */,
+				8E500CA91EEA23EC00A810D3 /* Default-568h@2x.png in Resources */,
 				8E19DFF31EE9DF470085084D /* Assets.xcassets in Resources */,
 				8E19DFF11EE9DF470085084D /* Main.storyboard in Resources */,
 			);
@@ -613,7 +617,7 @@
 				INFOPLIST_FILE = "fitbook-ios/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "pl.edu.amu.wmi.fitbook-ios";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = FitBook;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -627,7 +631,7 @@
 				INFOPLIST_FILE = "fitbook-ios/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "pl.edu.amu.wmi.fitbook-ios";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = FitBook;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

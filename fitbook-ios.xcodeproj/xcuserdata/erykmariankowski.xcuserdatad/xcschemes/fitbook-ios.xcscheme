@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "8E19DFE71EE9DF470085084D"
-               BuildableName = "fitbook-ios.app"
+               BuildableName = "FitBook.app"
                BlueprintName = "fitbook-ios"
                ReferencedContainer = "container:fitbook-ios.xcodeproj">
             </BuildableReference>
@@ -53,7 +53,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8E19DFE71EE9DF470085084D"
-            BuildableName = "fitbook-ios.app"
+            BuildableName = "FitBook.app"
             BlueprintName = "fitbook-ios"
             ReferencedContainer = "container:fitbook-ios.xcodeproj">
          </BuildableReference>
@@ -76,7 +76,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8E19DFE71EE9DF470085084D"
-            BuildableName = "fitbook-ios.app"
+            BuildableName = "FitBook.app"
             BlueprintName = "fitbook-ios"
             ReferencedContainer = "container:fitbook-ios.xcodeproj">
          </BuildableReference>
@@ -95,7 +95,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8E19DFE71EE9DF470085084D"
-            BuildableName = "fitbook-ios.app"
+            BuildableName = "FitBook.app"
             BlueprintName = "fitbook-ios"
             ReferencedContainer = "container:fitbook-ios.xcodeproj">
          </BuildableReference>
