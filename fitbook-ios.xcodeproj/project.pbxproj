@@ -17,7 +17,9 @@
 		8E19E0011EE9DF470085084D /* fitbook_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E19E0001EE9DF470085084D /* fitbook_iosTests.swift */; };
 		8E19E00C1EE9DF470085084D /* fitbook_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E19E00B1EE9DF470085084D /* fitbook_iosUITests.swift */; };
 		8E19E01A1EEA03A90085084D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E19E0191EEA03A90085084D /* MapKit.framework */; };
-		8E500CA91EEA23EC00A810D3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E500CA81EEA23EC00A810D3 /* Default-568h@2x.png */; };
+		8EE604CB1EEAAF820022CD82 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE604CA1EEAAF820022CD82 /* SearchViewController.swift */; };
+		8EE604CD1EEAAFAF0022CD82 /* snippet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE604CC1EEAAFAF0022CD82 /* snippet.swift */; };
+		8EE604D11EEAB1AA0022CD82 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE604D01EEAB1AA0022CD82 /* MapViewController.swift */; };
 		9E804957B28CCCB389BEBE19 /* Pods_fitbook_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 831D8269665DEC42207F6359 /* Pods_fitbook_ios.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,7 +61,9 @@
 		8E19E00B1EE9DF470085084D /* fitbook_iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fitbook_iosUITests.swift; sourceTree = "<group>"; };
 		8E19E00D1EE9DF470085084D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8E19E0191EEA03A90085084D /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		8E500CA81EEA23EC00A810D3 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		8EE604CA1EEAAF820022CD82 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		8EE604CC1EEAAFAF0022CD82 /* snippet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = snippet.swift; sourceTree = "<group>"; };
+		8EE604D01EEAB1AA0022CD82 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		99D12BFCE5DEE3ED35F178E2 /* Pods-fitbook-iosUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fitbook-iosUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-fitbook-iosUITests/Pods-fitbook-iosUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B57EF155F274628F3B4350A1 /* Pods_fitbook_iosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fitbook_iosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDDC3CE0B8B549DAA3911ADE /* Pods-fitbook-iosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fitbook-iosTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-fitbook-iosTests/Pods-fitbook-iosTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -121,7 +125,7 @@
 		8E19DFDF1EE9DF470085084D = {
 			isa = PBXGroup;
 			children = (
-				8E500CA81EEA23EC00A810D3 /* Default-568h@2x.png */,
+				8EE604CC1EEAAFAF0022CD82 /* snippet.swift */,
 				8E19DFEA1EE9DF470085084D /* fitbook-ios */,
 				8E19DFFF1EE9DF470085084D /* fitbook-iosTests */,
 				8E19E00A1EE9DF470085084D /* fitbook-iosUITests */,
@@ -144,8 +148,8 @@
 		8E19DFEA1EE9DF470085084D /* fitbook-ios */ = {
 			isa = PBXGroup;
 			children = (
+				8EE604BD1EEAAD150022CD82 /* main */,
 				8E19DFEB1EE9DF470085084D /* AppDelegate.swift */,
-				8E19DFED1EE9DF470085084D /* ViewController.swift */,
 				8E19DFEF1EE9DF470085084D /* Main.storyboard */,
 				8E19DFF21EE9DF470085084D /* Assets.xcassets */,
 				8E19DFF41EE9DF470085084D /* LaunchScreen.storyboard */,
@@ -170,6 +174,32 @@
 				8E19E00D1EE9DF470085084D /* Info.plist */,
 			);
 			path = "fitbook-iosUITests";
+			sourceTree = "<group>";
+		};
+		8EE604BD1EEAAD150022CD82 /* main */ = {
+			isa = PBXGroup;
+			children = (
+				8EE604C31EEAAE3F0022CD82 /* search */,
+				8EE604BE1EEAAD560022CD82 /* map */,
+				8E19DFED1EE9DF470085084D /* ViewController.swift */,
+			);
+			name = main;
+			sourceTree = "<group>";
+		};
+		8EE604BE1EEAAD560022CD82 /* map */ = {
+			isa = PBXGroup;
+			children = (
+				8EE604D01EEAB1AA0022CD82 /* MapViewController.swift */,
+			);
+			name = map;
+			sourceTree = "<group>";
+		};
+		8EE604C31EEAAE3F0022CD82 /* search */ = {
+			isa = PBXGroup;
+			children = (
+				8EE604CA1EEAAF820022CD82 /* SearchViewController.swift */,
+			);
+			name = search;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,7 +322,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E19DFF61EE9DF470085084D /* LaunchScreen.storyboard in Resources */,
-				8E500CA91EEA23EC00A810D3 /* Default-568h@2x.png in Resources */,
 				8E19DFF31EE9DF470085084D /* Assets.xcassets in Resources */,
 				8E19DFF11EE9DF470085084D /* Main.storyboard in Resources */,
 			);
@@ -458,6 +487,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E19DFEE1EE9DF470085084D /* ViewController.swift in Sources */,
+				8EE604CB1EEAAF820022CD82 /* SearchViewController.swift in Sources */,
+				8EE604CD1EEAAFAF0022CD82 /* snippet.swift in Sources */,
+				8EE604D11EEAB1AA0022CD82 /* MapViewController.swift in Sources */,
 				8E19DFEC1EE9DF470085084D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
