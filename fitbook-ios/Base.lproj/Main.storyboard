@@ -94,6 +94,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Mapa" image="Map" id="Xmq-ZK-f11" userLabel="Map"/>
+                    <connections>
+                        <outlet property="mapView" destination="1Xb-pj-Vb9" id="Mfn-XG-9N2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1yQ-fD-Qel" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

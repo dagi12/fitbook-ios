@@ -8,6 +8,7 @@
 
 import UIKit
 import FacebookLogin
+import MapKit
 
 struct FacebookButtonCoords {
     static let marginBottom = CGFloat(60)
@@ -17,12 +18,14 @@ struct FacebookButtonCoords {
 
 class MapViewController: UIViewController, FacebookLoginResultProtocol, FitbookLoginProtocol {
 
-    var loginDelegate: LoginButtonDelegate?
-    var initialTabBarViewControllers: [UIViewController]?
-    let loginButton: LoginButton = LoginButton(readPermissions: [ .publicProfile, .email ])
-    let alertService = AlertViewService.sharedInstance
-    let fitbookService = FitbookLoginService.shared
-    let processingMessage = "Signing in..."
+    private var loginDelegate: LoginButtonDelegate?
+    private let mapKitDelegate = MapKitDelegate()
+    private var initialTabBarViewControllers: [UIViewController]?
+    private let loginButton: LoginButton = LoginButton(readPermissions: [ .publicProfile, .email ])
+    private let alertService = AlertViewService.sharedInstance
+    private let fitbookService = FitbookLoginService.shared
+    private let processingMessage = "Signing in..."
+    @IBOutlet weak var mapView: MKMapView!
 
     func facebookLoginSuccess() {
         alertService.showProcess(processingMessage, self)
@@ -87,6 +90,11 @@ class MapViewController: UIViewController, FacebookLoginResultProtocol, FitbookL
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        mapKitDelegate.initMap(mapView: mapView)
     }
 
     override func viewDidLoad() {
