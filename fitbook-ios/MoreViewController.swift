@@ -11,9 +11,8 @@ import UIKit
 class MoreViewController: UITableViewController {
 
     @IBAction func logOutClick(_ sender: UIButton) {
-        let viewController = self.tabBarController as? ViewController
-        if viewController != nil {
-            viewController?.logoutFromMore()
+        if let viewController = self.tabBarController as? ViewController {
+            viewController.logoutFromMore()
         }
     }
 

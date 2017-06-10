@@ -17,9 +17,25 @@ class MapKitDelegate: NSObject, MKMapViewDelegate {
         super.init()
     }
 
+    func getLocationRequest(mapView: MKMapView) -> GymRequestParameters {
+        let bounds = mapView.bounds
+        let nw = CGPoint(x: bounds.origin.x + bounds.size.width, y: bounds.origin.y)
+        let se = CGPoint(x: bounds.origin.x,
+                         y: bounds.origin.y + bounds.size.height)
+        let nwCoord = mapView.convert(nw, toCoordinateFrom: mapView)
+        let seCoord = mapView.convert(se, toCoordinateFrom: mapView)
+        let nwLocation = Location(coord: nwCoord)
+        let seLocation = Location(coord: seCoord)
+        return GymRequestParameters(LocationRequest(nwLocation, seLocation))
+    }
+
+    func stopUpdating() {
+        locationManager.stopUpdatingLocation()
+    }
+
     func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
         let locationCorrds: CLLocationCoordinate2D = mapView.userLocation.location!.coordinate
-        let viewRegion = MKCoordinateRegionMakeWithDistance(locationCorrds, 1500, 1500)
+        let viewRegion = MKCoordinateRegionMakeWithDistance(locationCorrds, 3000, 3000)
         let adjustedRegion = mapView.regionThatFits(viewRegion)
         mapView.setRegion(adjustedRegion, animated: true)
     }

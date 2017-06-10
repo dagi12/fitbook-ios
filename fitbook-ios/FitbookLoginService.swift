@@ -32,14 +32,22 @@ class FitbookLoginService {
         return true
     }
 
+    func manualLogout() {
+        userContext.removeUser()
+    }
+
+    func loginCallback(loginProtocol: FitbookLoginProtocol) -> FitbookAlamoService.Callback {
+        return { (result: FitbookLoginResult) in
+            self.userContext.setContext(fitbookResult: result)
+            loginProtocol.fitbookLogin()
+        }
+    }
+
     func fitbookLoginAfterFacebookSuccess(loginProtocol: FitbookLoginProtocol) {
         if let tokenString = AccessToken.current?.authenticationToken {
             fitbookAlamoService.login(
                 token: FacebookToken(token: tokenString),
-                callback: { (result: FitbookLoginResult) in
-                self.userContext.setContext(fitbookResult: result)
-                loginProtocol.fitbookLogin()
-            })
+                callback: loginCallback(loginProtocol: loginProtocol))
         } else {
             fatalError("tokenString is nil")
         }

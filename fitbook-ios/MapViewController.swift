@@ -11,9 +11,9 @@ import FacebookLogin
 import MapKit
 
 struct FacebookButtonCoords {
-    static let marginBottom = CGFloat(60)
-    static let width = CGFloat(250)
-    static let height = CGFloat(40)
+    static let marginBottom = CGFloat(120)
+    static let width = CGFloat(302)
+    static let height = CGFloat(43)
 }
 
 class MapViewController: UIViewController, FacebookLoginResultProtocol, FitbookLoginProtocol {
@@ -25,7 +25,25 @@ class MapViewController: UIViewController, FacebookLoginResultProtocol, FitbookL
     private let alertService = AlertViewService.sharedInstance
     private let fitbookService = FitbookLoginService.shared
     private let processingMessage = "Signing in..."
+    private let gymService = GymAlamoService.shared
     @IBOutlet weak var mapView: MKMapView!
+
+    func gymServiceCallback() -> GymAlamoService.Callback {
+        return { ( result: [Gym]) in
+            for gym in result {
+                if let anno = gym.getAnnotation() {
+                    self.mapView.addAnnotation(anno)
+                }
+            }
+            self.mapKitDelegate.stopUpdating()
+        }
+    }
+
+    @IBAction func findCloseGym(_ sender: UIButton) {
+        let parameters = mapKitDelegate.getLocationRequest(mapView: mapView)
+        gymService.searchByLocation(
+            parameters: parameters, callback: gymServiceCallback())
+    }
 
     func facebookLoginSuccess() {
         alertService.showProcess(processingMessage, self)
@@ -65,6 +83,7 @@ class MapViewController: UIViewController, FacebookLoginResultProtocol, FitbookL
         if manual ?? false {
             alertService.showInfo("Logged out", self)
             LoginManager().logOut()
+            fitbookService.manualLogout()
         }
         loginButton.isHidden = false
         removeLoggedTabs()
@@ -94,7 +113,6 @@ class MapViewController: UIViewController, FacebookLoginResultProtocol, FitbookL
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
-        mapKitDelegate.initMap(mapView: mapView)
     }
 
     override func viewDidLoad() {
@@ -103,6 +121,7 @@ class MapViewController: UIViewController, FacebookLoginResultProtocol, FitbookL
         view.addSubview(setLoginButton())
         self.initialTabBarViewControllers = self.tabBarController?.viewControllers
         fitbookService.checkLogin(loginProtocol: self)
+        mapKitDelegate.initMap(mapView: mapView)
     }
 
 }

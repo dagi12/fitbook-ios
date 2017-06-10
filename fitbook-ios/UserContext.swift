@@ -20,14 +20,19 @@ class UserContext {
     }
 
     func getUser() -> User? {
-        if fitbookResult != nil {
-            return fitbookResult?.user
+        if let user = fitbookResult?.user {
+            return user
         }
         return nil
     }
 
     func isLogged() -> Bool {
         return self.fitbookResult != nil
+    }
+
+    func removeUser() {
+        self.fitbookResult = nil
+        defaultsService.removeFitbookResult()
     }
 
     func setContext(fitbookResult: FitbookLoginResult) {

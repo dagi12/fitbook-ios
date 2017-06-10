@@ -23,6 +23,10 @@ class UserDefaultsService {
         userDefaults.set(encodedData, forKey: Keys.fitbookUserKey)
     }
 
+    func removeFitbookResult() {
+        userDefaults.removeObject(forKey: Keys.fitbookUserKey)
+    }
+
     func getFitbookResult() -> FitbookLoginResult? {
         if let data = userDefaults.object(forKey: Keys.fitbookUserKey) {
             if let castedData = data as? Data {

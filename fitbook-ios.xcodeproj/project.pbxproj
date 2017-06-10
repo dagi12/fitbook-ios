@@ -11,6 +11,11 @@
 		6377A4092DDD4F54FBDF8304 /* Pods_fitbook_iosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BD9B8235962A57DE5F3B523 /* Pods_fitbook_iosTests.framework */; };
 		8E07F4351EEBF55C008572D4 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E07F4341EEBF55C008572D4 /* MoreViewController.swift */; };
 		8E07F4371EEC1D8E008572D4 /* MapKitDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E07F4361EEC1D8E008572D4 /* MapKitDelegate.swift */; };
+		8E07F43A1EEC35A4008572D4 /* GymAlamoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E07F4391EEC35A4008572D4 /* GymAlamoService.swift */; };
+		8E07F43C1EEC3865008572D4 /* Gym.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E07F43B1EEC3865008572D4 /* Gym.swift */; };
+		8E07F43E1EEC3AB5008572D4 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E07F43D1EEC3AB5008572D4 /* Location.swift */; };
+		8E07F4401EEC3D07008572D4 /* GymRequestParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E07F43F1EEC3D07008572D4 /* GymRequestParameters.swift */; };
+		8E07F4421EEC3DD7008572D4 /* LocationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E07F4411EEC3DD7008572D4 /* LocationRequest.swift */; };
 		8E19DFEC1EE9DF470085084D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E19DFEB1EE9DF470085084D /* AppDelegate.swift */; };
 		8E19DFEE1EE9DF470085084D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E19DFED1EE9DF470085084D /* ViewController.swift */; };
 		8E19DFF11EE9DF470085084D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E19DFEF1EE9DF470085084D /* Main.storyboard */; };
@@ -66,6 +71,11 @@
 		831D8269665DEC42207F6359 /* Pods_fitbook_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fitbook_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E07F4341EEBF55C008572D4 /* MoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		8E07F4361EEC1D8E008572D4 /* MapKitDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapKitDelegate.swift; sourceTree = "<group>"; };
+		8E07F4391EEC35A4008572D4 /* GymAlamoService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GymAlamoService.swift; sourceTree = "<group>"; };
+		8E07F43B1EEC3865008572D4 /* Gym.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gym.swift; sourceTree = "<group>"; };
+		8E07F43D1EEC3AB5008572D4 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		8E07F43F1EEC3D07008572D4 /* GymRequestParameters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GymRequestParameters.swift; sourceTree = "<group>"; };
+		8E07F4411EEC3DD7008572D4 /* LocationRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationRequest.swift; sourceTree = "<group>"; };
 		8E19DFE81EE9DF470085084D /* FitBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E19DFEB1EE9DF470085084D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8E19DFED1EE9DF470085084D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -164,6 +174,18 @@
 			name = more;
 			sourceTree = "<group>";
 		};
+		8E07F4381EEC3591008572D4 /* gym */ = {
+			isa = PBXGroup;
+			children = (
+				8E07F4391EEC35A4008572D4 /* GymAlamoService.swift */,
+				8E07F43B1EEC3865008572D4 /* Gym.swift */,
+				8E07F43D1EEC3AB5008572D4 /* Location.swift */,
+				8E07F43F1EEC3D07008572D4 /* GymRequestParameters.swift */,
+				8E07F4411EEC3DD7008572D4 /* LocationRequest.swift */,
+			);
+			name = gym;
+			sourceTree = "<group>";
+		};
 		8E19DFDF1EE9DF470085084D = {
 			isa = PBXGroup;
 			children = (
@@ -258,6 +280,7 @@
 		8EE604BE1EEAAD560022CD82 /* map */ = {
 			isa = PBXGroup;
 			children = (
+				8E07F4381EEC3591008572D4 /* gym */,
 				8EE604D51EEAC9610022CD82 /* login */,
 				8EE604D01EEAB1AA0022CD82 /* MapViewController.swift */,
 				8E07F4361EEC1D8E008572D4 /* MapKitDelegate.swift */,
@@ -638,9 +661,11 @@
 				8EE604EC1EEB00D20022CD82 /* FitbookLoginResult.swift in Sources */,
 				8E07F4351EEBF55C008572D4 /* MoreViewController.swift in Sources */,
 				8EE604CB1EEAAF820022CD82 /* SearchViewController.swift in Sources */,
+				8E07F4401EEC3D07008572D4 /* GymRequestParameters.swift in Sources */,
 				8EE604FB1EEB23C30022CD82 /* FacebookToken.swift in Sources */,
 				8EE604D41EEABC8E0022CD82 /* TrainerViewController.swift in Sources */,
 				8EE604F71EEB1CCC0022CD82 /* FitbookAlamoService.swift in Sources */,
+				8E07F43E1EEC3AB5008572D4 /* Location.swift in Sources */,
 				8E07F4371EEC1D8E008572D4 /* MapKitDelegate.swift in Sources */,
 				8EE604F51EEB1C0C0022CD82 /* AlamoService.swift in Sources */,
 				8EE604D11EEAB1AA0022CD82 /* MapViewController.swift in Sources */,
@@ -648,9 +673,12 @@
 				8EE604D71EEAC98D0022CD82 /* FacebookLoginService.swift in Sources */,
 				8EE604E21EEADB380022CD82 /* ImagePair.swift in Sources */,
 				8EE604F31EEB11CD0022CD82 /* FitbookLoginProtocol.swift in Sources */,
+				8E07F43A1EEC35A4008572D4 /* GymAlamoService.swift in Sources */,
 				8EE604DB1EEAD5560022CD82 /* FitbookLoginService.swift in Sources */,
+				8E07F43C1EEC3865008572D4 /* Gym.swift in Sources */,
 				8EE604EF1EEB033C0022CD82 /* UserDefaultsService.swift in Sources */,
 				8EE604EA1EEAF3DF0022CD82 /* AlertViewController.swift in Sources */,
+				8E07F4421EEC3DD7008572D4 /* LocationRequest.swift in Sources */,
 				8EE604DF1EEAD74C0022CD82 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

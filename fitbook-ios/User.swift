@@ -46,9 +46,9 @@ class User: NSObject, NSCoding, Mappable {
         email <- map["email"]
         isTrainer <- map["trainer"]
 
-        facebookId <- map["facebookId"]
-        createdAt <- map["createdAt"]
-        updatedAt <- map["updatedAt"]
+        facebookId <- map["facebook_id"]
+        createdAt <- map["created_at"]
+        updatedAt <- map["updated_at"]
         images <- map["images"]
         name <- map["name"]
         identifier <- map["id"]
