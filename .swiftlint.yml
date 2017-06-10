@@ -1,0 +1,4 @@
+excluded:
+  - Pods
+  - fitbook-iosTests
+  - fitbook-iosUITests
