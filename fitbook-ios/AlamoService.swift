@@ -9,13 +9,13 @@
 import Foundation
 
 class AlamoService {
-    
+
     let URL = "http://fitbook-api.herokuapp.com/api/"
-    
+
     typealias SwiftyJsonResult = [[String: Any]]
-    
+
     func constructUrl(endpoint: String) -> String {
         return URL + endpoint
     }
-    
+
 }

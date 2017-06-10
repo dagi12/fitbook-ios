@@ -29,6 +29,7 @@ PODS:
   - FBSDKShareKit (4.22.1):
     - FBSDKCoreKit
   - ObjectMapper (2.2.7)
+  - SwiftLint (0.19.0)
   - SwiftyJSON (3.1.4)
 
 DEPENDENCIES:
@@ -42,6 +43,7 @@ DEPENDENCIES:
   - FBSDKLoginKit (~> 4.22.1)
   - FBSDKShareKit (~> 4.22.1)
   - ObjectMapper (~> 2.0)
+  - SwiftLint (~> 0.19.0)
   - SwiftyJSON (~> 3.1.4)
 
 SPEC CHECKSUMS:
@@ -55,8 +57,9 @@ SPEC CHECKSUMS:
   FBSDKLoginKit: 00cf28916b9f0169763a3d61985d745b579fe304
   FBSDKShareKit: 1cbd0fdc2bb3277dd3522512855dcf1f4088f734
   ObjectMapper: 65abcfd9a61cf7396cbd14a4fb22fddfcc46577e
+  SwiftLint: 3537a05b34060e78e7510f04fb7537d738247803
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: 91a898a7c5a47a1b2f032235e8f2bb8fd317050b
+PODFILE CHECKSUM: 8e680734e8cbfb6c3f81f6634004106231bf725c
 
 COCOAPODS: 1.2.1

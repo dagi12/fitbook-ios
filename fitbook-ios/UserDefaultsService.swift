@@ -9,30 +9,27 @@
 import Foundation
 
 struct Keys {
-    static let FITBOOK_USER_KEY = "FITBOOK_USER_KEY"
+    static let fitbookUserKey = "FITBOOK_USER_KEY"
 }
 
 class UserDefaultsService {
-    
+
     let userDefaults = UserDefaults.standard
     static let shared = UserDefaultsService()
-    
+
     func setFitbookResult(fitbookResult: FitbookLoginResult) {
         let wrapper = FitbookLoginResultWrapper(fitbookResult)
         let encodedData: Data = NSKeyedArchiver.archivedData(withRootObject: wrapper)
-        userDefaults.set(encodedData, forKey: Keys.FITBOOK_USER_KEY)
+        userDefaults.set(encodedData, forKey: Keys.fitbookUserKey)
     }
-    
+
     func getFitbookResult() -> FitbookLoginResult? {
-        if let data = userDefaults.object(forKey: Keys.FITBOOK_USER_KEY) as! Data? {
+        if let data = userDefaults.object(forKey: Keys.fitbookUserKey) as? Data! {
             if let wrapper =  NSKeyedUnarchiver.unarchiveObject(with: data) as? FitbookLoginResultWrapper {
                 return wrapper.fitbookLoginResult
             }
         }
         return nil
     }
-    
-    
-    
-    
+
 }

@@ -8,32 +8,29 @@
 
 import Foundation
 
-
 @objc(FitbookLoginResultWrapper)
 class FitbookLoginResultWrapper: NSObject, NSCoding {
 
     struct Keys {
-        static let RESULT_KEY = "RESULT_KEY"
+        static let resultKey = "RESULT_KEY"
     }
-    
+
     var fitbookLoginResult: FitbookLoginResult?
-    
 
     func encode(with aCoder: NSCoder) {
         if let result = self.fitbookLoginResult {
-            aCoder.encode(result, forKey: Keys.RESULT_KEY)
+            aCoder.encode(result, forKey: Keys.resultKey)
         }
     }
-    
+
     init(_ fitbookResult: FitbookLoginResult) {
         self.fitbookLoginResult = fitbookResult
     }
-    
+
     required init?(coder aDecoder: NSCoder) {
-        if let result = aDecoder.decodeObject(forKey: Keys.RESULT_KEY) as? FitbookLoginResult {
+        if let result = aDecoder.decodeObject(forKey: Keys.resultKey) as? FitbookLoginResult {
             self.fitbookLoginResult = result
         }
     }
-    
-    
+
 }

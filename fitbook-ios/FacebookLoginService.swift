@@ -10,15 +10,15 @@ import Foundation
 import FacebookLogin
 
 class FacebookLoginService: LoginButtonDelegate {
-    
+
     let loginResultProtocol: FacebookLoginResultProtocol
-    
+
     init(loginResultProtocol: FacebookLoginResultProtocol) {
         self.loginResultProtocol = loginResultProtocol
     }
-    
+
     func loginButtonDidCompleteLogin(_ loginButton: LoginButton, result: LoginResult) {
-        switch (result) {
+        switch result {
         case .cancelled:
             loginResultProtocol.facebookLoginFailed()
             break
@@ -30,10 +30,9 @@ class FacebookLoginService: LoginButtonDelegate {
             break
         }
     }
-    
+
     func loginButtonDidLogOut(_ loginButton: LoginButton) {
         loginResultProtocol.facebookLogout()
     }
-    
-    
+
 }
