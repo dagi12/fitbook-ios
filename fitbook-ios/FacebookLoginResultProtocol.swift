@@ -9,7 +9,7 @@
 import Foundation
 
 protocol FacebookLoginResultProtocol {
-    func loginSuccess()
-    func loginFailed()
-    func logout()
+    func facebookLoginSuccess()
+    func facebookLoginFailed()
+    func facebookLogout()
 }

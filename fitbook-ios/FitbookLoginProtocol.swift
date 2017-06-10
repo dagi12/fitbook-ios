@@ -9,6 +9,6 @@
 import Foundation
 
 protocol FitbookLoginProtocol {
-    func onLogout()
-    func onLogin()
+    func fitbookLogout()
+    func fitbookLogin()
 }

@@ -17,6 +17,7 @@
 		8E19E0011EE9DF470085084D /* fitbook_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E19E0001EE9DF470085084D /* fitbook_iosTests.swift */; };
 		8E19E00C1EE9DF470085084D /* fitbook_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E19E00B1EE9DF470085084D /* fitbook_iosUITests.swift */; };
 		8E19E01A1EEA03A90085084D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E19E0191EEA03A90085084D /* MapKit.framework */; };
+		8EAEEF781EEB3CD600D51F7A /* FitbookAlamoServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAEEF771EEB3CD600D51F7A /* FitbookAlamoServiceTest.swift */; };
 		8EE604CB1EEAAF820022CD82 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE604CA1EEAAF820022CD82 /* SearchViewController.swift */; };
 		8EE604CD1EEAAFAF0022CD82 /* snippet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE604CC1EEAAFAF0022CD82 /* snippet.swift */; };
 		8EE604D11EEAB1AA0022CD82 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE604D01EEAB1AA0022CD82 /* MapViewController.swift */; };
@@ -77,6 +78,7 @@
 		8E19E00B1EE9DF470085084D /* fitbook_iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fitbook_iosUITests.swift; sourceTree = "<group>"; };
 		8E19E00D1EE9DF470085084D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8E19E0191EEA03A90085084D /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		8EAEEF771EEB3CD600D51F7A /* FitbookAlamoServiceTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FitbookAlamoServiceTest.swift; sourceTree = "<group>"; };
 		8EE604CA1EEAAF820022CD82 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		8EE604CC1EEAAFAF0022CD82 /* snippet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = snippet.swift; sourceTree = "<group>"; };
 		8EE604D01EEAB1AA0022CD82 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -194,6 +196,7 @@
 		8E19DFFF1EE9DF470085084D /* fitbook-iosTests */ = {
 			isa = PBXGroup;
 			children = (
+				8EAEEF741EEB3CA800D51F7A /* main */,
 				8E19E0001EE9DF470085084D /* fitbook_iosTests.swift */,
 				8E19E0021EE9DF470085084D /* Info.plist */,
 			);
@@ -207,6 +210,30 @@
 				8E19E00D1EE9DF470085084D /* Info.plist */,
 			);
 			path = "fitbook-iosUITests";
+			sourceTree = "<group>";
+		};
+		8EAEEF741EEB3CA800D51F7A /* main */ = {
+			isa = PBXGroup;
+			children = (
+				8EAEEF751EEB3CAF00D51F7A /* map */,
+			);
+			name = main;
+			sourceTree = "<group>";
+		};
+		8EAEEF751EEB3CAF00D51F7A /* map */ = {
+			isa = PBXGroup;
+			children = (
+				8EAEEF761EEB3CB700D51F7A /* common */,
+			);
+			name = map;
+			sourceTree = "<group>";
+		};
+		8EAEEF761EEB3CB700D51F7A /* common */ = {
+			isa = PBXGroup;
+			children = (
+				8EAEEF771EEB3CD600D51F7A /* FitbookAlamoServiceTest.swift */,
+			);
+			name = common;
 			sourceTree = "<group>";
 		};
 		8EE604BD1EEAAD150022CD82 /* main */ = {
@@ -611,6 +638,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E19E0011EE9DF470085084D /* fitbook_iosTests.swift in Sources */,
+				8EAEEF781EEB3CD600D51F7A /* FitbookAlamoServiceTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -793,7 +821,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "pl.edu.amu.wmi.fitbook-iosTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/fitbook-ios.app/fitbook-ios";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FitBook.app/FitBook";
 			};
 			name = Debug;
 		};
@@ -810,7 +838,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "pl.edu.amu.wmi.fitbook-iosTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/fitbook-ios.app/fitbook-ios";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FitBook.app/FitBook";
 			};
 			name = Release;
 		};

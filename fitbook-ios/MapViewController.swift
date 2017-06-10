@@ -22,24 +22,24 @@ class MapViewController: UIViewController, FacebookLoginResultProtocol, FitbookL
     let alertService = AlertViewService.sharedInstance
     let fitbookService = FitbookLoginService.shared
     
-    func loginSuccess() {
-        
+    func facebookLoginSuccess() {
+        fitbookService.fitbookLoginAfterFacebookSuccess(loginProtocol: self)
     }
     
-    func loginFailed() {
+    func facebookLoginFailed() {
         alertService.showError("Facebook login has been cancelled", self)
     }
     
-    func logout() {
+    func facebookLogout() {
         alertService.showInfo("Logged out", self)
     }
     
-    func onLogin() {
+    func fitbookLogin() {
         loginButton.isHidden = true
 
     }
     
-    func onLogout() {
+    func fitbookLogout() {
         loginButton.isHidden = false
     }
     

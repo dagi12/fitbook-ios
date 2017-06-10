@@ -30,7 +30,7 @@ class FitbookLoginResultWrapper: NSObject, NSCoding {
     }
     
     required init?(coder aDecoder: NSCoder) {
-        if let result = aDecoder.decodeObject(forKey: "result") as? FitbookLoginResult {
+        if let result = aDecoder.decodeObject(forKey: Keys.RESULT_KEY) as? FitbookLoginResult {
             self.fitbookLoginResult = result
         }
     }

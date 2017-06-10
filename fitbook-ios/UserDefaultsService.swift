@@ -19,12 +19,12 @@ class UserDefaultsService {
     
     func setFitbookResult(fitbookResult: FitbookLoginResult) {
         let wrapper = FitbookLoginResultWrapper(fitbookResult)
-        let encodedData = NSKeyedArchiver.archivedData(withRootObject: wrapper)
+        let encodedData: Data = NSKeyedArchiver.archivedData(withRootObject: wrapper)
         userDefaults.set(encodedData, forKey: Keys.FITBOOK_USER_KEY)
     }
     
     func getFitbookResult() -> FitbookLoginResult? {
-        if let data = userDefaults.data(forKey: Keys.FITBOOK_USER_KEY) {
+        if let data = userDefaults.object(forKey: Keys.FITBOOK_USER_KEY) as! Data? {
             if let wrapper =  NSKeyedUnarchiver.unarchiveObject(with: data) as? FitbookLoginResultWrapper {
                 return wrapper.fitbookLoginResult
             }

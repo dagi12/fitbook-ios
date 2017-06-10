@@ -40,6 +40,11 @@
     </array>
     <key>NSPhotoLibraryUsageDescription</key>
     <string>For displaying thumbnails of pages and users</string>
+    <key>NSAppTransportSecurity</key>
+    <dict>
+        <key>NSAllowsArbitraryLoads</key>
+        <true/>
+    </dict>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UILaunchStoryboardName</key>

@@ -14,6 +14,7 @@ class FitbookLoginService {
     
     static let shared = FitbookLoginService()
     let userContext = UserContext.sharedInstance
+    let fitbookAlamoService = FitbookAlamoService.shared
     
     func checkFitbookSessionExpired() -> Bool {
         let currentTime = CACurrentMediaTime()
@@ -30,11 +31,25 @@ class FitbookLoginService {
         return true
     }
     
-    func onlineLoginCheck(loginProtocol: FitbookLoginProtocol) {
-        if (!checkFitbookSessionExpired() && !checkFacebookSessionExpired()) {
-            
+    func fitbookLoginAfterFacebookSuccess(loginProtocol: FitbookLoginProtocol) {
+        if let tokenString = AccessToken.current?.authenticationToken {
+            fitbookAlamoService.login(token: FacebookToken(token: tokenString), callback: { (result: FitbookLoginResult) in
+                self.userContext.setContext(fitbookResult: result)
+                loginProtocol.fitbookLogin()
+            })
         } else {
-            loginProtocol.onLogout()
+            fatalError("tokenString is nil")
+        }
+    }
+    
+    
+    func onlineLoginCheck(loginProtocol: FitbookLoginProtocol) {
+        if (!checkFitbookSessionExpired()) {
+            loginProtocol.fitbookLogin()
+        } else if (!checkFacebookSessionExpired()) {
+            fitbookLoginAfterFacebookSuccess(loginProtocol: loginProtocol)
+        } else {
+            loginProtocol.fitbookLogin()
         }
     }
     
@@ -42,7 +57,7 @@ class FitbookLoginService {
         if (userContext.isLogged()) {
             onlineLoginCheck(loginProtocol: loginProtocol)
         } else {
-            loginProtocol.onLogout()
+            loginProtocol.fitbookLogout()
         }
     }
     

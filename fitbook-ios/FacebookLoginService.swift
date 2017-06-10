@@ -20,19 +20,19 @@ class FacebookLoginService: LoginButtonDelegate {
     func loginButtonDidCompleteLogin(_ loginButton: LoginButton, result: LoginResult) {
         switch (result) {
         case .cancelled:
-            loginResultProtocol.loginFailed()
+            loginResultProtocol.facebookLoginFailed()
             break
         case .failed:
-            loginResultProtocol.loginFailed()
+            loginResultProtocol.facebookLoginFailed()
             break
         case .success:
-            loginResultProtocol.loginSuccess()
+            loginResultProtocol.facebookLoginSuccess()
             break
         }
     }
     
     func loginButtonDidLogOut(_ loginButton: LoginButton) {
-        loginResultProtocol.logout()
+        loginResultProtocol.facebookLogout()
     }
     
     

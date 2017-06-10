@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import fitbook_ios
+@testable import FitBook
 
 class fitbook_iosTests: XCTestCase {
     
