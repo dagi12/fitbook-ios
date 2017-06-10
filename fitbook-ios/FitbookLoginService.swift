@@ -17,16 +17,17 @@ class FitbookLoginService {
     let fitbookAlamoService = FitbookAlamoService.shared
 
     func checkFitbookSessionExpired() -> Bool {
-        let currentTime = CACurrentMediaTime()
         if let exp = userContext.fitbookResult?.exp {
-            return Double(exp * 1000) - currentTime < 0
+            let currentTime = NSDate().timeIntervalSince1970
+            return Double(exp) - currentTime < 0
         }
         return true
     }
 
     func checkFacebookSessionExpired() -> Bool {
         if let token = AccessToken.current {
-            return Double(token.expirationDate.timeIntervalSince1970) - CACurrentMediaTime() < 0
+            let currentTime = NSDate().timeIntervalSince1970
+            return Double(token.expirationDate.timeIntervalSince1970) - currentTime < 0
         }
         return true
     }

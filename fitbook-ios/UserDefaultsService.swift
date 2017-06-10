@@ -24,9 +24,13 @@ class UserDefaultsService {
     }
 
     func getFitbookResult() -> FitbookLoginResult? {
-        if let data = userDefaults.object(forKey: Keys.fitbookUserKey) as? Data! {
-            if let wrapper =  NSKeyedUnarchiver.unarchiveObject(with: data) as? FitbookLoginResultWrapper {
-                return wrapper.fitbookLoginResult
+        if let data = userDefaults.object(forKey: Keys.fitbookUserKey) {
+            if let castedData = data as? Data {
+                if let wrapper = NSKeyedUnarchiver.unarchiveObject(with: castedData) {
+                    if let resultWrapper = wrapper as? FitbookLoginResultWrapper {
+                        return resultWrapper.fitbookLoginResult
+                    }
+                }
             }
         }
         return nil
