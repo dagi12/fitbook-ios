@@ -59,7 +59,7 @@ class FitbookLoginService {
         if userContext.isLogged() {
             onlineLoginCheck(loginProtocol: loginProtocol)
         } else {
-            loginProtocol.fitbookLogout()
+            loginProtocol.fitbookLogout(nil)
         }
     }
 

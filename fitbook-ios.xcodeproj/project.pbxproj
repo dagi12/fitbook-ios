@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2858FFC0D028786188511FAB /* Pods_fitbook_iosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B57EF155F274628F3B4350A1 /* Pods_fitbook_iosUITests.framework */; };
 		6377A4092DDD4F54FBDF8304 /* Pods_fitbook_iosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BD9B8235962A57DE5F3B523 /* Pods_fitbook_iosTests.framework */; };
+		8E07F4351EEBF55C008572D4 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E07F4341EEBF55C008572D4 /* MoreViewController.swift */; };
 		8E19DFEC1EE9DF470085084D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E19DFEB1EE9DF470085084D /* AppDelegate.swift */; };
 		8E19DFEE1EE9DF470085084D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E19DFED1EE9DF470085084D /* ViewController.swift */; };
 		8E19DFF11EE9DF470085084D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E19DFEF1EE9DF470085084D /* Main.storyboard */; };
@@ -62,6 +63,7 @@
 		25BD4A7D440E64CF845AF9C1 /* Pods-fitbook-iosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fitbook-iosTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-fitbook-iosTests/Pods-fitbook-iosTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5BD9B8235962A57DE5F3B523 /* Pods_fitbook_iosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fitbook_iosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		831D8269665DEC42207F6359 /* Pods_fitbook_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fitbook_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E07F4341EEBF55C008572D4 /* MoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		8E19DFE81EE9DF470085084D /* FitBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E19DFEB1EE9DF470085084D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8E19DFED1EE9DF470085084D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -152,6 +154,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		8E07F4331EEBF542008572D4 /* more */ = {
+			isa = PBXGroup;
+			children = (
+				8E07F4341EEBF55C008572D4 /* MoreViewController.swift */,
+			);
+			name = more;
+			sourceTree = "<group>";
+		};
 		8E19DFDF1EE9DF470085084D = {
 			isa = PBXGroup;
 			children = (
@@ -234,6 +244,7 @@
 		8EE604BD1EEAAD150022CD82 /* main */ = {
 			isa = PBXGroup;
 			children = (
+				8E07F4331EEBF542008572D4 /* more */,
 				8EE604D21EEABC830022CD82 /* trainer */,
 				8EE604C31EEAAE3F0022CD82 /* search */,
 				8EE604BE1EEAAD560022CD82 /* map */,
@@ -622,6 +633,7 @@
 				8E19DFEE1EE9DF470085084D /* ViewController.swift in Sources */,
 				8EE604D91EEAD1060022CD82 /* FacebookLoginResultProtocol.swift in Sources */,
 				8EE604EC1EEB00D20022CD82 /* FitbookLoginResult.swift in Sources */,
+				8E07F4351EEBF55C008572D4 /* MoreViewController.swift in Sources */,
 				8EE604CB1EEAAF820022CD82 /* SearchViewController.swift in Sources */,
 				8EE604FB1EEB23C30022CD82 /* FacebookToken.swift in Sources */,
 				8EE604D41EEABC8E0022CD82 /* TrainerViewController.swift in Sources */,

@@ -11,5 +11,4 @@ import Foundation
 protocol FacebookLoginResultProtocol {
     func facebookLoginSuccess()
     func facebookLoginFailed()
-    func facebookLogout()
 }

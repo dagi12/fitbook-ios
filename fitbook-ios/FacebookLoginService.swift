@@ -32,7 +32,7 @@ class FacebookLoginService: LoginButtonDelegate {
     }
 
     func loginButtonDidLogOut(_ loginButton: LoginButton) {
-        loginResultProtocol.facebookLogout()
+        // no need
     }
 
 }

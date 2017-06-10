@@ -20,4 +20,11 @@ class ViewController: UITabBarController {
         // Dispose of any resources that can be recreated.
     }
 
+    func logoutFromMore() {
+        let index = 0
+        self.selectedIndex = index
+        let viewController = self.viewControllers?[index] as? MapViewController
+        viewController?.fitbookLogout(true)
+    }
+
 }

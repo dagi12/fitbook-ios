@@ -33,10 +33,6 @@ class MapViewController: UIViewController, FacebookLoginResultProtocol, FitbookL
         alertService.showError("Facebook login has been cancelled", self)
     }
 
-    func facebookLogout() {
-        alertService.showInfo("Logged out", self)
-    }
-
     func fitbookLogin() {
         loginButton.isHidden = true
         restoreLoggedTabs()
@@ -56,15 +52,22 @@ class MapViewController: UIViewController, FacebookLoginResultProtocol, FitbookL
                     var viewControllers = tabBarController.viewControllers
                     viewControllers?.remove(at: 4)
                     viewControllers?.remove(at: 3)
-                    tabBarController.viewControllers = viewControllers                }
+                    tabBarController.viewControllers = viewControllers
+                }
             }
         }
     }
 
-    func fitbookLogout() {
+    func fitbookLogout(_ manual: Bool?) {
+        if manual ?? false {
+            alertService.showInfo("Logged out", self)
+            LoginManager().logOut()
+        }
         loginButton.isHidden = false
         removeLoggedTabs()
-        alertService.closeProcess(controller: self)
+        if manual ?? true {
+            alertService.closeProcess(controller: self)
+        }
     }
 
     func setLoginButton() -> LoginButton {
