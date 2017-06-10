@@ -6,7 +6,6 @@
 //  Copyright © 2017 Eryk Mariankowski. All rights reserved.
 //
 
-import Foundation
 import FacebookLogin
 
 class FacebookLoginStore: LoginButtonDelegate {

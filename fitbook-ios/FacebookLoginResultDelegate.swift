@@ -6,8 +6,6 @@
 //  Copyright © 2017 Eryk Mariankowski. All rights reserved.
 //
 
-import Foundation
-
 protocol FacebookLoginResultDelegate: class {
     func facebookLoginSuccess()
 

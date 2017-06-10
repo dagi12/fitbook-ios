@@ -6,7 +6,7 @@
 //  Copyright © 2017 Eryk Mariankowski. All rights reserved.
 //
 
-import UIKit
+import Foundation
 import Kingfisher
 
 class MoreViewController: UITableViewController {
@@ -42,11 +42,6 @@ class MoreViewController: UITableViewController {
         imageHelper.setRoundedImage(imageView: self.profileImage)
         setImage()
         setUserLabels()
-    }
-
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-
     }
 
 }

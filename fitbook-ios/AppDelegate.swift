@@ -6,7 +6,7 @@
 //  Copyright © 2017 Eryk Mariankowski. All rights reserved.
 //
 
-import UIKit
+import Foundation
 import FacebookCore
 
 @UIApplicationMain

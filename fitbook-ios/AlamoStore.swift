@@ -6,8 +6,6 @@
 //  Copyright © 2017 Eryk Mariankowski. All rights reserved.
 //
 
-import Foundation
-
 class AlamoStore {
 
     let URL = "http://fitbook-api.herokuapp.com/api/"

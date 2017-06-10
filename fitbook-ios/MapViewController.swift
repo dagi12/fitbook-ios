@@ -6,7 +6,7 @@
 //  Copyright © 2017 Eryk Mariankowski. All rights reserved.
 //
 
-import UIKit
+import Foundation
 import FacebookLogin
 import MapKit
 
@@ -104,15 +104,6 @@ class MapViewController: UIViewController, FacebookLoginResultDelegate, FitbookL
         loginDelegate = FacebookLoginStore(loginDelegate: self)
         loginButton.delegate = loginDelegate
         return loginButton
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(true)
     }
 
     override func viewDidLoad() {

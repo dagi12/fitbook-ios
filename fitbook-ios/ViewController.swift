@@ -6,19 +6,10 @@
 //  Copyright © 2017 Eryk Mariankowski. All rights reserved.
 //
 
-import UIKit
+import Foundation
 import FacebookLogin
 
 class ViewController: UITabBarController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
 
     func logoutFromMore() {
         let index = 0
