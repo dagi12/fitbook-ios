@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AlertViewService {
+class AlertViewHelper {
 
     var modalProcessing: Bool = false
 
@@ -19,18 +19,18 @@ class AlertViewService {
         static let height = 50
     }
 
-    static let sharedInstance = AlertViewService()
+    static let shared = AlertViewHelper()
 
     func showError(_ message: String, _ controller: UIViewController) {
         let alertController = UIAlertController(
-            title: "Błąd", message: message, preferredStyle: UIAlertControllerStyle.alert)
+                title: "Błąd", message: message, preferredStyle: UIAlertControllerStyle.alert)
         alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default, handler: nil))
         controller.present(alertController, animated: true, completion: nil)
     }
 
     func showInfo(_ message: String, _ controller: UIViewController) {
         let alertController = UIAlertController(
-            title: "Info", message: message, preferredStyle: UIAlertControllerStyle.alert)
+                title: "Info", message: message, preferredStyle: UIAlertControllerStyle.alert)
         alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
         controller.present(alertController, animated: true, completion: nil)
     }
@@ -39,8 +39,8 @@ class AlertViewService {
         if !modalProcessing {
             let alert = UIAlertController(title: nil, message: message, preferredStyle: .alert)
             let frameRect = CGRect(
-                x: ProcessIndicatorCoords.xCoord, y: ProcessIndicatorCoords.yCoord,
-                width: ProcessIndicatorCoords.width, height: ProcessIndicatorCoords.height)
+                    x: ProcessIndicatorCoords.xCoord, y: ProcessIndicatorCoords.yCoord,
+                    width: ProcessIndicatorCoords.width, height: ProcessIndicatorCoords.height)
             let loadingIndicator = UIActivityIndicatorView(frame: frameRect)
             loadingIndicator.hidesWhenStopped = true
             loadingIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray

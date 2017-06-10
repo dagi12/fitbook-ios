@@ -1,5 +1,5 @@
 //
-//  LoginService.swift
+//  FacebooLoginStore.swift
 //  fitbook-ios
 //
 //  Created by Eryk Mariankowski on 09.06.2017.
@@ -9,24 +9,24 @@
 import Foundation
 import FacebookLogin
 
-class FacebookLoginService: LoginButtonDelegate {
+class FacebookLoginStore: LoginButtonDelegate {
 
-    let loginResultProtocol: FacebookLoginResultProtocol
+    let loginDelegate: FacebookLoginResultDelegate
 
-    init(loginResultProtocol: FacebookLoginResultProtocol) {
-        self.loginResultProtocol = loginResultProtocol
+    init(loginDelegate: FacebookLoginResultDelegate) {
+        self.loginDelegate = loginDelegate
     }
 
     func loginButtonDidCompleteLogin(_ loginButton: LoginButton, result: LoginResult) {
         switch result {
         case .cancelled:
-            loginResultProtocol.facebookLoginFailed()
+            loginDelegate.facebookLoginFailed()
             break
         case .failed:
-            loginResultProtocol.facebookLoginFailed()
+            loginDelegate.facebookLoginFailed()
             break
         case .success:
-            loginResultProtocol.facebookLoginSuccess()
+            loginDelegate.facebookLoginSuccess()
             break
         }
     }

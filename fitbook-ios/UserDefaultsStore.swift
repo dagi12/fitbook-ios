@@ -1,5 +1,5 @@
 //
-//  UserDefaultsService.swift
+//  UserDefaultsStore.swift
 //  fitbook-ios
 //
 //  Created by Eryk Mariankowski on 09.06.2017.
@@ -12,10 +12,10 @@ struct Keys {
     static let fitbookUserKey = "FITBOOK_USER_KEY"
 }
 
-class UserDefaultsService {
+class UserDefaultsStore {
 
     let userDefaults = UserDefaults.standard
-    static let shared = UserDefaultsService()
+    static let shared = UserDefaultsStore()
 
     func setFitbookResult(fitbookResult: FitbookLoginResult) {
         let wrapper = FitbookLoginResultWrapper(fitbookResult)

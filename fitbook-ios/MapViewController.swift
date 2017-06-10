@@ -16,48 +16,48 @@ struct FacebookButtonCoords {
     static let height = CGFloat(43)
 }
 
-class MapViewController: UIViewController, FacebookLoginResultProtocol, FitbookLoginProtocol {
+class MapViewController: UIViewController, FacebookLoginResultDelegate, FitbookLoginDelegate {
 
     private var loginDelegate: LoginButtonDelegate?
-    private let mapKitDelegate = MapKitDelegate()
+    private let mapKitHelper = MapKitHelper()
     private var initialTabBarViewControllers: [UIViewController]?
-    private let loginButton: LoginButton = LoginButton(readPermissions: [ .publicProfile, .email ])
-    private let alertService = AlertViewService.sharedInstance
-    private let fitbookService = FitbookLoginService.shared
+    private let loginButton: LoginButton = LoginButton(readPermissions: [.publicProfile, .email])
+    private let alertHelper = AlertViewHelper.shared
+    private let fitbookStore = FitbookLoginStore.shared
     private let processingMessage = "Signing in..."
-    private let gymService = GymAlamoService.shared
+    private let gymStore = GymAlamoStore.shared
     @IBOutlet weak var mapView: MKMapView!
 
-    func gymServiceCallback() -> GymAlamoService.Callback {
+    func gymStoreCallback() -> GymAlamoStore.Callback {
         return { ( result: [Gym]) in
             for gym in result {
                 if let anno = gym.getAnnotation() {
                     self.mapView.addAnnotation(anno)
                 }
             }
-            self.mapKitDelegate.stopUpdating()
+            self.mapKitHelper.stopUpdating()
         }
     }
 
     @IBAction func findCloseGym(_ sender: UIButton) {
-        let parameters = mapKitDelegate.getLocationRequest(mapView: mapView)
-        gymService.searchByLocation(
-            parameters: parameters, callback: gymServiceCallback())
+        let parameters = mapKitHelper.getLocationRequest(mapView: mapView)
+        gymStore.searchByLocation(
+                parameters: parameters, callback: gymStoreCallback())
     }
 
     func facebookLoginSuccess() {
-        alertService.showProcess(processingMessage, self)
-        fitbookService.fitbookLoginAfterFacebookSuccess(loginProtocol: self)
+        alertHelper.showProcess(processingMessage, self)
+        fitbookStore.fitbookLoginAfterFacebookSuccess(loginDelegate: self)
     }
 
     func facebookLoginFailed() {
-        alertService.showError("Facebook login has been cancelled", self)
+        alertHelper.showError("Facebook login has been cancelled", self)
     }
 
     func fitbookLogin() {
         loginButton.isHidden = true
         restoreLoggedTabs()
-        alertService.closeProcess(controller: self)
+        alertHelper.closeProcess(controller: self)
 
     }
 
@@ -81,14 +81,14 @@ class MapViewController: UIViewController, FacebookLoginResultProtocol, FitbookL
 
     func fitbookLogout(_ manual: Bool?) {
         if manual ?? false {
-            alertService.showInfo("Logged out", self)
+            alertHelper.showInfo("Logged out", self)
             LoginManager().logOut()
-            fitbookService.manualLogout()
+            fitbookStore.manualLogout()
         }
         loginButton.isHidden = false
         removeLoggedTabs()
         if manual ?? true {
-            alertService.closeProcess(controller: self)
+            alertHelper.closeProcess(controller: self)
         }
     }
 
@@ -101,7 +101,7 @@ class MapViewController: UIViewController, FacebookLoginResultProtocol, FitbookL
         loginButtonFrame.size.height = FacebookButtonCoords.height
         loginButton.frame = loginButtonFrame
         loginButton.center = CGPoint(x: view.center.x, y: yCoord)
-        loginDelegate = FacebookLoginService(loginResultProtocol: self)
+        loginDelegate = FacebookLoginStore(loginDelegate: self)
         loginButton.delegate = loginDelegate
         return loginButton
     }
@@ -117,11 +117,11 @@ class MapViewController: UIViewController, FacebookLoginResultProtocol, FitbookL
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        alertService.showProcess(processingMessage, self)
+        alertHelper.showProcess(processingMessage, self)
         view.addSubview(setLoginButton())
         self.initialTabBarViewControllers = self.tabBarController?.viewControllers
-        fitbookService.checkLogin(loginProtocol: self)
-        mapKitDelegate.initMap(mapView: mapView)
+        fitbookStore.checkLogin(loginDelegate: self)
+        mapKitHelper.initMap(mapView: mapView)
     }
 
 }

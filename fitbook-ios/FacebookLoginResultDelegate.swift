@@ -1,5 +1,5 @@
 //
-//  FitbookLoginProtocol.swift
+//  LoginSuccessProtocol.swift
 //  fitbook-ios
 //
 //  Created by Eryk Mariankowski on 09.06.2017.
@@ -8,7 +8,8 @@
 
 import Foundation
 
-protocol FitbookLoginProtocol {
-    func fitbookLogout(_: Bool?)
-    func fitbookLogin()
+protocol FacebookLoginResultDelegate: class {
+    func facebookLoginSuccess()
+
+    func facebookLoginFailed()
 }

@@ -1,5 +1,5 @@
 //
-//  MapKitDelegate.swift
+//  MapKitHelper.swift
 //  fitbook-ios
 //
 //  Created by Eryk Mariankowski on 10.06.2017.
@@ -8,7 +8,7 @@
 
 import MapKit
 
-class MapKitDelegate: NSObject, MKMapViewDelegate {
+class MapKitHelper: NSObject, MKMapViewDelegate {
 
     let locationManager: CLLocationManager
 
@@ -21,7 +21,7 @@ class MapKitDelegate: NSObject, MKMapViewDelegate {
         let bounds = mapView.bounds
         let nw = CGPoint(x: bounds.origin.x + bounds.size.width, y: bounds.origin.y)
         let se = CGPoint(x: bounds.origin.x,
-                         y: bounds.origin.y + bounds.size.height)
+                y: bounds.origin.y + bounds.size.height)
         let nwCoord = mapView.convert(nw, toCoordinateFrom: mapView)
         let seCoord = mapView.convert(se, toCoordinateFrom: mapView)
         let nwLocation = Location(coord: nwCoord)
@@ -44,9 +44,7 @@ class MapKitDelegate: NSObject, MKMapViewDelegate {
         if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
             mapView.showsUserLocation = true
             mapView.delegate = self
-            DispatchQueue.main.async {
-                self.locationManager.startUpdatingLocation()
-            }
+            self.locationManager.startUpdatingLocation()
         } else if firstTime {
             locationManager.requestWhenInUseAuthorization()
             initLocationWithPermission(mapView: mapView, firstTime: false)

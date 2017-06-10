@@ -1,5 +1,5 @@
 //
-//  GymService.swift
+//  GymAlamoStore.swift
 //  fitbook-ios
 //
 //  Created by Eryk Mariankowski on 10.06.2017.
@@ -11,22 +11,22 @@ import Alamofire
 import AlamofireObjectMapper
 import SwiftyJSON
 
-class GymAlamoService: AlamoService {
+class GymAlamoStore: AlamoStore {
 
-    static let shared = GymAlamoService()
+    static let shared = GymAlamoStore()
     typealias Callback = ([Gym]) -> Void
 
-    func searchByLocation(parameters: GymRequestParameters, callback : @escaping Callback) {
+    func searchByLocation(parameters: GymRequestParameters, callback: @escaping Callback) {
         let url: URLConvertible = self.constructUrl(endpoint: "v1/gyms/find")
         let parameters: Parameters? = parameters.toJSON()
         Alamofire.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default)
-            .responseArray { (response: DataResponse<[Gym]>) in
-                if response.result.isSuccess {
-                    callback(response.result.value!)
-                } else {
-                    print(response.result.debugDescription)
+                .responseArray { (response: DataResponse<[Gym]>) in
+                    if response.result.isSuccess {
+                        callback(response.result.value!)
+                    } else {
+                        print(response.result.debugDescription)
+                    }
                 }
-        }
     }
 
 }

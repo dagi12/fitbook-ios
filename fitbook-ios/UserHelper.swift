@@ -1,5 +1,5 @@
 //
-//  UserContext.swift
+//  UserHelper.swift
 //  fitbook-ios
 //
 //  Created by Eryk Mariankowski on 09.06.2017.
@@ -8,15 +8,15 @@
 
 import Foundation
 
-class UserContext {
+class UserHelper {
 
-    static let sharedInstance = UserContext()
-    let defaultsService = UserDefaultsService.shared
+    static let shared = UserHelper()
+    let defaultsStore = UserDefaultsStore.shared
     var fitbookResult: FitbookLoginResult?
     var loginPending = false
 
     init() {
-        self.fitbookResult = defaultsService.getFitbookResult()
+        self.fitbookResult = defaultsStore.getFitbookResult()
     }
 
     func getUser() -> User? {
@@ -32,12 +32,12 @@ class UserContext {
 
     func removeUser() {
         self.fitbookResult = nil
-        defaultsService.removeFitbookResult()
+        defaultsStore.removeFitbookResult()
     }
 
-    func setContext(fitbookResult: FitbookLoginResult) {
+    func setUser(fitbookResult: FitbookLoginResult) {
         self.fitbookResult = fitbookResult
-        defaultsService.setFitbookResult(fitbookResult: fitbookResult)
+        defaultsStore.setFitbookResult(fitbookResult: fitbookResult)
     }
 
 }

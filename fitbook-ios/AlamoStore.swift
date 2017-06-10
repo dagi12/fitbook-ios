@@ -1,5 +1,5 @@
 //
-//  AlamoService.swift
+//  AlamoStore.swift
 //  fitbook-ios
 //
 //  Created by Eryk Mariankowski on 09.06.2017.
@@ -8,10 +8,10 @@
 
 import Foundation
 
-class AlamoService {
+class AlamoStore {
 
     let URL = "http://fitbook-api.herokuapp.com/api/"
-    let userContext = UserContext.sharedInstance
+    let userHelper = UserHelper.shared
 
     typealias SwiftyJsonResult = [[String: Any]]
 
@@ -20,8 +20,8 @@ class AlamoService {
     }
 
     func getHeader() -> [String: String] {
-        if (userContext.isLogged()) {
-            return ["Authorization": "Bearer " + userContext.fitbookResult!.token!]
+        if userHelper.isLogged() {
+            return ["Authorization": "Bearer " + userHelper.fitbookResult!.token!]
         }
         return [:]
     }
