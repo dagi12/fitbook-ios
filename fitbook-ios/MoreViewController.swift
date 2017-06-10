@@ -7,21 +7,46 @@
 //
 
 import UIKit
+import Kingfisher
 
 class MoreViewController: UITableViewController {
 
+    let userHelper = UserHelper.shared
+    let imageHelper = ImageUIHelper.shared
+    let fitbookStringHelper = FitbookStringHelper.shared
+
+    @IBOutlet weak var profileImage: UIImageView!
+    @IBOutlet weak var username: UILabel!
+    @IBOutlet weak var role: UILabel!
     @IBAction func logOutClick(_ sender: UIButton) {
         if let viewController = self.tabBarController as? ViewController {
             viewController.logoutFromMore()
         }
     }
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    private func setImage() {
+        if let picture = userHelper.getUser()?.images?.picture {
+            self.profileImage.kf.setImage(with: URL(string: picture))
+        }
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+    private func setUserLabels() {
+        if let user = userHelper.getUser() {
+            role.text = fitbookStringHelper.getRole(isTrainer: user.isTrainer!)
+            username.text = user.name
+        }
+    }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        imageHelper.setRoundedImage(imageView: self.profileImage)
+        setImage()
+        setUserLabels()
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
     }
 
 }

@@ -13,7 +13,6 @@ class UserHelper {
     static let shared = UserHelper()
     let defaultsStore = UserDefaultsStore.shared
     var fitbookResult: FitbookLoginResult?
-    var loginPending = false
 
     init() {
         self.fitbookResult = defaultsStore.getFitbookResult()

@@ -28,6 +28,7 @@ class User: NSObject, NSCoding, Mappable {
         aCoder.encode(identifier, forKey: "id")
         aCoder.encode(images, forKey: "images")
         aCoder.encode(email, forKey: "email")
+        aCoder.encode(isTrainer, forKey: "is_trainer")
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -35,6 +36,7 @@ class User: NSObject, NSCoding, Mappable {
         self.email = aDecoder.decodeObject(forKey: "email") as? String
         self.images = aDecoder.decodeObject(forKey: "images") as? ImagePair
         self.identifier = aDecoder.decodeObject(forKey: "id") as? Int
+        self.isTrainer = aDecoder.decodeObject(forKey: "is_trainer") as? Bool
     }
 
     required init?(map: Map) {
@@ -44,7 +46,7 @@ class User: NSObject, NSCoding, Mappable {
     func mapping(map: Map) {
         phone <- map["phone"]
         email <- map["email"]
-        isTrainer <- map["trainer"]
+        isTrainer <- map["is_trainer"]
 
         facebookId <- map["facebook_id"]
         createdAt <- map["created_at"]

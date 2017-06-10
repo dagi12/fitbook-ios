@@ -16,6 +16,7 @@ target 'fitbook-ios' do
   pod 'ObjectMapper', '~> 2.0'
   pod 'AlamofireObjectMapper', '~> 4.1.0'
   pod 'SwiftyJSON', '~> 3.1.4'
+  pod 'Kingfisher', '~> 3.10.1'
 
   # Pods for fitbook-ios
 
