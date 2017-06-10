@@ -18,6 +18,7 @@ struct FacebookButtonCoords {
 class MapViewController: UIViewController, FacebookLoginResultProtocol, FitbookLoginProtocol {
 
     var loginDelegate: LoginButtonDelegate?
+    var initialTabBarViewControllers: [UIViewController]?
     let loginButton: LoginButton = LoginButton(readPermissions: [ .publicProfile, .email ])
     let alertService = AlertViewService.sharedInstance
     let fitbookService = FitbookLoginService.shared
@@ -38,12 +39,31 @@ class MapViewController: UIViewController, FacebookLoginResultProtocol, FitbookL
 
     func fitbookLogin() {
         loginButton.isHidden = true
+        restoreLoggedTabs()
         alertService.closeProcess(controller: self)
 
     }
 
+    func restoreLoggedTabs() {
+        self.tabBarController?.viewControllers = initialTabBarViewControllers
+    }
+
+    func removeLoggedTabs() {
+        if let tabBarController = self.tabBarController {
+            if let viewControllers = tabBarController.viewControllers {
+                let lenCondition = 4
+                if lenCondition < viewControllers.count {
+                    var viewControllers = tabBarController.viewControllers
+                    viewControllers?.remove(at: 4)
+                    viewControllers?.remove(at: 3)
+                    tabBarController.viewControllers = viewControllers                }
+            }
+        }
+    }
+
     func fitbookLogout() {
         loginButton.isHidden = false
+        removeLoggedTabs()
         alertService.closeProcess(controller: self)
     }
 
@@ -70,6 +90,7 @@ class MapViewController: UIViewController, FacebookLoginResultProtocol, FitbookL
         super.viewDidLoad()
         alertService.showProcess(processingMessage, self)
         view.addSubview(setLoginButton())
+        self.initialTabBarViewControllers = self.tabBarController?.viewControllers
         fitbookService.checkLogin(loginProtocol: self)
     }
 
