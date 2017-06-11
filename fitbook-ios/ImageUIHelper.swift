@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class ImageUIHelper {
 
@@ -15,5 +16,17 @@ class ImageUIHelper {
     func setRoundedImage(imageView: UIImageView) {
         imageView.layer.cornerRadius = imageView.frame.size.width / 2
         imageView.clipsToBounds = true
+    }
+
+    func setImageCellReload(cell: UITableViewCell, url: String, indexPath: IndexPath, tableView: UITableView) {
+        cell.imageView?.kf.setImage(
+            with: URL(string: url),
+            placeholder: nil,
+            options: nil,
+            progressBlock: nil,
+            completionHandler: {(_, _, _, _) -> Void in
+                tableView.reloadRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
+            }
+        )
     }
 }

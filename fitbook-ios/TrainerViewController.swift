@@ -8,5 +8,5 @@
 
 import UIKit
 
-class TrainerViewController: UIViewController {
+class TrainerViewController: UITableViewController {
 }

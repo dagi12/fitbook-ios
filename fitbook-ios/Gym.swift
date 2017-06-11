@@ -15,10 +15,12 @@ class Gym: Mappable {
     var about: String?
     var description: String?
     var webstite: String?
+    var images: ImagePair?
     var name: String?
     var location: Location?
 
     func mapping(map: Map) {
+        images <- map["images"]
         identifier <- map["id"]
         name <- map["name"]
         about <- map["about"]

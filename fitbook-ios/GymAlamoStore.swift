@@ -28,4 +28,22 @@ class GymAlamoStore: AlamoStore {
                 }
     }
 
+    func myGyms(callback: @escaping Callback) {
+        let url: URLConvertible = self.constructUrl(endpoint: "v1/me/gyms")
+        Alamofire.request(
+            url, method: HTTPMethod.get, parameters: nil,
+            encoding: JSONEncoding.default, headers: getHeader())
+            .responseArray { (response: DataResponse<[GymJoinResilt]>) in
+                if response.result.isSuccess {
+                    var gyms: [Gym] = []
+                    for gymJoin in response.result.value! {
+                        gyms.append(gymJoin.gym!)
+                    }
+                    callback(gyms)
+                } else {
+                    print(response.result.debugDescription)
+                }
+        }
+    }
+
 }

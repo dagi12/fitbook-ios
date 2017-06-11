@@ -11,6 +11,8 @@
 		6377A4092DDD4F54FBDF8304 /* Pods_fitbook_iosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BD9B8235962A57DE5F3B523 /* Pods_fitbook_iosTests.framework */; };
 		8E03B3311EECA0BE00933500 /* ImageUIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E03B3301EECA0BE00933500 /* ImageUIHelper.swift */; };
 		8E03B3331EECA3E400933500 /* FitbookStringHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E03B3321EECA3E400933500 /* FitbookStringHelper.swift */; };
+		8E03B3361EECB7F700933500 /* MyGymsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E03B3351EECB7F700933500 /* MyGymsViewController.swift */; };
+		8E03B3381EECBD5F00933500 /* GymJoinResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E03B3371EECBD5F00933500 /* GymJoinResult.swift */; };
 		8E07F4351EEBF55C008572D4 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E07F4341EEBF55C008572D4 /* MoreViewController.swift */; };
 		8E07F4371EEC1D8E008572D4 /* MapKitHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E07F4361EEC1D8E008572D4 /* MapKitHelper.swift */; };
 		8E07F43A1EEC35A4008572D4 /* GymAlamoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E07F4391EEC35A4008572D4 /* GymAlamoStore.swift */; };
@@ -73,6 +75,8 @@
 		831D8269665DEC42207F6359 /* Pods_fitbook_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fitbook_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E03B3301EECA0BE00933500 /* ImageUIHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageUIHelper.swift; sourceTree = "<group>"; };
 		8E03B3321EECA3E400933500 /* FitbookStringHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FitbookStringHelper.swift; sourceTree = "<group>"; };
+		8E03B3351EECB7F700933500 /* MyGymsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyGymsViewController.swift; sourceTree = "<group>"; };
+		8E03B3371EECBD5F00933500 /* GymJoinResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GymJoinResult.swift; sourceTree = "<group>"; };
 		8E07F4341EEBF55C008572D4 /* MoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		8E07F4361EEC1D8E008572D4 /* MapKitHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapKitHelper.swift; sourceTree = "<group>"; };
 		8E07F4391EEC35A4008572D4 /* GymAlamoStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GymAlamoStore.swift; sourceTree = "<group>"; };
@@ -179,6 +183,14 @@
 			name = ui;
 			sourceTree = "<group>";
 		};
+		8E03B3341EECB6AA00933500 /* myGyms */ = {
+			isa = PBXGroup;
+			children = (
+				8E03B3351EECB7F700933500 /* MyGymsViewController.swift */,
+			);
+			name = myGyms;
+			sourceTree = "<group>";
+		};
 		8E07F4331EEBF542008572D4 /* more */ = {
 			isa = PBXGroup;
 			children = (
@@ -195,6 +207,7 @@
 				8E07F43D1EEC3AB5008572D4 /* Location.swift */,
 				8E07F43F1EEC3D07008572D4 /* GymRequestParameters.swift */,
 				8E07F4411EEC3DD7008572D4 /* LocationRequest.swift */,
+				8E03B3371EECBD5F00933500 /* GymJoinResult.swift */,
 			);
 			name = gym;
 			sourceTree = "<group>";
@@ -281,6 +294,7 @@
 		8EE604BD1EEAAD150022CD82 /* main */ = {
 			isa = PBXGroup;
 			children = (
+				8E03B3341EECB6AA00933500 /* myGyms */,
 				8E07F4331EEBF542008572D4 /* more */,
 				8EE604D21EEABC830022CD82 /* trainer */,
 				8EE604C31EEAAE3F0022CD82 /* search */,
@@ -678,6 +692,7 @@
 				8E07F4401EEC3D07008572D4 /* GymRequestParameters.swift in Sources */,
 				8EE604FB1EEB23C30022CD82 /* FacebookToken.swift in Sources */,
 				8EE604D41EEABC8E0022CD82 /* TrainerViewController.swift in Sources */,
+				8E03B3361EECB7F700933500 /* MyGymsViewController.swift in Sources */,
 				8EE604F71EEB1CCC0022CD82 /* FitbookAlamoStore.swift in Sources */,
 				8E07F43E1EEC3AB5008572D4 /* Location.swift in Sources */,
 				8E07F4371EEC1D8E008572D4 /* MapKitHelper.swift in Sources */,
@@ -692,6 +707,7 @@
 				8E07F43A1EEC35A4008572D4 /* GymAlamoStore.swift in Sources */,
 				8EE604DB1EEAD5560022CD82 /* FitbookLoginStore.swift in Sources */,
 				8E07F43C1EEC3865008572D4 /* Gym.swift in Sources */,
+				8E03B3381EECBD5F00933500 /* GymJoinResult.swift in Sources */,
 				8EE604EF1EEB033C0022CD82 /* UserDefaultsStore.swift in Sources */,
 				8EE604EA1EEAF3DF0022CD82 /* AlertViewHelper.swift in Sources */,
 				8E07F4421EEC3DD7008572D4 /* LocationRequest.swift in Sources */,
