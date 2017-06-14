@@ -9,4 +9,40 @@
 import UIKit
 
 class TrainerViewController: UITableViewController {
+
+    private let trainerStore = TrainerAlamoStore.shared
+    private let imageHelper = ImageUIHelper.shared
+    private var trainers: [Trainer] = []
+
+    private func trainerStoreCallback() -> TrainerAlamoStore.Callback {
+        return { (result: [Trainer]) in
+            self.trainers = result
+            self.tableView.reloadData()
+        }
+    }
+
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return trainers.count
+    }
+
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TrainerCell", for: indexPath)
+        let trainer = trainers[indexPath.row]
+        cell.textLabel?.text = trainer.name
+        cell.imageView!.image = UIImage(named: "Trainer")
+        if let picture = trainer.images?.picture {
+            imageHelper.setImageCellReload(cell: cell, url: picture, indexPath: indexPath, tableView: tableView)
+        }
+        return cell
+    }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        trainerStore.getTrainers(callback: trainerStoreCallback())
+    }
+
 }
