@@ -10,7 +10,7 @@ import MapKit
 
 class MapKitHelper: NSObject, MKMapViewDelegate {
 
-    let locationManager: CLLocationManager
+    var locationManager: CLLocationManager?
 
     override init() {
         locationManager = CLLocationManager()
@@ -29,8 +29,12 @@ class MapKitHelper: NSObject, MKMapViewDelegate {
         return GymRequestParameters(LocationRequest(nwLocation, seLocation))
     }
 
-    func stopUpdating() {
-        locationManager.stopUpdatingLocation()
+    func stopUpdating(mapView: MKMapView) {
+        if let manager = self.locationManager {
+            manager.stopUpdatingLocation()
+            mapView.delegate = nil
+            locationManager = nil
+        }
     }
 
     func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
@@ -44,15 +48,15 @@ class MapKitHelper: NSObject, MKMapViewDelegate {
         if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
             mapView.showsUserLocation = true
             mapView.delegate = self
-            self.locationManager.startUpdatingLocation()
+            self.locationManager!.startUpdatingLocation()
         } else if firstTime {
-            locationManager.requestWhenInUseAuthorization()
+            locationManager!.requestWhenInUseAuthorization()
             initLocationWithPermission(mapView: mapView, firstTime: false)
         }
     }
 
     func initMap(mapView: MKMapView) {
-        locationManager.startUpdatingLocation()
+        locationManager!.startUpdatingLocation()
         initLocationWithPermission(mapView: mapView, firstTime: true)
     }
 

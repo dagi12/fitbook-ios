@@ -35,7 +35,7 @@ class MapViewController: UIViewController, FacebookLoginResultDelegate, FitbookL
                     self.mapView.addAnnotation(anno)
                 }
             }
-            self.mapKitHelper.stopUpdating()
+            self.mapKitHelper.stopUpdating(mapView: self.mapView)
         }
     }
 
