@@ -29,7 +29,7 @@
 		8E19E00C1EE9DF470085084D /* fitbook_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E19E00B1EE9DF470085084D /* fitbook_iosUITests.swift */; };
 		8E19E01A1EEA03A90085084D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E19E0191EEA03A90085084D /* MapKit.framework */; };
 		8E530C6C1EF15CA300092D04 /* TrainerAlamoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E530C6B1EF15CA300092D04 /* TrainerAlamoStore.swift */; };
-		8E530C6E1EF15CFC00092D04 /* Trainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E530C6D1EF15CFC00092D04 /* Trainer.swift */; };
+		8E530C701EF17FF600092D04 /* Trainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E530C6F1EF17FF600092D04 /* Trainer.swift */; };
 		8EAEEF781EEB3CD600D51F7A /* FitbookAlamoServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAEEF771EEB3CD600D51F7A /* FitbookAlamoServiceTest.swift */; };
 		8EE604CB1EEAAF820022CD82 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE604CA1EEAAF820022CD82 /* SearchViewController.swift */; };
 		8EE604D11EEAB1AA0022CD82 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE604D01EEAB1AA0022CD82 /* MapViewController.swift */; };
@@ -101,7 +101,7 @@
 		8E19E00D1EE9DF470085084D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8E19E0191EEA03A90085084D /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		8E530C6B1EF15CA300092D04 /* TrainerAlamoStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainerAlamoStore.swift; sourceTree = "<group>"; };
-		8E530C6D1EF15CFC00092D04 /* Trainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trainer.swift; sourceTree = "<group>"; };
+		8E530C6F1EF17FF600092D04 /* Trainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trainer.swift; sourceTree = "<group>"; };
 		8EAEEF771EEB3CD600D51F7A /* FitbookAlamoServiceTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FitbookAlamoServiceTest.swift; sourceTree = "<group>"; };
 		8EE604CA1EEAAF820022CD82 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		8EE604D01EEAB1AA0022CD82 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -332,7 +332,7 @@
 			children = (
 				8EE604D31EEABC8E0022CD82 /* TrainerViewController.swift */,
 				8E530C6B1EF15CA300092D04 /* TrainerAlamoStore.swift */,
-				8E530C6D1EF15CFC00092D04 /* Trainer.swift */,
+				8E530C6F1EF17FF600092D04 /* Trainer.swift */,
 			);
 			name = trainer;
 			sourceTree = "<group>";
@@ -717,7 +717,7 @@
 				8EE604EF1EEB033C0022CD82 /* UserDefaultsStore.swift in Sources */,
 				8EE604EA1EEAF3DF0022CD82 /* AlertViewHelper.swift in Sources */,
 				8E530C6C1EF15CA300092D04 /* TrainerAlamoStore.swift in Sources */,
-				8E530C6E1EF15CFC00092D04 /* Trainer.swift in Sources */,
+				8E530C701EF17FF600092D04 /* Trainer.swift in Sources */,
 				8E07F4421EEC3DD7008572D4 /* LocationRequest.swift in Sources */,
 				8EE604DF1EEAD74C0022CD82 /* User.swift in Sources */,
 			);

@@ -23,6 +23,14 @@ class FitbookLoginStore {
         return true
     }
 
+    func checkFitbookRefreshExpired() -> Bool {
+        if let iss = userHelper.fitbookResult?.iss {
+            let currentTime = NSDate().timeIntervalSince1970
+            return Double(iss) - currentTime < 0
+        }
+        return true
+    }
+
     func checkFacebookSessionExpired() -> Bool {
         if let token = AccessToken.current {
             let currentTime = NSDate().timeIntervalSince1970
@@ -52,9 +60,20 @@ class FitbookLoginStore {
         }
     }
 
+    func fitbookRefereshAfterFacebookSuccess(loginDelegate: FitbookLoginDelegate) {
+        if AccessToken.current?.authenticationToken != nil {
+            fitbookAlamoStore.refresh(
+                callback: loginCallback(loginDelegate: loginDelegate))
+        } else {
+            fatalError("tokenString is nil")
+        }
+    }
+
     func onlineLoginCheck(loginDelegate: FitbookLoginDelegate) {
         if !checkFitbookSessionExpired() {
             loginDelegate.fitbookLogin()
+        } else if !checkFitbookRefreshExpired() {
+            fitbookRefereshAfterFacebookSuccess(loginDelegate: loginDelegate)
         } else if !checkFacebookSessionExpired() {
             fitbookLoginAfterFacebookSuccess(loginDelegate: loginDelegate)
         } else {

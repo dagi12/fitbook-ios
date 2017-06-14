@@ -27,4 +27,16 @@ class FitbookAlamoStore: AlamoStore {
                 }
     }
 
+    func refresh(callback: @escaping Callback) {
+        let url: URLConvertible = self.constructUrl(endpoint: "auth/refresh")
+        Alamofire.request(url, method: .put, parameters: nil, encoding: JSONEncoding.default, headers: getHeader())
+            .responseObject { (response: DataResponse<FitbookLoginResult>) in
+                if response.result.isSuccess {
+                    callback(response.result.value!)
+                } else {
+                    print(response.result.debugDescription)
+                }
+        }
+    }
+
 }
