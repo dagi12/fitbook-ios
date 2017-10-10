@@ -41,11 +41,11 @@
                                 <rect key="frame" x="0.0" y="56" width="375" height="88"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CAG-nH-EMS" id="gHP-Pv-qzR">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="87.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="87"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="a3Y-0X-OGe">
-                                            <rect key="frame" x="15" y="0.0" width="345" height="87.5"/>
+                                            <rect key="frame" x="16" y="0.0" width="344" height="87"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -169,6 +169,11 @@
                                     <action selector="findCloseGym:" destination="jn2-5b-jmn" eventType="touchUpInside" id="ufE-uh-VAX"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dV7-1z-8Gy" customClass="LoginButton" customModule="FacebookLogin">
+                                <rect key="frame" x="36" y="542" width="302" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -180,6 +185,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Mapa" image="Map" id="Xmq-ZK-f11" userLabel="Map"/>
                     <connections>
+                        <outlet property="loginButtonView" destination="dV7-1z-8Gy" id="Csx-KD-biE"/>
                         <outlet property="mapView" destination="1Xb-pj-Vb9" id="Mfn-XG-9N2"/>
                     </connections>
                 </viewController>
@@ -200,11 +206,11 @@
                                 <rect key="frame" x="0.0" y="56" width="375" height="89"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Jdf-p7-OsI" id="yTd-MD-hxr">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="88.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="88"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kud-UI-lT2">
-                                            <rect key="frame" x="15" y="0.0" width="345" height="88.5"/>
+                                            <rect key="frame" x="15" y="0.0" width="345" height="88"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
