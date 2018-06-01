@@ -18,11 +18,10 @@ struct FacebookButtonCoords {
 
 class MapViewController: UIViewController, FacebookLoginResultDelegate, FitbookLoginDelegate {
 
-    @IBOutlet weak var loginButtonView: LoginButton!
-
     private var loginDelegate: LoginButtonDelegate?
     private let mapKitHelper = MapKitHelper()
     private var initialTabBarViewControllers: [UIViewController]?
+    private let loginButton: LoginButton = LoginButton(readPermissions: [.publicProfile, .email])
     private let alertHelper = AlertViewHelper.shared
     private let fitbookStore = FitbookLoginStore.shared
     private let processingMessage = "Signing in..."
@@ -56,7 +55,7 @@ class MapViewController: UIViewController, FacebookLoginResultDelegate, FitbookL
     }
 
     func fitbookLogin() {
-        loginButtonView.isHidden = true
+        loginButton.isHidden = true
         restoreLoggedTabs()
         alertHelper.closeProcess(controller: self)
 
@@ -86,7 +85,7 @@ class MapViewController: UIViewController, FacebookLoginResultDelegate, FitbookL
             LoginManager().logOut()
             fitbookStore.manualLogout()
         }
-        loginButtonView.isHidden = false
+        loginButton.isHidden = false
         removeLoggedTabs()
         if manual ?? true {
             alertHelper.closeProcess(controller: self)
@@ -94,9 +93,17 @@ class MapViewController: UIViewController, FacebookLoginResultDelegate, FitbookL
     }
 
     func setLoginButton() -> LoginButton {
+        let frameHeight = UIScreen.main.bounds.height
+        let buttonHeight = loginButton.frame.height
+        let yCoord = frameHeight - buttonHeight - FacebookButtonCoords.marginBottom
+        var loginButtonFrame = loginButton.frame
+        loginButtonFrame.size.width = FacebookButtonCoords.width
+        loginButtonFrame.size.height = FacebookButtonCoords.height
+        loginButton.frame = loginButtonFrame
+        loginButton.center = CGPoint(x: view.center.x, y: yCoord)
         loginDelegate = FacebookLoginStore(loginDelegate: self)
-        loginButtonView.delegate = loginDelegate
-        return loginButtonView
+        loginButton.delegate = loginDelegate
+        return loginButton
     }
 
     override func viewDidLoad() {

@@ -103,6 +103,7 @@
 		8E530C6B1EF15CA300092D04 /* TrainerAlamoStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainerAlamoStore.swift; sourceTree = "<group>"; };
 		8E530C6F1EF17FF600092D04 /* Trainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trainer.swift; sourceTree = "<group>"; };
 		8EAEEF771EEB3CD600D51F7A /* FitbookAlamoServiceTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FitbookAlamoServiceTest.swift; sourceTree = "<group>"; };
+		8EC9983320C1720000B48255 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		8EE604CA1EEAAF820022CD82 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		8EE604D01EEAB1AA0022CD82 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		8EE604D31EEABC8E0022CD82 /* TrainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainerViewController.swift; sourceTree = "<group>"; };
@@ -219,6 +220,7 @@
 		8E19DFDF1EE9DF470085084D = {
 			isa = PBXGroup;
 			children = (
+				8EC9983320C1720000B48255 /* README.md */,
 				8E19DFEA1EE9DF470085084D /* fitbook-ios */,
 				8E19DFFF1EE9DF470085084D /* fitbook-iosTests */,
 				8E19E00A1EE9DF470085084D /* fitbook-iosUITests */,
@@ -400,6 +402,7 @@
 				8449EC67BA5F2B90DED15686 /* [CP] Check Pods Manifest.lock */,
 				8E19DFE41EE9DF470085084D /* Sources */,
 				8E19DFE51EE9DF470085084D /* Frameworks */,
+				8EC9983420C17C3200B48255 /* Increase build number */,
 				8E19DFE61EE9DF470085084D /* Resources */,
 				5F75CA44D26AF7A12C213ABF /* [CP] Embed Pods Frameworks */,
 				44CEA7A7B7E9A2D61323C1CB /* [CP] Copy Pods Resources */,
@@ -620,6 +623,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\" --config \".swiftlint.yml\"";
+		};
+		8EC9983420C17C3200B48255 /* Increase build number */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Increase build number";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "buildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\")\nbuildNumber=$(($buildNumber + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\"";
 		};
 		C67F68927B68C9DACFC44331 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;

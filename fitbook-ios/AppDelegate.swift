@@ -22,13 +22,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 .application(application, didFinishLaunchingWithOptions: launchOptions)
         return true
     }
-
-    @available(iOS, deprecated: 9.0)
-    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
-        return SDKApplicationDelegate.shared.application(application,
-                open: url,
-                sourceApplication: sourceApplication,
-                annotation: annotation)
+    
+    // swiftlint:disable all
+    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+        return SDKApplicationDelegate.shared.application(app,
+                                                         open: url,
+                                                         sourceApplication: (options[.sourceApplication] as? String),
+                                                         annotation: options[.annotation])
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
