@@ -13,10 +13,9 @@ hasło: haslohaslo123
 - .gitignore x
 - swiftlint 1h 7min
 - remove uiTests 20min
+- responsywny button facebooka 1h 30m
 
 ## To do
-- inne joby erent-ceo-ios
-- responsywny button facebooka
 - conversion to swift4
 - internationalization
 - swiftlint and compiler warnings
@@ -45,6 +44,7 @@ hasło: haslohaslo123
     - swiftlint if production
     - autocorrect everytime 
     - remove uitests
+    - fabric
 - if offline populate offline (realtime) otherwise download online (background) and save (background)
 - zapisywanie danych w bazie danych i dostępność offline
 

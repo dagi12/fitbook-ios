@@ -26,7 +26,9 @@ class MapViewController: UIViewController, FacebookLoginResultDelegate, FitbookL
     private let fitbookStore = FitbookLoginStore.shared
     private let processingMessage = "Signing in..."
     private let gymStore = GymAlamoStore.shared
+
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var facebookView: UIView!
 
     func gymStoreCallback() -> GymAlamoStore.Callback {
         return { ( result: [Gym]) in
@@ -92,24 +94,17 @@ class MapViewController: UIViewController, FacebookLoginResultDelegate, FitbookL
         }
     }
 
-    func setLoginButton() -> LoginButton {
-        let frameHeight = UIScreen.main.bounds.height
-        let buttonHeight = loginButton.frame.height
-        let yCoord = frameHeight - buttonHeight - FacebookButtonCoords.marginBottom
-        var loginButtonFrame = loginButton.frame
-        loginButtonFrame.size.width = FacebookButtonCoords.width
-        loginButtonFrame.size.height = FacebookButtonCoords.height
-        loginButton.frame = loginButtonFrame
-        loginButton.center = CGPoint(x: view.center.x, y: yCoord)
-        loginDelegate = FacebookLoginStore(loginDelegate: self)
-        loginButton.delegate = loginDelegate
-        return loginButton
-    }
-
     override func viewDidLoad() {
         super.viewDidLoad()
+        loginDelegate = FacebookLoginStore(loginDelegate: self)
+        loginButton.delegate = loginDelegate
+        loginButton.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+
+        loginButton.frame.size.width = facebookView.frame.width
+        loginButton.frame.size.height = facebookView.frame.height
+
+        facebookView.addSubview(loginButton)
         alertHelper.showProcess(processingMessage, self)
-        view.addSubview(setLoginButton())
         self.initialTabBarViewControllers = self.tabBarController?.viewControllers
         fitbookStore.checkLogin(loginDelegate: self)
         mapKitHelper.initMap(mapView: mapView)
