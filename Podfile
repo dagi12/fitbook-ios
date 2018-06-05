@@ -27,9 +27,4 @@ target 'fitbook-ios' do
     # Pods for testing
   end
 
-  target 'fitbook-iosUITests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
 end

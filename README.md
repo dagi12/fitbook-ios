@@ -11,10 +11,10 @@ hasło: haslohaslo123
 # Zrobione
 - auto incremental builds x
 - .gitignore x
-- swiftlint x
+- swiftlint 1h 7min
+- remove uiTests 20min
 
 ## To do
-- remove uiTests
 - inne joby erent-ceo-ios
 - responsywny button facebooka
 - conversion to swift4
