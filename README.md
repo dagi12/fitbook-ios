@@ -8,15 +8,21 @@ client_id nowy: 2019415104973479
 login: 669446713
 hasło: haslohaslo123
 
+# Zrobione
+- auto incremental builds x
+- .gitignore x
+- swiftlint x
+
 ## To do
-- auto incremental builds
-- .gitignore
-- swiftlint
-- integracja z eryk-android-common
+- remove uiTests
 - inne joby erent-ceo-ios
 - responsywny button facebooka
+- conversion to swift4
+- internationalization
+- swiftlint and compiler warnings
+- integracja z eryk-android-common
 - get rid of force !! assertions
-- log ->clodgger
+- log -> xclodgger
 - wprowadź rxswift
 - mutablelist -> list
 - enable crashanalyzer
@@ -36,6 +42,9 @@ hasło: haslohaslo123
     - auto incremental builds
     - usuń correct i kill, zamiast tego skrypty z README
     - gitignore
+    - swiftlint if production
+    - autocorrect everytime 
+    - remove uitests
 - if offline populate offline (realtime) otherwise download online (background) and save (background)
 - zapisywanie danych w bazie danych i dostępność offline
 

@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 .application(application, didFinishLaunchingWithOptions: launchOptions)
         return true
     }
-    
+
     // swiftlint:disable all
     func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
         return SDKApplicationDelegate.shared.application(app,

@@ -4,6 +4,8 @@ platform :ios, '9.0'
 target 'fitbook-ios' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
+  inhibit_all_warnings!
+ 
   pod 'Bolts'
   pod 'SwiftLint', '~> 0.19.0'
   pod 'FacebookCore', '~> 0.2'
