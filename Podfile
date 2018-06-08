@@ -1,5 +1,5 @@
 # Uncomment the next line to define a global platform for your project
-platform :ios, '9.0'
+platform :ios, '10.0'
 
 target 'fitbook-ios' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
@@ -11,11 +11,10 @@ target 'fitbook-ios' do
   pod 'FacebookCore', '~> 0.3'
   pod 'FacebookLogin', '~> 0.3'
   pod 'FacebookShare', '~> 0.3'
-  pod 'Alamofire', '~> 4.1'
-  pod 'ObjectMapper', '~> 2.0'
-  pod 'AlamofireObjectMapper', '~> 4.1.0'
+  pod 'ObjectMapper', '~> 3.0.0'
+  pod 'AlamofireObjectMapper', '~> 5.0.0'
   pod 'SwiftyJSON', '~> 3.1.4'
-  pod 'Kingfisher', '~> 3.10.1'
+  pod 'ErykIosCommon', :path => './ErykIosCommon'
 
   # Pods for fitbook-ios
 

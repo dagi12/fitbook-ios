@@ -1,14 +1,24 @@
 PODS:
-  - Alamofire (4.4.0)
-  - AlamofireObjectMapper (4.1.0):
+  - Alamofire (4.5.1)
+  - AlamofireObjectMapper (5.0.0):
     - Alamofire (~> 4.1)
-    - ObjectMapper (~> 2.0)
+    - ObjectMapper (~> 3.0)
   - Bolts (1.8.4):
     - Bolts/AppLinks (= 1.8.4)
     - Bolts/Tasks (= 1.8.4)
   - Bolts/AppLinks (1.8.4):
     - Bolts/Tasks
   - Bolts/Tasks (1.8.4)
+  - ErykIosCommon (0.2.0):
+    - Alamofire (~> 4.5.1)
+    - Kingfisher (~> 4.1.0)
+    - Moya/RxSwift (~> 10.0.0)
+    - RxSwift (~> 4.0.0)
+    - SkyFloatingLabelTextField (~> 3.2.1)
+    - Swinject (~> 2.1.1)
+    - SwinjectAutoregistration (~> 2.1.1)
+    - SwinjectStoryboard (~> 1.1.2)
+    - Whisper (~> 6.0.2)
   - FacebookCore (0.3.0):
     - Bolts (~> 1.8)
     - FBSDKCoreKit (~> 4.27)
@@ -28,38 +38,65 @@ PODS:
     - FBSDKCoreKit
   - FBSDKShareKit (4.30.0):
     - FBSDKCoreKit (~> 4.30.0)
-  - Kingfisher (3.10.1)
-  - ObjectMapper (2.2.7)
+  - Kingfisher (4.1.1)
+  - Moya/Core (10.0.2):
+    - Alamofire (~> 4.1)
+    - Result (~> 3.0)
+  - Moya/RxSwift (10.0.2):
+    - Moya/Core
+    - RxSwift (~> 4.0)
+  - ObjectMapper (3.0.0)
+  - Result (3.2.4)
+  - RxSwift (4.0.0)
+  - SkyFloatingLabelTextField (3.2.1)
   - SwiftLint (0.19.0)
   - SwiftyJSON (3.1.4)
+  - Swinject (2.1.1)
+  - SwinjectAutoregistration (2.1.1):
+    - Swinject (~> 2.1)
+  - SwinjectStoryboard (1.1.2):
+    - Swinject (~> 2.1)
+  - Whisper (6.0.2)
 
 DEPENDENCIES:
-  - Alamofire (~> 4.1)
-  - AlamofireObjectMapper (~> 4.1.0)
+  - AlamofireObjectMapper (~> 5.0.0)
   - Bolts
+  - ErykIosCommon (from `./ErykIosCommon`)
   - FacebookCore (~> 0.3)
   - FacebookLogin (~> 0.3)
   - FacebookShare (~> 0.3)
-  - Kingfisher (~> 3.10.1)
-  - ObjectMapper (~> 2.0)
+  - ObjectMapper (~> 3.0.0)
   - SwiftLint (~> 0.19.0)
   - SwiftyJSON (~> 3.1.4)
 
+EXTERNAL SOURCES:
+  ErykIosCommon:
+    :path: ./ErykIosCommon
+
 SPEC CHECKSUMS:
-  Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
-  AlamofireObjectMapper: 435adc82f5b367679bd9e71c4974a54efd0b2521
+  Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
+  AlamofireObjectMapper: 5fafc816351cbbc0d486611aaeba7461c0cbad49
   Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
+  ErykIosCommon: 7b416582db2dddbfae2c2e2f62c6e9bc61e56dc6
   FacebookCore: 3ffa190a3f1f96cec0e44d3fc221bc322c595ffa
   FacebookLogin: 0af839ea858faef99550d16596b87b4a8e8906e6
   FacebookShare: 0469964297ebd75f052be2c5083389a4208e82b7
   FBSDKCoreKit: 7c4bba2877781a131ab5d54c0a78c405d4307b62
   FBSDKLoginKit: fe7a7e82373dc5daad92e1623219e86224ab1fb1
   FBSDKShareKit: a9427574b51bde4f437262c3f118c4ccfddeef6c
-  Kingfisher: 33a1b82140fcb14a9fc13f78dfde2a03ff8de8cb
-  ObjectMapper: 65abcfd9a61cf7396cbd14a4fb22fddfcc46577e
+  Kingfisher: 6793a473357b5dbee42b0068ef203fe8325f259e
+  Moya: 2b0531a9fef318e0bc484030c3db1e6f279ccb66
+  ObjectMapper: 92230db59bf8f341a5c3a3cf0b9fbdde3cf0d87f
+  Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
+  RxSwift: fd680d75283beb5e2559486f3c0ff852f0d35334
+  SkyFloatingLabelTextField: 71d28906024e7d7e4460099b342f3ca7036a2e24
   SwiftLint: 3537a05b34060e78e7510f04fb7537d738247803
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
+  Swinject: afea49fd95f392b41171669f165842879c48fad6
+  SwinjectAutoregistration: d06b56bd8f912b9fb9c59c15181342558a734b1b
+  SwinjectStoryboard: 92e75763c3299cdf627bef98a5180dc894864336
+  Whisper: 169760fc4bab0abf24d5529f9276f95c25cf1025
 
-PODFILE CHECKSUM: 77e372e94173cdc2b8ecdc8ec8429a3118def054
+PODFILE CHECKSUM: d95917e620c267fd36d88c578f763f8df919f56c
 
 COCOAPODS: 1.4.0

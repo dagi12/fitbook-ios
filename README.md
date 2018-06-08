@@ -14,11 +14,15 @@ hasło: haslohaslo123
 - swiftlint 1h 7min
 - remove uiTests 20min
 - responsywny button facebooka 1h 30m
-- conversion to swift4
+- conversion to swift4 12min
+- integracja z ErykiosCommon 39min
+- git submodule X 
+- pod dependency X
+- tidy dependencies X
+- tidy duplicated classes X
+- deployment target 10 x
 
 ## To do
-- integracja z eryk-android-common
-- deployment target 10
 - internationalization
 - dep update
 - launchscreen

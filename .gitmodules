@@ -1,0 +1,3 @@
+[submodule "ErykIosCommon"]
+	path = ErykIosCommon
+	url = git@github.com:dagi12/ErykIosCommon.git
