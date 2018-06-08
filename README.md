@@ -14,12 +14,15 @@ hasło: haslohaslo123
 - swiftlint 1h 7min
 - remove uiTests 20min
 - responsywny button facebooka 1h 30m
+- conversion to swift4
 
 ## To do
-- conversion to swift4
-- internationalization
-- swiftlint and compiler warnings
 - integracja z eryk-android-common
+- deployment target 10
+- internationalization
+- dep update
+- launchscreen
+- swiftlint and compiler warnings
 - get rid of force !! assertions
 - log -> xclodgger
 - wprowadź rxswift
@@ -45,6 +48,7 @@ hasło: haslohaslo123
     - autocorrect everytime 
     - remove uitests
     - fabric
+    - bash script with rename
 - if offline populate offline (realtime) otherwise download online (background) and save (background)
 - zapisywanie danych w bazie danych i dostępność offline
 
