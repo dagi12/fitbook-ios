@@ -1,0 +1,21 @@
+
+/* Class = "UITabBarItem"; title = "My gyms"; ObjectID = "O8r-ss-3mg"; */
+"O8r-ss-3mg.title" = "Moje siłownie";
+
+/* Class = "UITabBarItem"; title = "Mapa"; ObjectID = "Xmq-ZK-f11"; */
+"Xmq-ZK-f11.title" = "Mapa";
+
+/* Class = "UILabel"; text = "Role"; ObjectID = "ZeQ-Hd-y5a"; */
+"ZeQ-Hd-y5a.text" = "Role";
+
+/* Class = "UITabBarItem"; title = "Trainer"; ObjectID = "iug-Tt-JdF"; */
+"iug-Tt-JdF.title" = "Trener";
+
+/* Class = "UIButton"; normalTitle = "Log Out"; ObjectID = "ns1-sp-CHq"; */
+"ns1-sp-CHq.normalTitle" = "Wyloguj";
+
+/* Class = "UIButton"; normalTitle = "Find gym close to me"; ObjectID = "qyu-xS-s2D"; */
+"qyu-xS-s2D.normalTitle" = "Znajdź siłownie w pobliżu";
+
+/* Class = "UILabel"; text = "Username"; ObjectID = "w2y-2r-E6g"; */
+"w2y-2r-E6g.text" = "Nazwa użytkownika";
