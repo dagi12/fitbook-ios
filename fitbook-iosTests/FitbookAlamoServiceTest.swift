@@ -18,8 +18,8 @@ class FitbookAlamoServiceTest: XCTestCase {
     }
     
     func testExample() {
-        service.login(token: FacebookToken(token: "A1312"), callback: handleResult)
-        
+//        service.login(token: FacebookToken(token: "A1312"), callback: handleResult)
+    
     }
     
 }

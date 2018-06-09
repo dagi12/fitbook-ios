@@ -26,21 +26,24 @@ hasło: haslohaslo123
 - alamostro -> moya x 1h
 - create APIs x 1h
 - mark signed APIs x 30min
+- get rid off alamostore, wprowadź swift x 3h
+- ukryj frame'a wraz z przcysikiem x 15min
+- compiler warnings x 30min
 
 ## To do
-- get rid off alamostore, wprowadź rxswift
-- shared -> swinject
 - dep update
+- nie updateuj pozycji
+- shared -> swinject
 - launchscreen
-- swiftlint and compiler warnings
+- swiftlint
 - mvvm
 - log -> xclodgger
 - get rid of force !! assertions
 - mutablelist -> list
-- enable crashanalyzer
+- enable crashanalyzer (crashlytics)
 - global checkFacebookFromCallbackFailure() on 401
 - Activity indicators for long operations
-- delete interfaces
+- delete delegates
 - enable core data
     - stackoverflow.com/questions/2032818 
     - medium.com/@shawnbierman/how-to-add-core-data-to-an-existing-xcode-8-and-swift-3-project-508781b3e1c4

@@ -6,7 +6,7 @@
 //  Copyright © 2017 Eryk Mariankowski. All rights reserved.
 //
 
-import Foundation
+import ErykIosCommon
 
 struct Keys {
     static let fitbookUserKey = "FITBOOK_USER_KEY"
@@ -32,7 +32,9 @@ class UserDefaultsStore {
             if let castedData = data as? Data {
                 if let wrapper = NSKeyedUnarchiver.unarchiveObject(with: castedData) {
                     if let resultWrapper = wrapper as? FitbookLoginResultWrapper {
-                        return resultWrapper.fitbookLoginResult
+                        let result = resultWrapper.fitbookLoginResult
+                        BaseUrlStore.sharedInstance.token = result?.token
+                        return result
                     }
                 }
             }

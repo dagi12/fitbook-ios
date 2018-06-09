@@ -8,17 +8,17 @@
 import UIKit
 import Kingfisher
 import ErykIosCommon
+import RxSwift
 
 class MyGymsViewController: UITableViewController {
 
     private let gymStore = GymStore.shared
     private var gyms: [Gym] = []
+    private let bag = DisposeBag()
 
-    private func gymStoreCallback() -> GymStore.Callback {
-        return { (result: [Gym]) in
-            self.gyms = result
-            self.tableView.reloadData()
-        }
+    private func gymStoreCallback(result: [Gym]) {
+        self.gyms = result
+        self.tableView.reloadData()
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -42,7 +42,9 @@ class MyGymsViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        gymStore.myGyms(callback: gymStoreCallback())
+        gymStore.myGyms()
+            .subscribe(onSuccess: gymStoreCallback)
+            .disposed(by: bag)
     }
 
 }

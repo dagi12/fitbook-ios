@@ -5,30 +5,18 @@
 //  Created by Eryk Mariankowski on 14.06.2017.
 //  Copyright © 2017 Eryk Mariankowski. All rights reserved.
 //
+import RxSwift
+import ErykIosCommon
+import Moya_ObjectMapper
 
-import Foundation
-import Alamofire
-import AlamofireObjectMapper
-
-class TrainerStore: AlamoStore {
+class TrainerStore: BaseTokenStore<TrainerApi> {
 
     static let shared = TrainerStore()
 
-    typealias Callback = ([Trainer]) -> Void
-
-    func getTrainers(callback: @escaping Callback) {
-        let url: URLConvertible = self.constructUrl(endpoint: "v1/users/trainers")
-        Alamofire.request(url,
-                          method: HTTPMethod.get,
-                          parameters: nil,
-                          encoding: JSONEncoding.default)
-            .responseArray { (response: DataResponse<[Trainer]>) in
-                if response.result.isSuccess {
-                    callback(response.result.value!)
-                } else {
-                    print(response.result.debugDescription)
-                }
-        }
+    func getTrainers()-> Single<[Trainer]> {
+        return provider.rx
+            .request(.trainers)
+            .mapArray(Trainer.self)
     }
 
 }

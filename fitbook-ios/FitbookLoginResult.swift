@@ -40,4 +40,5 @@ class FitbookLoginResult: NSObject, NSCoding, Mappable {
         exp <- map["exp"]
         iss <- map["iss"]
     }
+
 }

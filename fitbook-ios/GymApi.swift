@@ -27,9 +27,9 @@ extension GymApi: BaseTargetType, AccessTokenAuthorizable {
     var path: String {
         switch self {
         case .myGyms:
-            return "v1/gyms/find"
-        case .searchByLocation:
             return "v1/me/gyms"
+        case .searchByLocation:
+            return "v1/gyms/find"
         }
     }
 

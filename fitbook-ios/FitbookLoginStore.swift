@@ -8,12 +8,14 @@
 
 import QuartzCore
 import FacebookCore
+import RxSwift
 
 class FitbookLoginStore {
 
     static let shared = FitbookLoginStore()
+    let bag = DisposeBag()
     let userHelper = UserHelper.shared
-    let fitbookAlamoStore = FitbookStore.shared
+    let fitbookStore = FitbookStore.shared
 
     func checkFitbookSessionExpired() -> Bool {
         if let exp = userHelper.fitbookResult?.exp {
@@ -43,30 +45,22 @@ class FitbookLoginStore {
         userHelper.removeUser()
     }
 
-    func loginCallback(loginDelegate: FitbookLoginDelegate) -> FitbookStore.Callback {
-        return { (result: FitbookLoginResult) in
-            self.userHelper.setUser(fitbookResult: result)
-            loginDelegate.fitbookLogin()
-        }
-    }
-
     func fitbookLoginAfterFacebookSuccess(loginDelegate: FitbookLoginDelegate) {
-        if let tokenString = AccessToken.current?.authenticationToken {
-            fitbookAlamoStore.login(
-                    token: FacebookToken(token: tokenString),
-                    callback: loginCallback(loginDelegate: loginDelegate))
-        } else {
-            fatalError("tokenString is nil")
-        }
+        fitbookStore
+            .login(token: FacebookToken(token: AccessToken.current!.authenticationToken))
+            .subscribe(onSuccess: {
+                self.userHelper.setUser(fitbookResult: $0)
+                loginDelegate.fitbookLogin()
+        }).disposed(by: bag)
     }
 
     func fitbookRefereshAfterFacebookSuccess(loginDelegate: FitbookLoginDelegate) {
-        if AccessToken.current?.authenticationToken != nil {
-            fitbookAlamoStore.refresh(
-                callback: loginCallback(loginDelegate: loginDelegate))
-        } else {
-            fatalError("tokenString is nil")
-        }
+        fitbookStore
+            .refresh()
+            .subscribe(onSuccess: {
+                self.userHelper.setUser(fitbookResult: $0)
+                loginDelegate.fitbookLogin()
+            }).disposed(by: bag)
     }
 
     func onlineLoginCheck(loginDelegate: FitbookLoginDelegate) {

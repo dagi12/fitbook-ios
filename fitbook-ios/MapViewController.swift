@@ -9,6 +9,7 @@
 import Foundation
 import FacebookLogin
 import MapKit
+import RxSwift
 
 struct FacebookButtonCoords {
     static let marginBottom = CGFloat(120)
@@ -26,25 +27,26 @@ class MapViewController: UIViewController, FacebookLoginResultDelegate, FitbookL
     private let fitbookStore = FitbookLoginStore.shared
     private let processingMessage = "Signing in..."
     private let gymStore = GymStore.shared
+    private let bag = DisposeBag()
 
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var facebookView: UIView!
 
-    func gymStoreCallback() -> GymStore.Callback {
-        return { ( result: [Gym]) in
-            for gym in result {
-                if let anno = gym.getAnnotation() {
-                    self.mapView.addAnnotation(anno)
-                }
+    func gymStoreCallback( result: [Gym]) {
+        for gym in result {
+            if let anno = gym.getAnnotation() {
+                self.mapView.addAnnotation(anno)
             }
-            self.mapKitHelper.stopUpdating(mapView: self.mapView)
         }
+        self.mapKitHelper.stopUpdating(mapView: self.mapView)
     }
 
     @IBAction func findCloseGym(_ sender: UIButton) {
         let parameters = mapKitHelper.getLocationRequest(mapView: mapView)
-        gymStore.searchByLocation(
-                parameters: parameters, callback: gymStoreCallback())
+        gymStore
+            .searchByLocation(parameters: parameters)
+            .subscribe(onSuccess: gymStoreCallback)
+            .disposed(by: bag)
     }
 
     func facebookLoginSuccess() {
@@ -57,7 +59,7 @@ class MapViewController: UIViewController, FacebookLoginResultDelegate, FitbookL
     }
 
     func fitbookLogin() {
-        loginButton.isHidden = true
+        facebookView.isHidden = true
         restoreLoggedTabs()
         alertHelper.closeProcess(controller: self)
 
@@ -87,7 +89,7 @@ class MapViewController: UIViewController, FacebookLoginResultDelegate, FitbookL
             LoginManager().logOut()
             fitbookStore.manualLogout()
         }
-        loginButton.isHidden = false
+        facebookView.isHidden = false
         removeLoggedTabs()
         if manual ?? true {
             alertHelper.closeProcess(controller: self)

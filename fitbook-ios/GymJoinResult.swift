@@ -8,7 +8,7 @@
 
 import ObjectMapper
 
-class GymJoinResilt: Mappable {
+class GymJoinResult: Mappable {
 
     var approved: Bool?
     var gym: Gym?

@@ -8,18 +8,12 @@
 
 import UIKit
 import ErykIosCommon
+import RxSwift
 
 class TrainerViewController: UITableViewController {
 
     private let trainerStore = TrainerStore.shared
     private var trainers: [Trainer] = []
-
-    private func trainerStoreCallback() -> TrainerStore.Callback {
-        return { (result: [Trainer]) in
-            self.trainers = result
-            self.tableView.reloadData()
-        }
-    }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return trainers.count
@@ -42,7 +36,14 @@ class TrainerViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        trainerStore.getTrainers(callback: trainerStoreCallback())
+        trainerStore
+            .getTrainers()
+            .subscribe(onSuccess: {
+            self.trainers = $0
+            self.tableView.reloadData()
+        }).disposed(by: bag)
     }
+
+    private let bag = DisposeBag()
 
 }

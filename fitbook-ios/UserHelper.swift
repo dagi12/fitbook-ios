@@ -5,6 +5,7 @@
 //  Created by Eryk Mariankowski on 09.06.2017.
 //  Copyright © 2017 Eryk Mariankowski. All rights reserved.
 //
+import ErykIosCommon
 
 class UserHelper {
 
@@ -34,6 +35,7 @@ class UserHelper {
 
     func setUser(fitbookResult: FitbookLoginResult) {
         self.fitbookResult = fitbookResult
+        BaseUrlStore.sharedInstance.token = fitbookResult.token
         defaultsStore.setFitbookResult(fitbookResult: fitbookResult)
     }
 
