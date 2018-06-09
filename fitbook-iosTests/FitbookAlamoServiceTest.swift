@@ -11,7 +11,7 @@ import XCTest
 
 class FitbookAlamoServiceTest: XCTestCase {
     
-    let service = FitbookAlamoStore.shared
+    let service = FitbookStore.shared
     
     func handleResult(result: FitbookLoginResult) {
         XCTAssertNotNil(result.user?.images?.cover)

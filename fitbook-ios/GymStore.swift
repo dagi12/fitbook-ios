@@ -10,9 +10,9 @@ import Alamofire
 import AlamofireObjectMapper
 import SwiftyJSON
 
-class GymAlamoStore: AlamoStore {
+class GymStore: AlamoStore {
 
-    static let shared = GymAlamoStore()
+    static let shared = GymStore()
     typealias Callback = ([Gym]) -> Void
 
     func searchByLocation(parameters: GymRequestParameters, callback: @escaping Callback) {

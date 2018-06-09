@@ -25,12 +25,12 @@ class MapViewController: UIViewController, FacebookLoginResultDelegate, FitbookL
     private let alertHelper = AlertViewHelper.shared
     private let fitbookStore = FitbookLoginStore.shared
     private let processingMessage = "Signing in..."
-    private let gymStore = GymAlamoStore.shared
+    private let gymStore = GymStore.shared
 
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var facebookView: UIView!
 
-    func gymStoreCallback() -> GymAlamoStore.Callback {
+    func gymStoreCallback() -> GymStore.Callback {
         return { ( result: [Gym]) in
             for gym in result {
                 if let anno = gym.getAnnotation() {

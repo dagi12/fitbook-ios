@@ -11,10 +11,10 @@ import ErykIosCommon
 
 class TrainerViewController: UITableViewController {
 
-    private let trainerStore = TrainerAlamoStore.shared
+    private let trainerStore = TrainerStore.shared
     private var trainers: [Trainer] = []
 
-    private func trainerStoreCallback() -> TrainerAlamoStore.Callback {
+    private func trainerStoreCallback() -> TrainerStore.Callback {
         return { (result: [Trainer]) in
             self.trainers = result
             self.tableView.reloadData()

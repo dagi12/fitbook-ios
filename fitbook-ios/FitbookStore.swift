@@ -9,9 +9,9 @@
 import Alamofire
 import AlamofireObjectMapper
 
-class FitbookAlamoStore: AlamoStore {
+class FitbookStore: AlamoStore {
 
-    static let shared = FitbookAlamoStore()
+    static let shared = FitbookStore()
     typealias Callback = (FitbookLoginResult) -> Void
 
     func login(token: FacebookToken, callback: @escaping Callback) {

@@ -10,9 +10,9 @@ import Foundation
 import Alamofire
 import AlamofireObjectMapper
 
-class TrainerAlamoStore: AlamoStore {
+class TrainerStore: AlamoStore {
 
-    static let shared = TrainerAlamoStore()
+    static let shared = TrainerStore()
 
     typealias Callback = ([Trainer]) -> Void
 

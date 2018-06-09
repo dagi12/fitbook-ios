@@ -13,7 +13,7 @@ class FitbookLoginStore {
 
     static let shared = FitbookLoginStore()
     let userHelper = UserHelper.shared
-    let fitbookAlamoStore = FitbookAlamoStore.shared
+    let fitbookAlamoStore = FitbookStore.shared
 
     func checkFitbookSessionExpired() -> Bool {
         if let exp = userHelper.fitbookResult?.exp {
@@ -43,7 +43,7 @@ class FitbookLoginStore {
         userHelper.removeUser()
     }
 
-    func loginCallback(loginDelegate: FitbookLoginDelegate) -> FitbookAlamoStore.Callback {
+    func loginCallback(loginDelegate: FitbookLoginDelegate) -> FitbookStore.Callback {
         return { (result: FitbookLoginResult) in
             self.userHelper.setUser(fitbookResult: result)
             loginDelegate.fitbookLogin()
