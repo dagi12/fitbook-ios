@@ -1,53 +1,52 @@
 PODS:
-  - Alamofire (4.5.1)
-  - AlamofireObjectMapper (5.0.0):
-    - Alamofire (~> 4.1)
-    - ObjectMapper (~> 3.0)
-  - Bolts (1.8.4):
-    - Bolts/AppLinks (= 1.8.4)
-    - Bolts/Tasks (= 1.8.4)
-  - Bolts/AppLinks (1.8.4):
+  - Alamofire (4.7.2)
+  - Bolts (1.9.0):
+    - Bolts/AppLinks (= 1.9.0)
+    - Bolts/Tasks (= 1.9.0)
+  - Bolts/AppLinks (1.9.0):
     - Bolts/Tasks
-  - Bolts/Tasks (1.8.4)
+  - Bolts/Tasks (1.9.0)
   - ErykIosCommon (0.2.0):
-    - Alamofire (~> 4.5.1)
-    - Kingfisher (~> 4.1.0)
-    - Moya/RxSwift (~> 10.0.0)
-    - RxSwift (~> 4.0.0)
-    - SkyFloatingLabelTextField (~> 3.2.1)
-    - Swinject (~> 2.1.1)
+    - Alamofire (~> 4.7.2)
+    - Kingfisher (~> 4.8.0)
+    - Moya-ObjectMapper/RxSwift (= 2.5)
+    - Moya/RxSwift (= 10.0.2)
+    - ObjectMapper (= 3.0.0)
+    - RxSwift (= 4.0.0)
+    - SkyFloatingLabelTextField (~> 3.5.1)
+    - Swinject (~> 2.4.1)
     - SwinjectAutoregistration (~> 2.1.1)
-    - SwinjectStoryboard (~> 1.1.2)
+    - SwinjectStoryboard (~> 2.0.1)
     - Whisper (~> 6.0.2)
-  - FacebookCore (0.3.0):
+  - FacebookCore (0.3.1):
     - Bolts (~> 1.8)
-    - FBSDKCoreKit (~> 4.27)
-  - FacebookLogin (0.3.0):
+    - FBSDKCoreKit (~> 4.33)
+  - FacebookLogin (0.3.1):
     - Bolts (~> 1.8)
-    - FacebookCore (~> 0.3)
-    - FBSDKCoreKit (~> 4.27)
-    - FBSDKLoginKit (~> 4.27)
-  - FacebookShare (0.3.0):
+    - FacebookCore (~> 0.3.1)
+    - FBSDKCoreKit (~> 4.33)
+    - FBSDKLoginKit (~> 4.33)
+  - FacebookShare (0.3.1):
     - Bolts (~> 1.8)
-    - FacebookCore (~> 0.3)
-    - FBSDKCoreKit (~> 4.27)
-    - FBSDKShareKit (~> 4.27)
-  - FBSDKCoreKit (4.30.0):
+    - FacebookCore (~> 0.3.1)
+    - FBSDKCoreKit (~> 4.33)
+    - FBSDKShareKit (~> 4.33)
+  - FBSDKCoreKit (4.33.0):
     - Bolts (~> 1.7)
-  - FBSDKLoginKit (4.30.0):
+  - FBSDKLoginKit (4.33.0):
     - FBSDKCoreKit
-  - FBSDKShareKit (4.30.0):
-    - FBSDKCoreKit (~> 4.30.0)
-  - Kingfisher (4.1.1)
+  - FBSDKShareKit (4.33.0):
+    - FBSDKCoreKit (~> 4.33.0)
+  - Kingfisher (4.8.0)
   - Moya (10.0.2):
     - Moya/Core (= 10.0.2)
-  - Moya-ObjectMapper/Core (2.4.2):
-    - Moya
-    - ObjectMapper
-  - Moya-ObjectMapper/RxSwift (2.4.2):
+  - Moya-ObjectMapper/Core (2.5):
+    - Moya (~> 10.0.0)
+    - ObjectMapper (~> 3.0.0)
+  - Moya-ObjectMapper/RxSwift (2.5):
     - Moya-ObjectMapper/Core
     - Moya/RxSwift
-    - RxSwift
+    - RxSwift (~> 4.0.0)
   - Moya/Core (10.0.2):
     - Alamofire (~> 4.1)
     - Result (~> 3.0)
@@ -57,64 +56,50 @@ PODS:
   - ObjectMapper (3.0.0)
   - Result (3.2.4)
   - RxSwift (4.0.0)
-  - SkyFloatingLabelTextField (3.2.1)
-  - SwiftLint (0.19.0)
-  - SwiftyJSON (3.1.4)
-  - Swinject (2.1.1)
+  - SkyFloatingLabelTextField (3.5.1)
+  - SwiftLint (0.25.1)
+  - Swinject (2.4.1)
   - SwinjectAutoregistration (2.1.1):
     - Swinject (~> 2.1)
-  - SwinjectStoryboard (1.1.2):
-    - Swinject (~> 2.1)
+  - SwinjectStoryboard (2.0.1):
+    - Swinject (~> 2.4)
   - Whisper (6.0.2)
 
 DEPENDENCIES:
-  - AlamofireObjectMapper (~> 5.0.0)
   - Bolts
   - ErykIosCommon (from `./ErykIosCommon`)
   - FacebookCore (~> 0.3)
   - FacebookLogin (~> 0.3)
   - FacebookShare (~> 0.3)
-  - Moya-ObjectMapper/RxSwift (from `https://github.com/dagi12/Moya-ObjectMapper.git`)
-  - ObjectMapper (~> 3.0.0)
-  - SwiftLint (~> 0.19.0)
-  - SwiftyJSON (~> 3.1.4)
+  - SwiftLint (~> 0.25.1)
 
 EXTERNAL SOURCES:
   ErykIosCommon:
     :path: ./ErykIosCommon
-  Moya-ObjectMapper:
-    :git: https://github.com/dagi12/Moya-ObjectMapper.git
-
-CHECKOUT OPTIONS:
-  Moya-ObjectMapper:
-    :commit: 7b0bab9d9fb003ecd6c75486979c32034c8f545e
-    :git: https://github.com/dagi12/Moya-ObjectMapper.git
 
 SPEC CHECKSUMS:
-  Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
-  AlamofireObjectMapper: 5fafc816351cbbc0d486611aaeba7461c0cbad49
-  Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
-  ErykIosCommon: 7b416582db2dddbfae2c2e2f62c6e9bc61e56dc6
-  FacebookCore: 3ffa190a3f1f96cec0e44d3fc221bc322c595ffa
-  FacebookLogin: 0af839ea858faef99550d16596b87b4a8e8906e6
-  FacebookShare: 0469964297ebd75f052be2c5083389a4208e82b7
-  FBSDKCoreKit: 7c4bba2877781a131ab5d54c0a78c405d4307b62
-  FBSDKLoginKit: fe7a7e82373dc5daad92e1623219e86224ab1fb1
-  FBSDKShareKit: a9427574b51bde4f437262c3f118c4ccfddeef6c
-  Kingfisher: 6793a473357b5dbee42b0068ef203fe8325f259e
+  Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
+  Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
+  ErykIosCommon: 54d4561db92f866e9981d86597d7f9e23df79e34
+  FacebookCore: 33078ef1d7d76b73f7e8c990dca7d3ea6db8d22f
+  FacebookLogin: 6f15bf4fefd7a8865abbfa8fcd7f3dfd87aa275f
+  FacebookShare: c9ee8e5399d961fda00ded9befccacfe04fccf93
+  FBSDKCoreKit: 572b047a7e029bc44542bcf8a59414e7ff2b543e
+  FBSDKLoginKit: 88cb456349cfb3b554427ce4f8b43729d85dfb40
+  FBSDKShareKit: 1869cb24db2cea90666a50cb9d568deb38e2d16e
+  Kingfisher: 976d828df2b24834c6a3f2fc4d82cdbd26552be1
   Moya: 2b0531a9fef318e0bc484030c3db1e6f279ccb66
-  Moya-ObjectMapper: 11f6eb088c320e37baab54ed63357d6dacc5aed6
+  Moya-ObjectMapper: 167adf69db0298bf3a19ea05cb9a16ee117c8ef5
   ObjectMapper: 92230db59bf8f341a5c3a3cf0b9fbdde3cf0d87f
   Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
   RxSwift: fd680d75283beb5e2559486f3c0ff852f0d35334
-  SkyFloatingLabelTextField: 71d28906024e7d7e4460099b342f3ca7036a2e24
-  SwiftLint: 3537a05b34060e78e7510f04fb7537d738247803
-  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
-  Swinject: afea49fd95f392b41171669f165842879c48fad6
+  SkyFloatingLabelTextField: 4cbeece9c3aae97c6019d8fae511cb5b755874f7
+  SwiftLint: ce933681be10c3266e82576dad676fa815a602e9
+  Swinject: f7f15a9672e99328c1f07f277091087917215700
   SwinjectAutoregistration: d06b56bd8f912b9fb9c59c15181342558a734b1b
-  SwinjectStoryboard: 92e75763c3299cdf627bef98a5180dc894864336
+  SwinjectStoryboard: ad2529218a1504cc888040ee56c13d7cb1cc7998
   Whisper: 169760fc4bab0abf24d5529f9276f95c25cf1025
 
-PODFILE CHECKSUM: 95a751bfa218fd7b195650fb1cad934dcf9a5ffd
+PODFILE CHECKSUM: 7940d892c41be695b4353f39de72f087d9d78965
 
 COCOAPODS: 1.4.0

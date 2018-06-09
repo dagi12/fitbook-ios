@@ -29,9 +29,9 @@ hasło: haslohaslo123
 - get rid off alamostore, wprowadź swift x 3h
 - ukryj frame'a wraz z przcysikiem x 15min
 - compiler warnings x 30min
+- dep update 1h
 
 ## To do
-- dep update
 - nie updateuj pozycji
 - shared -> swinject
 - launchscreen
