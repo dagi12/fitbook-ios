@@ -8,16 +8,16 @@
 import ObjectMapper
 import Alamofire
 import AlamofireObjectMapper
+import ErykIosCommon
 
 class AlamoStore {
 
-    let URL = "http://fitbook-api.herokuapp.com/api/"
     let userHelper = UserHelper.shared
 
     typealias SwiftyJsonResult = [[String: Any]]
 
     func constructUrl(endpoint: String) -> String {
-        return URL + endpoint
+        return BaseUrlStore.sharedInstance.url!.absoluteString + endpoint
     }
 
     func getHeader() -> [String: String] {

@@ -18,6 +18,7 @@
 		8E07F43E1EEC3AB5008572D4 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E07F43D1EEC3AB5008572D4 /* Location.swift */; };
 		8E07F4401EEC3D07008572D4 /* GymRequestParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E07F43F1EEC3D07008572D4 /* GymRequestParameters.swift */; };
 		8E07F4421EEC3DD7008572D4 /* LocationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E07F4411EEC3DD7008572D4 /* LocationRequest.swift */; };
+		8E16287420CBD69700C9FC45 /* GymApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E16287320CBD69700C9FC45 /* GymApi.swift */; };
 		8E19DFEC1EE9DF470085084D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E19DFEB1EE9DF470085084D /* AppDelegate.swift */; };
 		8E19DFEE1EE9DF470085084D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E19DFED1EE9DF470085084D /* ViewController.swift */; };
 		8E19DFF11EE9DF470085084D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E19DFEF1EE9DF470085084D /* Main.storyboard */; };
@@ -26,6 +27,8 @@
 		8E19E01A1EEA03A90085084D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E19E0191EEA03A90085084D /* MapKit.framework */; };
 		8E530C6C1EF15CA300092D04 /* TrainerAlamoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E530C6B1EF15CA300092D04 /* TrainerAlamoStore.swift */; };
 		8E530C701EF17FF600092D04 /* Trainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E530C6F1EF17FF600092D04 /* Trainer.swift */; };
+		8E7CE6E520CBE47500A8E7F5 /* FitbookApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7CE6E420CBE47500A8E7F5 /* FitbookApi.swift */; };
+		8E7CE6E720CBE75A00A8E7F5 /* TrainerApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7CE6E620CBE75A00A8E7F5 /* TrainerApi.swift */; };
 		8EAEEF781EEB3CD600D51F7A /* FitbookAlamoServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAEEF771EEB3CD600D51F7A /* FitbookAlamoServiceTest.swift */; };
 		8EE604CB1EEAAF820022CD82 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE604CA1EEAAF820022CD82 /* SearchViewController.swift */; };
 		8EE604D11EEAB1AA0022CD82 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE604D01EEAB1AA0022CD82 /* MapViewController.swift */; };
@@ -76,6 +79,7 @@
 		8E07F4411EEC3DD7008572D4 /* LocationRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationRequest.swift; sourceTree = "<group>"; };
 		8E16286B20CBC29300C9FC45 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		8E16286E20CBC36C00C9FC45 /* pl-PL */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pl-PL"; path = "pl-PL.lproj/Main.strings"; sourceTree = "<group>"; };
+		8E16287320CBD69700C9FC45 /* GymApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymApi.swift; sourceTree = "<group>"; };
 		8E19DFE81EE9DF470085084D /* FitBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E19DFEB1EE9DF470085084D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8E19DFED1EE9DF470085084D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -88,6 +92,8 @@
 		8E19E0191EEA03A90085084D /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		8E530C6B1EF15CA300092D04 /* TrainerAlamoStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainerAlamoStore.swift; sourceTree = "<group>"; };
 		8E530C6F1EF17FF600092D04 /* Trainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trainer.swift; sourceTree = "<group>"; };
+		8E7CE6E420CBE47500A8E7F5 /* FitbookApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitbookApi.swift; sourceTree = "<group>"; };
+		8E7CE6E620CBE75A00A8E7F5 /* TrainerApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerApi.swift; sourceTree = "<group>"; };
 		8EAEEF771EEB3CD600D51F7A /* FitbookAlamoServiceTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FitbookAlamoServiceTest.swift; sourceTree = "<group>"; };
 		8EC9983320C1720000B48255 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		8EC9983920C17F6900B48255 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
@@ -192,6 +198,7 @@
 				8E07F43F1EEC3D07008572D4 /* GymRequestParameters.swift */,
 				8E07F4411EEC3DD7008572D4 /* LocationRequest.swift */,
 				8E03B3371EECBD5F00933500 /* GymJoinResult.swift */,
+				8E16287320CBD69700C9FC45 /* GymApi.swift */,
 			);
 			name = gym;
 			sourceTree = "<group>";
@@ -304,6 +311,7 @@
 				8EE604D31EEABC8E0022CD82 /* TrainerViewController.swift */,
 				8E530C6B1EF15CA300092D04 /* TrainerAlamoStore.swift */,
 				8E530C6F1EF17FF600092D04 /* Trainer.swift */,
+				8E7CE6E620CBE75A00A8E7F5 /* TrainerApi.swift */,
 			);
 			name = trainer;
 			sourceTree = "<group>";
@@ -321,6 +329,7 @@
 				8EE604F21EEB11CD0022CD82 /* FitbookLoginDelegate.swift */,
 				8EE604F61EEB1CCC0022CD82 /* FitbookAlamoStore.swift */,
 				8EE604FA1EEB23C30022CD82 /* FacebookToken.swift */,
+				8E7CE6E420CBE47500A8E7F5 /* FitbookApi.swift */,
 			);
 			name = login;
 			sourceTree = "<group>";
@@ -507,6 +516,7 @@
 				"${BUILT_PRODUCTS_DIR}/FacebookShare/FacebookShare.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya-ObjectMapper/Moya_ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
@@ -531,6 +541,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookShare.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya_ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
@@ -661,12 +672,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E7CE6E720CBE75A00A8E7F5 /* TrainerApi.swift in Sources */,
 				8EE604DD1EEAD6A90022CD82 /* UserHelper.swift in Sources */,
 				8EE604F11EEB0BD70022CD82 /* FitbookLoginResultWrapper.swift in Sources */,
 				8E19DFEE1EE9DF470085084D /* ViewController.swift in Sources */,
 				8EE604D91EEAD1060022CD82 /* FacebookLoginResultDelegate.swift in Sources */,
 				8EE604EC1EEB00D20022CD82 /* FitbookLoginResult.swift in Sources */,
 				8E07F4351EEBF55C008572D4 /* MoreViewController.swift in Sources */,
+				8E7CE6E520CBE47500A8E7F5 /* FitbookApi.swift in Sources */,
 				8EE604CB1EEAAF820022CD82 /* SearchViewController.swift in Sources */,
 				8E07F4401EEC3D07008572D4 /* GymRequestParameters.swift in Sources */,
 				8EE604FB1EEB23C30022CD82 /* FacebookToken.swift in Sources */,
@@ -675,6 +688,7 @@
 				8EE604F71EEB1CCC0022CD82 /* FitbookAlamoStore.swift in Sources */,
 				8E07F43E1EEC3AB5008572D4 /* Location.swift in Sources */,
 				8E07F4371EEC1D8E008572D4 /* MapKitHelper.swift in Sources */,
+				8E16287420CBD69700C9FC45 /* GymApi.swift in Sources */,
 				8E03B3331EECA3E400933500 /* FitbookStringHelper.swift in Sources */,
 				8EE604F51EEB1C0C0022CD82 /* AlamoStore.swift in Sources */,
 				8EE604D11EEAB1AA0022CD82 /* MapViewController.swift in Sources */,
@@ -890,7 +904,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "pl.edu.amu.wmi.fitbook-iosTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FitBook.app/FitBook";
 			};
@@ -908,7 +922,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "pl.edu.amu.wmi.fitbook-iosTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FitBook.app/FitBook";
 			};

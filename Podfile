@@ -14,6 +14,7 @@ target 'fitbook-ios' do
   pod 'ObjectMapper', '~> 3.0.0'
   pod 'AlamofireObjectMapper', '~> 5.0.0'
   pod 'SwiftyJSON', '~> 3.1.4'
+  pod 'Moya-ObjectMapper/RxSwift', :git => 'https://github.com/dagi12/Moya-ObjectMapper.git'
   pod 'ErykIosCommon', :path => './ErykIosCommon'
 
   # Pods for fitbook-ios

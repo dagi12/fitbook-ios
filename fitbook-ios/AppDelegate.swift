@@ -8,6 +8,7 @@
 
 import Foundation
 import FacebookCore
+import ErykIosCommon
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,15 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         SDKApplicationDelegate
                 .shared
                 .application(application, didFinishLaunchingWithOptions: launchOptions)
+        BaseUrlStore.sharedInstance.url = URL(string: "http://fitbook-api.herokuapp.com/api/")
         return true
-    }
-
-    // swiftlint:disable all
-    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
-        return SDKApplicationDelegate.shared.application(app,
-                                                         open: url,
-                                                         sourceApplication: (options[.sourceApplication] as? String),
-                                                         annotation: options[.annotation])
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

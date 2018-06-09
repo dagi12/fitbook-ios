@@ -22,32 +22,30 @@ hasło: haslohaslo123
 - tidy duplicated classes X
 - deployment target 10 x
 - common image helper 10 x
+- internationalization 12min
+- alamostro -> moya x 1h
+- create APIs x 1h
+- mark signed APIs x 30min
 
 ## To do
-- internationalization
-- rid of set
-- userdefaults -> core data
-- alamostro -> moya
+- get rid off alamostore, wprowadź rxswift
 - shared -> swinject
 - dep update
 - launchscreen
 - swiftlint and compiler warnings
-- get rid of force !! assertions
+- mvvm
 - log -> xclodgger
-- wprowadź rxswift
+- get rid of force !! assertions
 - mutablelist -> list
 - enable crashanalyzer
 - global checkFacebookFromCallbackFailure() on 401
 - Activity indicators for long operations
 - delete interfaces
-- sharedPreferences -> RxSharedPreferenses
-- SplashActivity
-- Library updates
-    - facebook lib
 - enable core data
     - stackoverflow.com/questions/2032818 
     - medium.com/@shawnbierman/how-to-add-core-data-to-an-existing-xcode-8-and-swift-3-project-508781b3e1c4
-- get rid of sharedPreferences (sqlite)
+    - rid of set
+    - userdefaults -> core data
 - testy
 - podciągnij ios-common-template
     - auto incremental builds
