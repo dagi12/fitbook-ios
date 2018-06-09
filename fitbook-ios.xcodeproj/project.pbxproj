@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		6377A4092DDD4F54FBDF8304 /* Pods_fitbook_iosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BD9B8235962A57DE5F3B523 /* Pods_fitbook_iosTests.framework */; };
-		8E03B3311EECA0BE00933500 /* ImageUIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E03B3301EECA0BE00933500 /* ImageUIHelper.swift */; };
 		8E03B3331EECA3E400933500 /* FitbookStringHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E03B3321EECA3E400933500 /* FitbookStringHelper.swift */; };
 		8E03B3361EECB7F700933500 /* MyGymsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E03B3351EECB7F700933500 /* MyGymsViewController.swift */; };
 		8E03B3381EECBD5F00933500 /* GymJoinResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E03B3371EECBD5F00933500 /* GymJoinResult.swift */; };
@@ -65,7 +64,6 @@
 		25BD4A7D440E64CF845AF9C1 /* Pods-fitbook-iosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fitbook-iosTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-fitbook-iosTests/Pods-fitbook-iosTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5BD9B8235962A57DE5F3B523 /* Pods_fitbook_iosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fitbook_iosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		831D8269665DEC42207F6359 /* Pods_fitbook_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fitbook_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8E03B3301EECA0BE00933500 /* ImageUIHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageUIHelper.swift; sourceTree = "<group>"; };
 		8E03B3321EECA3E400933500 /* FitbookStringHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FitbookStringHelper.swift; sourceTree = "<group>"; };
 		8E03B3351EECB7F700933500 /* MyGymsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyGymsViewController.swift; sourceTree = "<group>"; };
 		8E03B3371EECBD5F00933500 /* GymJoinResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GymJoinResult.swift; sourceTree = "<group>"; };
@@ -162,7 +160,6 @@
 		8E03B32F1EECA0A900933500 /* ui */ = {
 			isa = PBXGroup;
 			children = (
-				8E03B3301EECA0BE00933500 /* ImageUIHelper.swift */,
 				8E03B3321EECA3E400933500 /* FitbookStringHelper.swift */,
 			);
 			name = ui;
@@ -678,7 +675,6 @@
 				8E07F4371EEC1D8E008572D4 /* MapKitHelper.swift in Sources */,
 				8E03B3331EECA3E400933500 /* FitbookStringHelper.swift in Sources */,
 				8EE604F51EEB1C0C0022CD82 /* AlamoStore.swift in Sources */,
-				8E03B3311EECA0BE00933500 /* ImageUIHelper.swift in Sources */,
 				8EE604D11EEAB1AA0022CD82 /* MapViewController.swift in Sources */,
 				8E19DFEC1EE9DF470085084D /* AppDelegate.swift in Sources */,
 				8EE604D71EEAC98D0022CD82 /* FacebookLoginStore.swift in Sources */,

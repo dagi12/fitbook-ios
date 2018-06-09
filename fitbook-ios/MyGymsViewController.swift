@@ -7,11 +7,11 @@
 //
 import UIKit
 import Kingfisher
+import ErykIosCommon
 
 class MyGymsViewController: UITableViewController {
 
     private let gymStore = GymAlamoStore.shared
-    private let imageHelper = ImageUIHelper.shared
     private var gyms: [Gym] = []
 
     private func gymStoreCallback() -> GymAlamoStore.Callback {
@@ -35,7 +35,7 @@ class MyGymsViewController: UITableViewController {
         cell.textLabel?.text = gym.name
         cell.imageView!.image = UIImage(named: "Gym")
         if let picture = gym.images?.picture {
-            imageHelper.setImageCellReload(cell: cell, url: picture, indexPath: indexPath, tableView: tableView)
+            cell.imageReload(url: picture, indexPath: indexPath, tableView: tableView)
         }
         return cell
     }

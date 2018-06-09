@@ -8,11 +8,11 @@
 
 import Foundation
 import Kingfisher
+import ErykIosCommon
 
 class MoreViewController: UITableViewController {
 
     let userHelper = UserHelper.shared
-    let imageHelper = ImageUIHelper.shared
     let fitbookStringHelper = FitbookStringHelper.shared
 
     @IBOutlet weak var profileImage: UIImageView!
@@ -39,7 +39,7 @@ class MoreViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        imageHelper.setRoundedImage(imageView: self.profileImage)
+        self.profileImage.rounded()
         setImage()
         setUserLabels()
     }

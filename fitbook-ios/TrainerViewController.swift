@@ -7,11 +7,11 @@
 //
 
 import UIKit
+import ErykIosCommon
 
 class TrainerViewController: UITableViewController {
 
     private let trainerStore = TrainerAlamoStore.shared
-    private let imageHelper = ImageUIHelper.shared
     private var trainers: [Trainer] = []
 
     private func trainerStoreCallback() -> TrainerAlamoStore.Callback {
@@ -35,7 +35,7 @@ class TrainerViewController: UITableViewController {
         cell.textLabel?.text = trainer.name
         cell.imageView!.image = UIImage(named: "Trainer")
         if let picture = trainer.images?.picture {
-            imageHelper.setImageCellReload(cell: cell, url: picture, indexPath: indexPath, tableView: tableView)
+            cell.imageReload(url: picture, indexPath: indexPath, tableView: tableView)
         }
         return cell
     }

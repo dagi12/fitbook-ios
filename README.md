@@ -21,9 +21,14 @@ hasło: haslohaslo123
 - tidy dependencies X
 - tidy duplicated classes X
 - deployment target 10 x
+- common image helper 10 x
 
 ## To do
 - internationalization
+- rid of set
+- userdefaults -> core data
+- alamostro -> moya
+- shared -> swinject
 - dep update
 - launchscreen
 - swiftlint and compiler warnings
