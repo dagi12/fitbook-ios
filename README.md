@@ -31,10 +31,10 @@ hasło: haslohaslo123
 - compiler warnings x 30min
 - dep update 1h
 - shared -> swinject 30min
+- extract strings
+- launchscreen 25min
 
 ## To do
-- extract strings
-- launchscreen
 - swiftlint
 - mvvm
 - nie updateuj pozycji
@@ -51,6 +51,7 @@ hasło: haslohaslo123
     - rid of set
     - userdefaults -> core data
 - testy
+- theme
 - podciągnij ios-common-template
     - auto incremental builds
     - usuń correct i kill, zamiast tego skrypty z README
