@@ -9,15 +9,16 @@ PODS:
   - ErykIosCommon (0.2.0):
     - Alamofire (~> 4.7.2)
     - Kingfisher (~> 4.8.0)
-    - Moya-ObjectMapper/RxSwift (= 2.5)
-    - Moya/RxSwift (= 10.0.2)
-    - ObjectMapper (= 3.0.0)
-    - RxSwift (= 4.0.0)
+    - Moya-ObjectMapper/RxSwift (~> 2.5)
+    - Moya/RxSwift (~> 10.0.2)
+    - ObjectMapper (~> 3.0.0)
+    - RxSwift (~> 4.0.0)
     - SkyFloatingLabelTextField (~> 3.5.1)
     - Swinject (~> 2.4.1)
     - SwinjectAutoregistration (~> 2.1.1)
     - SwinjectStoryboard (~> 2.0.1)
     - Whisper (~> 6.0.2)
+    - XCGLogger (~> 6.0.2)
   - FacebookCore (0.3.1):
     - Bolts (~> 1.8)
     - FBSDKCoreKit (~> 4.33)
@@ -53,6 +54,9 @@ PODS:
   - Moya/RxSwift (10.0.2):
     - Moya/Core
     - RxSwift (~> 4.0)
+  - ObjcExceptionBridging (1.0.1):
+    - ObjcExceptionBridging/ObjcExceptionBridging (= 1.0.1)
+  - ObjcExceptionBridging/ObjcExceptionBridging (1.0.1)
   - ObjectMapper (3.0.0)
   - Result (3.2.4)
   - RxSwift (4.0.0)
@@ -64,6 +68,10 @@ PODS:
   - SwinjectStoryboard (2.0.1):
     - Swinject (~> 2.4)
   - Whisper (6.0.2)
+  - XCGLogger (6.0.2):
+    - XCGLogger/Core (= 6.0.2)
+  - XCGLogger/Core (6.0.2):
+    - ObjcExceptionBridging
 
 DEPENDENCIES:
   - Bolts
@@ -80,7 +88,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
-  ErykIosCommon: 54d4561db92f866e9981d86597d7f9e23df79e34
+  ErykIosCommon: 6b38af6272555302bed3a4b1a8af99cf33db2146
   FacebookCore: 33078ef1d7d76b73f7e8c990dca7d3ea6db8d22f
   FacebookLogin: 6f15bf4fefd7a8865abbfa8fcd7f3dfd87aa275f
   FacebookShare: c9ee8e5399d961fda00ded9befccacfe04fccf93
@@ -90,6 +98,7 @@ SPEC CHECKSUMS:
   Kingfisher: 976d828df2b24834c6a3f2fc4d82cdbd26552be1
   Moya: 2b0531a9fef318e0bc484030c3db1e6f279ccb66
   Moya-ObjectMapper: 167adf69db0298bf3a19ea05cb9a16ee117c8ef5
+  ObjcExceptionBridging: c30e00eb3700467e695faeea30e26e18bd445001
   ObjectMapper: 92230db59bf8f341a5c3a3cf0b9fbdde3cf0d87f
   Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
   RxSwift: fd680d75283beb5e2559486f3c0ff852f0d35334
@@ -99,6 +108,7 @@ SPEC CHECKSUMS:
   SwinjectAutoregistration: d06b56bd8f912b9fb9c59c15181342558a734b1b
   SwinjectStoryboard: ad2529218a1504cc888040ee56c13d7cb1cc7998
   Whisper: 169760fc4bab0abf24d5529f9276f95c25cf1025
+  XCGLogger: c9601cae9a8912de34a58666ba931ed3d624dd31
 
 PODFILE CHECKSUM: 7940d892c41be695b4353f39de72f087d9d78965
 

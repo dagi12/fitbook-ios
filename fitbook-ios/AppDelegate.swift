@@ -11,13 +11,12 @@ import FacebookCore
 import ErykIosCommon
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
-
-    typealias LaunchOptionsCallback = ([UIApplicationLaunchOptionsKey: Any]?)
+class AppDelegate: ErykAppDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: LaunchOptionsCallback) -> Bool {
+        initialization()
         SDKApplicationDelegate
                 .shared
                 .application(application, didFinishLaunchingWithOptions: launchOptions)
@@ -43,4 +42,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     }
 
+}
+
+func logError(_ error: Error) {
+    log.error(error.localizedDescription)
+//    Crashlytics.sharedInstance().recordError(error)
 }
