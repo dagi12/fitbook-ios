@@ -10,6 +10,7 @@ import FacebookLogin
 
 class FacebookLoginStore: LoginButtonDelegate {
 
+    // swiftlint:disable:next weak_delegate
     let loginDelegate: FacebookLoginResultDelegate
 
     init(loginDelegate: FacebookLoginResultDelegate) {
@@ -20,13 +21,10 @@ class FacebookLoginStore: LoginButtonDelegate {
         switch result {
         case .cancelled:
             loginDelegate.facebookLoginFailed()
-            break
         case .failed:
             loginDelegate.facebookLoginFailed()
-            break
         case .success:
             loginDelegate.facebookLoginSuccess()
-            break
         }
     }
 

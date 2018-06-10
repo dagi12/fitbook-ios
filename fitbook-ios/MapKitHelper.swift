@@ -19,11 +19,11 @@ class MapKitHelper: NSObject, MKMapViewDelegate {
 
     func getLocationRequest(mapView: MKMapView) -> GymRequestParameters {
         let bounds = mapView.bounds
-        let nw = CGPoint(x: bounds.origin.x + bounds.size.width, y: bounds.origin.y)
-        let se = CGPoint(x: bounds.origin.x,
+        let northWest = CGPoint(x: bounds.origin.x + bounds.size.width, y: bounds.origin.y)
+        let southEast = CGPoint(x: bounds.origin.x,
                 y: bounds.origin.y + bounds.size.height)
-        let nwCoord = mapView.convert(nw, toCoordinateFrom: mapView)
-        let seCoord = mapView.convert(se, toCoordinateFrom: mapView)
+        let nwCoord = mapView.convert(northWest, toCoordinateFrom: mapView)
+        let seCoord = mapView.convert(southEast, toCoordinateFrom: mapView)
         let nwLocation = Location(coord: nwCoord)
         let seLocation = Location(coord: seCoord)
         return GymRequestParameters(LocationRequest(nwLocation, seLocation))

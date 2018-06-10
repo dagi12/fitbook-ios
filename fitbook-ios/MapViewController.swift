@@ -19,7 +19,6 @@ struct FacebookButtonCoords {
 
 class MapViewController: UIViewController, FacebookLoginResultDelegate, FitbookLoginDelegate {
 
-    private var loginDelegate: LoginButtonDelegate?
     private let mapKitHelper = MapKitHelper()
     private var initialTabBarViewControllers: [UIViewController]?
     private let loginButton: LoginButton = LoginButton(readPermissions: [.publicProfile, .email])
@@ -99,8 +98,7 @@ class MapViewController: UIViewController, FacebookLoginResultDelegate, FitbookL
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        loginDelegate = FacebookLoginStore(loginDelegate: self)
-        loginButton.delegate = loginDelegate
+        loginButton.delegate = FacebookLoginStore(loginDelegate: self)
         loginButton.autoresizingMask = [.flexibleWidth, .flexibleHeight]
 
         loginButton.frame.size.width = facebookView.frame.width

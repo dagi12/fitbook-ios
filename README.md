@@ -33,18 +33,12 @@ hasło: haslohaslo123
 - shared -> swinject 30min
 - extract strings
 - launchscreen 25min
+- swiftlint 15min
 
 ## To do
-- swiftlint
-- mvvm
-- nie updateuj pozycji
 - log -> xclodgger
 - get rid of force !! assertions
-- mutablelist -> list
 - enable crashanalyzer (crashlytics)
-- global checkFacebookFromCallbackFailure() on 401
-- Activity indicators for long operations
-- delete delegates
 - enable core data
     - stackoverflow.com/questions/2032818 
     - medium.com/@shawnbierman/how-to-add-core-data-to-an-existing-xcode-8-and-swift-3-project-508781b3e1c4
@@ -52,6 +46,10 @@ hasło: haslohaslo123
     - userdefaults -> core data
 - testy
 - theme
+- nie updateuj pozycji
+- global checkFacebookFromCallbackFailure() on 401
+- Activity indicators for long operations
+- delete delegates
 - podciągnij ios-common-template
     - auto incremental builds
     - usuń correct i kill, zamiast tego skrypty z README
@@ -63,6 +61,7 @@ hasło: haslohaslo123
     - bash script with rename
 - if offline populate offline (realtime) otherwise download online (background) and save (background)
 - zapisywanie danych w bazie danych i dostępność offline
+- mvvm
 
 ## Linki
 - gdrive Fitbook

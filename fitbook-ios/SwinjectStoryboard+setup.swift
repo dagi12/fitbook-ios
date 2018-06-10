@@ -13,13 +13,27 @@ import SwinjectAutoregistration
 extension SwinjectStoryboard {
 
     @objc class func setup() {
-        defaultContainer.autoregister(UserDefaultsStore.self, initializer: UserDefaultsStore.init).inObjectScope(.container)
-        defaultContainer.autoregister(AlertViewHelper.self, initializer: AlertViewHelper.init).inObjectScope(.container)
-        defaultContainer.autoregister(GymStore.self, initializer: GymStore.init).inObjectScope(.container)
-        defaultContainer.autoregister(UserHelper.self, initializer: UserHelper.init).inObjectScope(.container)
-        defaultContainer.autoregister(TrainerStore.self, initializer: TrainerStore.init).inObjectScope(.container)
-        defaultContainer.autoregister(FitbookLoginStore.self, initializer: FitbookLoginStore.init).inObjectScope(.container)
-        defaultContainer.autoregister(FitbookStore.self, initializer: FitbookStore.init).inObjectScope(.container)
+        defaultContainer
+            .autoregister(UserDefaultsStore.self, initializer: UserDefaultsStore.init)
+            .inObjectScope(.container)
+        defaultContainer
+            .autoregister(AlertViewHelper.self, initializer: AlertViewHelper.init)
+            .inObjectScope(.container)
+        defaultContainer
+            .autoregister(GymStore.self, initializer: GymStore.init)
+            .inObjectScope(.container)
+        defaultContainer
+            .autoregister(UserHelper.self, initializer: UserHelper.init)
+            .inObjectScope(.container)
+        defaultContainer
+            .autoregister(TrainerStore.self, initializer: TrainerStore.init)
+            .inObjectScope(.container)
+        defaultContainer
+            .autoregister(FitbookLoginStore.self, initializer: FitbookLoginStore.init)
+            .inObjectScope(.container)
+        defaultContainer
+            .autoregister(FitbookStore.self, initializer: FitbookStore.init)
+            .inObjectScope(.container)
 
         defaultContainer.storyboardInitCompleted(MyGymsViewController.self) { res, con in
             con.gymStore = res.resolve(GymStore.self)

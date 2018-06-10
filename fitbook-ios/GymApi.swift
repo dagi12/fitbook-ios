@@ -35,8 +35,8 @@ extension GymApi: BaseTargetType, AccessTokenAuthorizable {
 
     var task: Task {
         switch self {
-          case .searchByLocation(let request):
-                return .requestParameters(parameters: request.toJSON(), encoding: JSONEncoding.default)
+        case .searchByLocation(let request):
+            return .requestParameters(parameters: request.toJSON(), encoding: JSONEncoding.default)
         default:
             return .requestPlain
         }
