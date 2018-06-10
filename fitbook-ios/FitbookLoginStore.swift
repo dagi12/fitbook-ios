@@ -12,10 +12,14 @@ import RxSwift
 
 class FitbookLoginStore {
 
-    static let shared = FitbookLoginStore()
     let bag = DisposeBag()
-    let userHelper = UserHelper.shared
-    let fitbookStore = FitbookStore.shared
+    let userHelper: UserHelper
+    let fitbookStore: FitbookStore
+
+    init(userHelper: UserHelper, fitbookStore: FitbookStore) {
+        self.userHelper = userHelper
+        self.fitbookStore = fitbookStore
+    }
 
     func checkFitbookSessionExpired() -> Bool {
         if let exp = userHelper.fitbookResult?.exp {

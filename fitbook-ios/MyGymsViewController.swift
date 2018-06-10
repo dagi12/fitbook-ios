@@ -12,7 +12,8 @@ import RxSwift
 
 class MyGymsViewController: UITableViewController {
 
-    private let gymStore = GymStore.shared
+    var gymStore: GymStore!
+
     private var gyms: [Gym] = []
     private let bag = DisposeBag()
 

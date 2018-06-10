@@ -19,8 +19,6 @@ class AlertViewHelper {
         static let height = 50
     }
 
-    static let shared = AlertViewHelper()
-
     func showError(_ message: String, _ controller: UIViewController) {
         let alertController = UIAlertController(
                 title: "Błąd", message: message, preferredStyle: UIAlertControllerStyle.alert)

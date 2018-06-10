@@ -30,13 +30,14 @@ hasło: haslohaslo123
 - ukryj frame'a wraz z przcysikiem x 15min
 - compiler warnings x 30min
 - dep update 1h
+- shared -> swinject 30min
 
 ## To do
-- nie updateuj pozycji
-- shared -> swinject
+- extract strings
 - launchscreen
 - swiftlint
 - mvvm
+- nie updateuj pozycji
 - log -> xclodgger
 - get rid of force !! assertions
 - mutablelist -> list

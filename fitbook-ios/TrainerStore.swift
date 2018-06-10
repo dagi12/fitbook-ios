@@ -11,8 +11,6 @@ import Moya_ObjectMapper
 
 class TrainerStore: BaseTokenStore<TrainerApi> {
 
-    static let shared = TrainerStore()
-
     func getTrainers()-> Single<[Trainer]> {
         return provider.rx
             .request(.trainers)

@@ -12,8 +12,7 @@ import ErykIosCommon
 
 class MoreViewController: UITableViewController {
 
-    let userHelper = UserHelper.shared
-    let fitbookStringHelper = FitbookStringHelper.shared
+    var userHelper: UserHelper!
 
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var username: UILabel!
@@ -32,7 +31,7 @@ class MoreViewController: UITableViewController {
 
     private func setUserLabels() {
         if let user = userHelper.getUser() {
-            role.text = fitbookStringHelper.getRole(isTrainer: user.isTrainer!)
+            role.text = MoreViewController.roleLabel(isTrainer: user.isTrainer!)
             username.text = user.name
         }
     }
@@ -42,6 +41,13 @@ class MoreViewController: UITableViewController {
         self.profileImage.rounded()
         setImage()
         setUserLabels()
+    }
+
+    static func roleLabel(isTrainer: Bool) -> String {
+        if isTrainer {
+            return "Trainer"
+        }
+        return "User"
     }
 
 }

@@ -11,8 +11,6 @@ import Moya_ObjectMapper
 
 class FitbookStore: BaseTokenStore<FitbookApi> {
 
-    static let shared = FitbookStore()
-
     func login(token: FacebookToken) -> Single<FitbookLoginResult> {
         return provider.rx
             .request(.login(token))

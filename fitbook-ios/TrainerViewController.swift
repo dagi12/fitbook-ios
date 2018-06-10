@@ -12,7 +12,8 @@ import RxSwift
 
 class TrainerViewController: UITableViewController {
 
-    private let trainerStore = TrainerStore.shared
+    var trainerStore: TrainerStore!
+
     private var trainers: [Trainer] = []
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

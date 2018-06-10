@@ -15,7 +15,6 @@ struct Keys {
 class UserDefaultsStore {
 
     let userDefaults = UserDefaults.standard
-    static let shared = UserDefaultsStore()
 
     func setFitbookResult(fitbookResult: FitbookLoginResult) {
         let wrapper = FitbookLoginResultWrapper(fitbookResult)

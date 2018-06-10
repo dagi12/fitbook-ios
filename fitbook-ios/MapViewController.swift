@@ -23,10 +23,12 @@ class MapViewController: UIViewController, FacebookLoginResultDelegate, FitbookL
     private let mapKitHelper = MapKitHelper()
     private var initialTabBarViewControllers: [UIViewController]?
     private let loginButton: LoginButton = LoginButton(readPermissions: [.publicProfile, .email])
-    private let alertHelper = AlertViewHelper.shared
-    private let fitbookStore = FitbookLoginStore.shared
+
+    var alertHelper: AlertViewHelper!
+    var fitbookStore: FitbookLoginStore!
+    var gymStore: GymStore!
+
     private let processingMessage = "Signing in..."
-    private let gymStore = GymStore.shared
     private let bag = DisposeBag()
 
     @IBOutlet weak var mapView: MKMapView!

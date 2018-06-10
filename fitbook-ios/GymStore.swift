@@ -11,8 +11,6 @@ import Moya_ObjectMapper
 
 class GymStore: BaseTokenStore<GymApi> {
 
-    static let shared = GymStore()
-
     func searchByLocation(parameters: GymRequestParameters) -> Single<[Gym]> {
         return provider.rx.request(.searchByLocation(parameters)).mapArray(Gym.self)
     }

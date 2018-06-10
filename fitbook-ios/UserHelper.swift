@@ -9,11 +9,11 @@ import ErykIosCommon
 
 class UserHelper {
 
-    static let shared = UserHelper()
-    let defaultsStore = UserDefaultsStore.shared
+    let defaultsStore: UserDefaultsStore
     var fitbookResult: FitbookLoginResult?
 
-    init() {
+    init (defaultsStore: UserDefaultsStore) {
+        self.defaultsStore = defaultsStore
         self.fitbookResult = defaultsStore.getFitbookResult()
     }
 
