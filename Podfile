@@ -1,4 +1,3 @@
-# Uncomment the next line to define a global platform for your project
 platform :ios, '10.0'
 
 target 'fitbook-ios' do
@@ -11,6 +10,9 @@ target 'fitbook-ios' do
   pod 'FacebookCore', '~> 0.3'
   pod 'FacebookLogin', '~> 0.3'
   pod 'FacebookShare', '~> 0.3'
+
+  pod 'Fabric'
+  pod 'Crashlytics'
 
   pod 'ErykIosCommon', :path => './ErykIosCommon'
 

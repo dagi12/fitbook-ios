@@ -34,10 +34,9 @@ hasło: haslohaslo123
 - extract strings
 - launchscreen 25min
 - swiftlint 15min
+- log -> xclodgger 15min
 
 ## To do
-- log -> xclodgger
-- get rid of force !! assertions
 - enable crashanalyzer (crashlytics)
 - enable core data
     - stackoverflow.com/questions/2032818 

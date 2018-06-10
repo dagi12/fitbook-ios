@@ -6,6 +6,8 @@ PODS:
   - Bolts/AppLinks (1.9.0):
     - Bolts/Tasks
   - Bolts/Tasks (1.9.0)
+  - Crashlytics (3.10.2):
+    - Fabric (~> 1.7.7)
   - ErykIosCommon (0.2.0):
     - Alamofire (~> 4.7.2)
     - Kingfisher (~> 4.8.0)
@@ -19,6 +21,7 @@ PODS:
     - SwinjectStoryboard (~> 2.0.1)
     - Whisper (~> 6.0.2)
     - XCGLogger (~> 6.0.2)
+  - Fabric (1.7.7)
   - FacebookCore (0.3.1):
     - Bolts (~> 1.8)
     - FBSDKCoreKit (~> 4.33)
@@ -75,7 +78,9 @@ PODS:
 
 DEPENDENCIES:
   - Bolts
+  - Crashlytics
   - ErykIosCommon (from `./ErykIosCommon`)
+  - Fabric
   - FacebookCore (~> 0.3)
   - FacebookLogin (~> 0.3)
   - FacebookShare (~> 0.3)
@@ -88,7 +93,9 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
+  Crashlytics: 0360624eea1c978a743feddb2fb1ef8b37fb7a0d
   ErykIosCommon: 6b38af6272555302bed3a4b1a8af99cf33db2146
+  Fabric: bda89e242bce1b7b8ab264248cf3407774ce0095
   FacebookCore: 33078ef1d7d76b73f7e8c990dca7d3ea6db8d22f
   FacebookLogin: 6f15bf4fefd7a8865abbfa8fcd7f3dfd87aa275f
   FacebookShare: c9ee8e5399d961fda00ded9befccacfe04fccf93
@@ -110,6 +117,6 @@ SPEC CHECKSUMS:
   Whisper: 169760fc4bab0abf24d5529f9276f95c25cf1025
   XCGLogger: c9601cae9a8912de34a58666ba931ed3d624dd31
 
-PODFILE CHECKSUM: 7940d892c41be695b4353f39de72f087d9d78965
+PODFILE CHECKSUM: dee5fe60441adbeba5bc1062f27483b7f567d590
 
 COCOAPODS: 1.4.0

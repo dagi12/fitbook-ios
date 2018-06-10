@@ -392,6 +392,7 @@
 				44CEA7A7B7E9A2D61323C1CB /* [CP] Copy Pods Resources */,
 				8E4396B420C6D7AE008F3329 /* Autocorrect */,
 				8E2D74DF1EEB7AC800B9BC43 /* Swiftlint */,
+				8EAD761820CDA6D500B8F163 /* Fabric */,
 			);
 			buildRules = (
 			);
@@ -610,6 +611,20 @@
 			shellPath = /bin/sh;
 			shellScript = "cd fitbook-ios && \"${PODS_ROOT}/SwiftLint/swiftlint\" autocorrect";
 		};
+		8EAD761820CDA6D500B8F163 /* Fabric */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Fabric;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" a7cbb55e82a857db57a293a6819bf9fc094c55c8 526752aad5c17d573de81f8148fdae2277c002963548a4402fafdc2ae20e31cf";
+		};
 		8EC9983420C17C3200B48255 /* Increase build number */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -798,7 +813,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;

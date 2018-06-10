@@ -9,9 +9,12 @@
 import Foundation
 import FacebookCore
 import ErykIosCommon
+import Crashlytics
+import Fabric
 
 @UIApplicationMain
 class AppDelegate: ErykAppDelegate {
+
     var window: UIWindow?
 
     func application(_ application: UIApplication,
@@ -21,6 +24,7 @@ class AppDelegate: ErykAppDelegate {
                 .shared
                 .application(application, didFinishLaunchingWithOptions: launchOptions)
         BaseUrlStore.sharedInstance.url = URL(string: "http://fitbook-api.herokuapp.com/api/")
+        Fabric.with([Crashlytics.self])
         return true
     }
 
@@ -46,5 +50,5 @@ class AppDelegate: ErykAppDelegate {
 
 func logError(_ error: Error) {
     log.error(error.localizedDescription)
-//    Crashlytics.sharedInstance().recordError(error)
+    Crashlytics.sharedInstance().recordError(error)
 }
