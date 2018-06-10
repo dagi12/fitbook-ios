@@ -28,7 +28,6 @@ class MapViewController: UIViewController, FacebookLoginResultDelegate, FitbookL
     var fitbookStore: FitbookLoginStore!
     var gymStore: GymStore!
 
-    private let processingMessage = "Signing in..."
     private let bag = DisposeBag()
 
     @IBOutlet weak var mapView: MKMapView!
@@ -52,12 +51,12 @@ class MapViewController: UIViewController, FacebookLoginResultDelegate, FitbookL
     }
 
     func facebookLoginSuccess() {
-        alertHelper.showProcess(processingMessage, self)
+        alertHelper.showProcess("signing".localized, self)
         fitbookStore.fitbookLoginAfterFacebookSuccess(loginDelegate: self)
     }
 
     func facebookLoginFailed() {
-        alertHelper.showError("Facebook login has been cancelled", self)
+        alertHelper.showError("facebook_login".localized, self)
     }
 
     func fitbookLogin() {
@@ -108,7 +107,7 @@ class MapViewController: UIViewController, FacebookLoginResultDelegate, FitbookL
         loginButton.frame.size.height = facebookView.frame.height
 
         facebookView.addSubview(loginButton)
-        alertHelper.showProcess(processingMessage, self)
+        alertHelper.showProcess("signing".common, self)
         self.initialTabBarViewControllers = self.tabBarController?.viewControllers
         fitbookStore.checkLogin(loginDelegate: self)
         mapKitHelper.initMap(mapView: mapView)

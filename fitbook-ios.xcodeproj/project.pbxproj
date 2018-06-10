@@ -46,6 +46,8 @@
 		8EE604F71EEB1CCC0022CD82 /* FitbookStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE604F61EEB1CCC0022CD82 /* FitbookStore.swift */; };
 		8EE604FB1EEB23C30022CD82 /* FacebookToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE604FA1EEB23C30022CD82 /* FacebookToken.swift */; };
 		8EEFB97B20CD8253006F249E /* SwinjectStoryboard+setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEFB97A20CD8253006F249E /* SwinjectStoryboard+setup.swift */; };
+		8EEFB98020CD8F32006F249E /* String+localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEFB97F20CD8F32006F249E /* String+localized.swift */; };
+		8EEFB98120CD8F3F006F249E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8EEFB98320CD8F3F006F249E /* Localizable.strings */; };
 		9E804957B28CCCB389BEBE19 /* Pods_fitbook_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 831D8269665DEC42207F6359 /* Pods_fitbook_ios.framework */; };
 /* End PBXBuildFile section */
 
@@ -112,6 +114,9 @@
 		8EE604F61EEB1CCC0022CD82 /* FitbookStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FitbookStore.swift; sourceTree = "<group>"; };
 		8EE604FA1EEB23C30022CD82 /* FacebookToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookToken.swift; sourceTree = "<group>"; };
 		8EEFB97A20CD8253006F249E /* SwinjectStoryboard+setup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwinjectStoryboard+setup.swift"; sourceTree = "<group>"; };
+		8EEFB97F20CD8F32006F249E /* String+localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+localized.swift"; sourceTree = "<group>"; };
+		8EEFB98220CD8F3F006F249E /* pl-PL */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pl-PL"; path = "pl-PL.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		8EEFB98420CD8F43006F249E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		EDDC3CE0B8B549DAA3911ADE /* Pods-fitbook-iosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fitbook-iosTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-fitbook-iosTests/Pods-fitbook-iosTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -322,6 +327,7 @@
 		8EE604E01EEADB0F0022CD82 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				8EEFB97C20CD8EF6006F249E /* Localization */,
 				8EE604ED1EEB02D50022CD82 /* Service */,
 				8EE604E81EEAF38F0022CD82 /* Model */,
 				8EE604E71EEAF3370022CD82 /* Alert */,
@@ -359,6 +365,15 @@
 				8EEFB97A20CD8253006F249E /* SwinjectStoryboard+setup.swift */,
 			);
 			name = DI;
+			sourceTree = "<group>";
+		};
+		8EEFB97C20CD8EF6006F249E /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				8EEFB98320CD8F3F006F249E /* Localizable.strings */,
+				8EEFB97F20CD8F32006F249E /* String+localized.swift */,
+			);
+			name = Localization;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -458,6 +473,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E19DFF61EE9DF470085084D /* LaunchScreen.storyboard in Resources */,
+				8EEFB98120CD8F3F006F249E /* Localizable.strings in Resources */,
 				8E19DFF31EE9DF470085084D /* Assets.xcassets in Resources */,
 				8E19DFF11EE9DF470085084D /* Main.storyboard in Resources */,
 			);
@@ -667,6 +683,7 @@
 				8EE604EC1EEB00D20022CD82 /* FitbookLoginResult.swift in Sources */,
 				8E07F4351EEBF55C008572D4 /* MoreViewController.swift in Sources */,
 				8E7CE6E520CBE47500A8E7F5 /* FitbookApi.swift in Sources */,
+				8EEFB98020CD8F32006F249E /* String+localized.swift in Sources */,
 				8EE604CB1EEAAF820022CD82 /* SearchViewController.swift in Sources */,
 				8E07F4401EEC3D07008572D4 /* GymRequestParameters.swift in Sources */,
 				8EE604FB1EEB23C30022CD82 /* FacebookToken.swift in Sources */,
@@ -730,6 +747,15 @@
 				8E19DFF51EE9DF470085084D /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		8EEFB98320CD8F3F006F249E /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8EEFB98220CD8F3F006F249E /* pl-PL */,
+				8EEFB98420CD8F43006F249E /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

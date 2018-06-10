@@ -1,0 +1,9 @@
+/* 
+  Localizable.strings
+  fitbook-ios
+
+  Created by Eryk Mariankowski on 10.06.2018.
+  Copyright © 2018 Eryk Mariankowski. All rights reserved.
+*/
+"signing" = "Logowanie...";
+"facebook_login" = "Logowanie przez facebooka zostało anulowane.";

@@ -21,15 +21,17 @@ class AlertViewHelper {
 
     func showError(_ message: String, _ controller: UIViewController) {
         let alertController = UIAlertController(
-                title: "Błąd", message: message, preferredStyle: UIAlertControllerStyle.alert)
-        alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default, handler: nil))
+                title: "error".common,
+                message: message,
+                preferredStyle: UIAlertControllerStyle.alert)
+        alertController.addAction(UIAlertAction(title: "ok".common, style: UIAlertActionStyle.default, handler: nil))
         controller.present(alertController, animated: true, completion: nil)
     }
 
     func showInfo(_ message: String, _ controller: UIViewController) {
         let alertController = UIAlertController(
-                title: "Info", message: message, preferredStyle: UIAlertControllerStyle.alert)
-        alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+                title: "info".common, message: message, preferredStyle: UIAlertControllerStyle.alert)
+        alertController.addAction(UIAlertAction(title: "ok".common, style: UIAlertActionStyle.default, handler: nil))
         controller.present(alertController, animated: true, completion: nil)
     }
 
