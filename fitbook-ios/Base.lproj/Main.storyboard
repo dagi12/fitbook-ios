@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -21,7 +20,7 @@
                     <view key="view" contentMode="scaleToFill" id="ZMw-K9-DCg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.90588235294117647" green="0.90588235294117647" blue="0.90588235294117647" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="search" id="uQw-FW-BTL" userLabel="Search"/>
                 </viewController>
@@ -36,7 +35,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="88" sectionHeaderHeight="18" sectionFooterHeight="18" id="3uG-QJ-X0M">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" red="0.90588235294117647" green="0.90588235294117647" blue="0.90588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TrainerCell" textLabel="a3Y-0X-OGe" rowHeight="88" style="IBUITableViewCellStyleDefault" id="CAG-nH-EMS">
                                 <rect key="frame" x="0.0" y="55.5" width="375" height="88"/>
@@ -74,7 +73,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="ITb-K3-Lgt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" red="0.90588235294117647" green="0.90588235294117647" blue="0.90588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <button key="tableFooterView" opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ns1-sp-CHq">
                             <rect key="frame" x="0.0" y="153" width="375" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -180,7 +179,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.90588235294117647" green="0.90588235294117647" blue="0.90588235294117647" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="qyu-xS-s2D" firstAttribute="top" secondItem="Xsw-qg-cdX" secondAttribute="bottom" constant="12" id="6iV-yw-A0p"/>
                             <constraint firstItem="AWV-1X-l3w" firstAttribute="top" secondItem="qyu-xS-s2D" secondAttribute="bottom" constant="24" id="HmL-Yh-s8j"/>
@@ -198,6 +197,7 @@
                     <connections>
                         <outlet property="facebookView" destination="Xsw-qg-cdX" id="auz-j6-MA4"/>
                         <outlet property="mapView" destination="1Xb-pj-Vb9" id="Mfn-XG-9N2"/>
+                        <outlet property="searchButton" destination="qyu-xS-s2D" id="056-vl-Sl7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1yQ-fD-Qel" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -211,7 +211,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="89" sectionHeaderHeight="18" sectionFooterHeight="18" id="rpB-0l-vHY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" red="0.90588235294117647" green="0.90588235294117647" blue="0.90588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyGymCell" textLabel="kud-UI-lT2" rowHeight="89" style="IBUITableViewCellStyleDefault" id="Jdf-p7-OsI">
                                 <rect key="frame" x="0.0" y="55.5" width="375" height="89"/>
@@ -242,10 +242,10 @@
             </objects>
             <point key="canvasLocation" x="1492" y="866.71664167916049"/>
         </scene>
-        <!--View Controller-->
+        <!--My Tab Bar Controller-->
         <scene sceneID="EFc-Ib-2vP">
             <objects>
-                <tabBarController id="Gh1-gS-V1h" customClass="ViewController" customModule="FitBook" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController id="Gh1-gS-V1h" customClass="MyTabBarController" customModule="FitBook" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="RWi-1L-q3i">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -268,4 +268,5 @@
         <image name="Map" width="32" height="32"/>
         <image name="Trainer" width="25" height="25"/>
     </resources>
+    <color key="tintColor" red="0.40000000000000002" green="0.38039215686274508" blue="0.35686274509803922" alpha="1" colorSpace="calibratedRGB"/>
 </document>

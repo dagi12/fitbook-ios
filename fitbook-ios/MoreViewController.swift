@@ -17,7 +17,7 @@ class MoreViewController: UITableViewController {
     @IBOutlet weak var username: UILabel!
     @IBOutlet weak var role: UILabel!
     @IBAction func logOutClick(_ sender: UIButton) {
-        if let viewController = self.tabBarController as? ViewController {
+        if let viewController = self.tabBarController as? MyTabBarController {
             viewController.logout()
         }
     }

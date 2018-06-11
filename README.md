@@ -23,7 +23,7 @@ hasło: haslohaslo123
 - deployment target 10 x
 - common image helper 10 x
 - internationalization 12min
-- alamostro -> moya x 1h
+- alamostore -> moya x 1h
 - create APIs x 1h
 - mark signed APIs x 30min
 - get rid off alamostore, wprowadź swift x 3h
@@ -37,15 +37,11 @@ hasło: haslohaslo123
 - log -> xclodgger 15min
 - enable crashanalyzer (crashlytics) 35min
 - global 401 logout 1h 30min
+- wygląd przycisku 1h 15min
+- tint 30min
+- background 30min 
 
 ## To do
-- nie updatuj pozycji po znalezieniu
-- theme 
-    - wygląd przycisku
-    - background
-    - topnavbar
-    - tabbar accent
-    - softra theme 
 - enable core data
     - stackoverflow.com/questions/2032818 
     - medium.com/@shawnbierman/how-to-add-core-data-to-an-existing-xcode-8-and-swift-3-project-508781b3e1c4
@@ -65,6 +61,9 @@ hasło: haslohaslo123
     - bash script with rename
 - if offline populate offline (realtime) otherwise download online (background) and save (background)
 - zapisywanie danych w bazie danych i dostępność offline
+- theme 
+    - topnavbar
+    - tabbar accent
 - mvvm
 
 ## Linki

@@ -30,6 +30,7 @@ class MapViewController: UIViewController, FacebookLoginResultDelegate, FitbookL
 
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var facebookView: UIView!
+    @IBOutlet weak var searchButton: UIButton!
 
     func gymStoreCallback( result: [Gym]) {
         for gym in result {
@@ -95,6 +96,7 @@ class MapViewController: UIViewController, FacebookLoginResultDelegate, FitbookL
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        searchButton.buttonStyle()
         loginButton.delegate = FacebookLoginStore(loginDelegate: self)
         loginButton.autoresizingMask = [.flexibleWidth, .flexibleHeight]
 
@@ -102,7 +104,7 @@ class MapViewController: UIViewController, FacebookLoginResultDelegate, FitbookL
         loginButton.frame.size.height = facebookView.frame.height
 
         facebookView.addSubview(loginButton)
-        alertHelper.showProcess("signing".common, self)
+        alertHelper.showProcess("signing".localized, self)
         self.initialTabBarViewControllers = self.tabBarController?.viewControllers
         fitbookStore.checkLogin(loginDelegate: self)
         mapKitHelper.initMap(mapView: mapView)

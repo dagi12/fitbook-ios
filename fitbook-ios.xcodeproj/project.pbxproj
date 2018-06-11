@@ -19,7 +19,7 @@
 		8E07F4421EEC3DD7008572D4 /* LocationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E07F4411EEC3DD7008572D4 /* LocationRequest.swift */; };
 		8E16287420CBD69700C9FC45 /* GymApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E16287320CBD69700C9FC45 /* GymApi.swift */; };
 		8E19DFEC1EE9DF470085084D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E19DFEB1EE9DF470085084D /* AppDelegate.swift */; };
-		8E19DFEE1EE9DF470085084D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E19DFED1EE9DF470085084D /* ViewController.swift */; };
+		8E19DFEE1EE9DF470085084D /* MyTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E19DFED1EE9DF470085084D /* MyTabBarController.swift */; };
 		8E19DFF11EE9DF470085084D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E19DFEF1EE9DF470085084D /* Main.storyboard */; };
 		8E19DFF31EE9DF470085084D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E19DFF21EE9DF470085084D /* Assets.xcassets */; };
 		8E19DFF61EE9DF470085084D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E19DFF41EE9DF470085084D /* LaunchScreen.storyboard */; };
@@ -27,7 +27,7 @@
 		8E530C6C1EF15CA300092D04 /* TrainerStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E530C6B1EF15CA300092D04 /* TrainerStore.swift */; };
 		8E530C701EF17FF600092D04 /* Trainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E530C6F1EF17FF600092D04 /* Trainer.swift */; };
 		8E5446F220CEBE560016FD37 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E07F4341EEBF55C008572D4 /* MoreViewController.swift */; };
-		8E5446F320CEBE740016FD37 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E19DFED1EE9DF470085084D /* ViewController.swift */; };
+		8E5446F320CEBE740016FD37 /* MyTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E19DFED1EE9DF470085084D /* MyTabBarController.swift */; };
 		8E5446F420CEBE7F0016FD37 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E19DFEB1EE9DF470085084D /* AppDelegate.swift */; };
 		8E7CE6E520CBE47500A8E7F5 /* FitbookApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7CE6E420CBE47500A8E7F5 /* FitbookApi.swift */; };
 		8E7CE6E720CBE75A00A8E7F5 /* TrainerApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7CE6E620CBE75A00A8E7F5 /* TrainerApi.swift */; };
@@ -51,7 +51,9 @@
 		8EEFB97B20CD8253006F249E /* SwinjectStoryboard+setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEFB97A20CD8253006F249E /* SwinjectStoryboard+setup.swift */; };
 		8EEFB98020CD8F32006F249E /* String+localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEFB97F20CD8F32006F249E /* String+localized.swift */; };
 		8EEFB98120CD8F3F006F249E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8EEFB98320CD8F3F006F249E /* Localizable.strings */; };
+		9314F2D98C6B8C67D7F1E0FC /* FitbookColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9314F236009C36CE2A9D1FAC /* FitbookColors.swift */; };
 		9314F58F6B617C203A7D46DE /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE604D01EEAB1AA0022CD82 /* MapViewController.swift */; };
+		9314FAC68B4097DCE7CFBCDF /* FitbookTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9314FF5583D7F4C954D67C33 /* FitbookTheme.swift */; };
 		9E804957B28CCCB389BEBE19 /* Pods_fitbook_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 831D8269665DEC42207F6359 /* Pods_fitbook_ios.framework */; };
 /* End PBXBuildFile section */
 
@@ -85,7 +87,7 @@
 		8E16287320CBD69700C9FC45 /* GymApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymApi.swift; sourceTree = "<group>"; };
 		8E19DFE81EE9DF470085084D /* FitBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E19DFEB1EE9DF470085084D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8E19DFED1EE9DF470085084D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8E19DFED1EE9DF470085084D /* MyTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTabBarController.swift; sourceTree = "<group>"; };
 		8E19DFF01EE9DF470085084D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8E19DFF21EE9DF470085084D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8E19DFF51EE9DF470085084D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -121,6 +123,8 @@
 		8EEFB97F20CD8F32006F249E /* String+localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+localized.swift"; sourceTree = "<group>"; };
 		8EEFB98220CD8F3F006F249E /* pl-PL */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pl-PL"; path = "pl-PL.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		8EEFB98420CD8F43006F249E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		9314F236009C36CE2A9D1FAC /* FitbookColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FitbookColors.swift; sourceTree = "<group>"; };
+		9314FF5583D7F4C954D67C33 /* FitbookTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FitbookTheme.swift; sourceTree = "<group>"; };
 		EDDC3CE0B8B549DAA3911ADE /* Pods-fitbook-iosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fitbook-iosTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-fitbook-iosTests/Pods-fitbook-iosTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -275,7 +279,8 @@
 				8EE604D21EEABC830022CD82 /* Trainer */,
 				8EE604C31EEAAE3F0022CD82 /* Search */,
 				8EE604BE1EEAAD560022CD82 /* Map */,
-				8E19DFED1EE9DF470085084D /* ViewController.swift */,
+				8E19DFED1EE9DF470085084D /* MyTabBarController.swift */,
+				9314F11DB487EC5FB6AF25D7 /* Theme */,
 			);
 			name = Main;
 			sourceTree = "<group>";
@@ -379,6 +384,15 @@
 				8EEFB97F20CD8F32006F249E /* String+localized.swift */,
 			);
 			name = Localization;
+			sourceTree = "<group>";
+		};
+		9314F11DB487EC5FB6AF25D7 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				9314FF5583D7F4C954D67C33 /* FitbookTheme.swift */,
+				9314F236009C36CE2A9D1FAC /* FitbookColors.swift */,
+			);
+			name = Theme;
 			sourceTree = "<group>";
 		};
 		9314F7CF17B1D623A227BBC3 /* Extension */ = {
@@ -709,7 +723,7 @@
 				8E7CE6E720CBE75A00A8E7F5 /* TrainerApi.swift in Sources */,
 				8EE604DD1EEAD6A90022CD82 /* UserHelper.swift in Sources */,
 				8EE604F11EEB0BD70022CD82 /* FitbookLoginResultWrapper.swift in Sources */,
-				8E19DFEE1EE9DF470085084D /* ViewController.swift in Sources */,
+				8E19DFEE1EE9DF470085084D /* MyTabBarController.swift in Sources */,
 				8EE604D91EEAD1060022CD82 /* FacebookLoginResultDelegate.swift in Sources */,
 				8EE604EC1EEB00D20022CD82 /* FitbookLoginResult.swift in Sources */,
 				8E07F4351EEBF55C008572D4 /* MoreViewController.swift in Sources */,
@@ -740,6 +754,8 @@
 				8E7CE6E920CBF23100A8E7F5 /* FitbookLoginDelegate.swift in Sources */,
 				8E07F4421EEC3DD7008572D4 /* LocationRequest.swift in Sources */,
 				8EE604DF1EEAD74C0022CD82 /* User.swift in Sources */,
+				9314FAC68B4097DCE7CFBCDF /* FitbookTheme.swift in Sources */,
+				9314F2D98C6B8C67D7F1E0FC /* FitbookColors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -749,7 +765,7 @@
 			files = (
 				8E5446F220CEBE560016FD37 /* MoreViewController.swift in Sources */,
 				8EAEEF781EEB3CD600D51F7A /* FitbookAlamoServiceTest.swift in Sources */,
-				8E5446F320CEBE740016FD37 /* ViewController.swift in Sources */,
+				8E5446F320CEBE740016FD37 /* MyTabBarController.swift in Sources */,
 				8E5446F420CEBE7F0016FD37 /* AppDelegate.swift in Sources */,
 				9314F58F6B617C203A7D46DE /* MapViewController.swift in Sources */,
 			);

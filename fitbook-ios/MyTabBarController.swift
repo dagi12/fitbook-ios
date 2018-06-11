@@ -9,11 +9,12 @@
 import FacebookLogin
 import ErykIosCommon
 
-class ViewController: UITabBarController, LogoutDelegate {
+class MyTabBarController: UITabBarController, LogoutDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         Router.sharedInstance.logoutDelegate = self
+        tabBar.tintColor = FitbookColors.splashScreenBg
     }
 
     func logout() {

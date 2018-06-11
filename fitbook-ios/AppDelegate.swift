@@ -19,6 +19,7 @@ class AppDelegate: ErykAppDelegate {
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: LaunchOptionsCallback) -> Bool {
         initialization()
+        FitbookTheme().apply()
         SDKApplicationDelegate
                 .shared
                 .application(application, didFinishLaunchingWithOptions: launchOptions)
@@ -29,11 +30,12 @@ class AppDelegate: ErykAppDelegate {
 
     // do not remove facebook login will stop working
     // swiftlint:disable all
+    @available(iOS, deprecated: 9.0)
     func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey: Any] = [:]) -> Bool {
         return SDKApplicationDelegate.shared.application(app,
                 open: url,
                 sourceApplication: (options[.sourceApplication] as? String),
-                annotation: options[.annotation])
+                annotation: options[.annotation] as Any)
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
