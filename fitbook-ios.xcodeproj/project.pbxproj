@@ -26,11 +26,14 @@
 		8E19E01A1EEA03A90085084D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E19E0191EEA03A90085084D /* MapKit.framework */; };
 		8E530C6C1EF15CA300092D04 /* TrainerStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E530C6B1EF15CA300092D04 /* TrainerStore.swift */; };
 		8E530C701EF17FF600092D04 /* Trainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E530C6F1EF17FF600092D04 /* Trainer.swift */; };
-		8E5446F220CEBE560016FD37 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E07F4341EEBF55C008572D4 /* MoreViewController.swift */; };
-		8E5446F320CEBE740016FD37 /* MyTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E19DFED1EE9DF470085084D /* MyTabBarController.swift */; };
-		8E5446F420CEBE7F0016FD37 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E19DFEB1EE9DF470085084D /* AppDelegate.swift */; };
 		8E54472120CEE4930016FD37 /* fitbook-ios.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8E54471F20CEE4930016FD37 /* fitbook-ios.xcdatamodeld */; };
-		8E54472220CEE4930016FD37 /* fitbook-ios.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8E54471F20CEE4930016FD37 /* fitbook-ios.xcdatamodeld */; };
+		8E54474020CEF8AF0016FD37 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E54473820CEF8AE0016FD37 /* User+CoreDataClass.swift */; };
+		8E54474220CEF8AF0016FD37 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E54473920CEF8AE0016FD37 /* User+CoreDataProperties.swift */; };
+		8E54474420CEF8AF0016FD37 /* FitbookLoginResult+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E54473A20CEF8AE0016FD37 /* FitbookLoginResult+CoreDataClass.swift */; };
+		8E54474620CEF8AF0016FD37 /* FitbookLoginResult+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E54473B20CEF8AE0016FD37 /* FitbookLoginResult+CoreDataProperties.swift */; };
+		8E54474A20CEF9760016FD37 /* ImagePair+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E54474820CEF9760016FD37 /* ImagePair+CoreDataClass.swift */; };
+		8E54474C20CEF9760016FD37 /* ImagePair+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E54474920CEF9760016FD37 /* ImagePair+CoreDataProperties.swift */; };
+		8E54475120CF0A500016FD37 /* FItbookLoginViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E54474F20CF0A500016FD37 /* FItbookLoginViewModelTest.swift */; };
 		8E7CE6E520CBE47500A8E7F5 /* FitbookApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7CE6E420CBE47500A8E7F5 /* FitbookApi.swift */; };
 		8E7CE6E720CBE75A00A8E7F5 /* TrainerApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7CE6E620CBE75A00A8E7F5 /* TrainerApi.swift */; };
 		8E7CE6E920CBF23100A8E7F5 /* FitbookLoginDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7CE6E820CBF23000A8E7F5 /* FitbookLoginDelegate.swift */; };
@@ -40,21 +43,16 @@
 		8EE604D41EEABC8E0022CD82 /* TrainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE604D31EEABC8E0022CD82 /* TrainerViewController.swift */; };
 		8EE604D71EEAC98D0022CD82 /* FacebookLoginStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE604D61EEAC98D0022CD82 /* FacebookLoginStore.swift */; };
 		8EE604D91EEAD1060022CD82 /* FacebookLoginResultDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE604D81EEAD1060022CD82 /* FacebookLoginResultDelegate.swift */; };
-		8EE604DB1EEAD5560022CD82 /* FitbookLoginStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE604DA1EEAD5560022CD82 /* FitbookLoginStore.swift */; };
+		8EE604DB1EEAD5560022CD82 /* FitbookLoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE604DA1EEAD5560022CD82 /* FitbookLoginViewModel.swift */; };
 		8EE604DD1EEAD6A90022CD82 /* UserHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE604DC1EEAD6A90022CD82 /* UserHelper.swift */; };
-		8EE604DF1EEAD74C0022CD82 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE604DE1EEAD74C0022CD82 /* User+CoreDataClass.swift */; };
-		8EE604E21EEADB380022CD82 /* ImagePair+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE604E11EEADB380022CD82 /* ImagePair+CoreDataClass.swift */; };
 		8EE604EA1EEAF3DF0022CD82 /* AlertViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE604E91EEAF3DF0022CD82 /* AlertViewHelper.swift */; };
-		8EE604EC1EEB00D20022CD82 /* FitbookLoginResult+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE604EB1EEB00D20022CD82 /* FitbookLoginResult+CoreDataClass.swift */; };
 		8EE604EF1EEB033C0022CD82 /* UserDefaultsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE604EE1EEB033C0022CD82 /* UserDefaultsStore.swift */; };
-		8EE604F11EEB0BD70022CD82 /* FitbookLoginResultWrapper+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE604F01EEB0BD70022CD82 /* FitbookLoginResultWrapper+CoreDataClass.swift */; };
 		8EE604F71EEB1CCC0022CD82 /* FitbookStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE604F61EEB1CCC0022CD82 /* FitbookStore.swift */; };
 		8EE604FB1EEB23C30022CD82 /* FacebookToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE604FA1EEB23C30022CD82 /* FacebookToken.swift */; };
 		8EEFB97B20CD8253006F249E /* SwinjectStoryboard+setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEFB97A20CD8253006F249E /* SwinjectStoryboard+setup.swift */; };
 		8EEFB98020CD8F32006F249E /* String+localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEFB97F20CD8F32006F249E /* String+localized.swift */; };
 		8EEFB98120CD8F3F006F249E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8EEFB98320CD8F3F006F249E /* Localizable.strings */; };
 		9314F2D98C6B8C67D7F1E0FC /* FitbookColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9314F236009C36CE2A9D1FAC /* FitbookColors.swift */; };
-		9314F58F6B617C203A7D46DE /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE604D01EEAB1AA0022CD82 /* MapViewController.swift */; };
 		9314FAC68B4097DCE7CFBCDF /* FitbookTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9314FF5583D7F4C954D67C33 /* FitbookTheme.swift */; };
 		9E804957B28CCCB389BEBE19 /* Pods_fitbook_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 831D8269665DEC42207F6359 /* Pods_fitbook_ios.framework */; };
 /* End PBXBuildFile section */
@@ -100,6 +98,13 @@
 		8E530C6B1EF15CA300092D04 /* TrainerStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainerStore.swift; sourceTree = "<group>"; };
 		8E530C6F1EF17FF600092D04 /* Trainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trainer.swift; sourceTree = "<group>"; };
 		8E54472020CEE4930016FD37 /* fitbook-ios.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "fitbook-ios.xcdatamodel"; sourceTree = "<group>"; };
+		8E54473820CEF8AE0016FD37 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
+		8E54473920CEF8AE0016FD37 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		8E54473A20CEF8AE0016FD37 /* FitbookLoginResult+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FitbookLoginResult+CoreDataClass.swift"; sourceTree = "<group>"; };
+		8E54473B20CEF8AE0016FD37 /* FitbookLoginResult+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FitbookLoginResult+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		8E54474820CEF9760016FD37 /* ImagePair+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImagePair+CoreDataClass.swift"; sourceTree = "<group>"; };
+		8E54474920CEF9760016FD37 /* ImagePair+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImagePair+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		8E54474F20CF0A500016FD37 /* FItbookLoginViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FItbookLoginViewModelTest.swift; sourceTree = "<group>"; };
 		8E7CE6E420CBE47500A8E7F5 /* FitbookApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitbookApi.swift; sourceTree = "<group>"; };
 		8E7CE6E620CBE75A00A8E7F5 /* TrainerApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerApi.swift; sourceTree = "<group>"; };
 		8E7CE6E820CBF23000A8E7F5 /* FitbookLoginDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FitbookLoginDelegate.swift; sourceTree = "<group>"; };
@@ -112,14 +117,10 @@
 		8EE604D31EEABC8E0022CD82 /* TrainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainerViewController.swift; sourceTree = "<group>"; };
 		8EE604D61EEAC98D0022CD82 /* FacebookLoginStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookLoginStore.swift; sourceTree = "<group>"; };
 		8EE604D81EEAD1060022CD82 /* FacebookLoginResultDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookLoginResultDelegate.swift; sourceTree = "<group>"; };
-		8EE604DA1EEAD5560022CD82 /* FitbookLoginStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FitbookLoginStore.swift; sourceTree = "<group>"; };
+		8EE604DA1EEAD5560022CD82 /* FitbookLoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FitbookLoginViewModel.swift; sourceTree = "<group>"; };
 		8EE604DC1EEAD6A90022CD82 /* UserHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserHelper.swift; sourceTree = "<group>"; };
-		8EE604DE1EEAD74C0022CD82 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
-		8EE604E11EEADB380022CD82 /* ImagePair+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ImagePair+CoreDataClass.swift"; sourceTree = "<group>"; };
 		8EE604E91EEAF3DF0022CD82 /* AlertViewHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertViewHelper.swift; sourceTree = "<group>"; };
-		8EE604EB1EEB00D20022CD82 /* FitbookLoginResult+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FitbookLoginResult+CoreDataClass.swift"; sourceTree = "<group>"; };
 		8EE604EE1EEB033C0022CD82 /* UserDefaultsStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsStore.swift; sourceTree = "<group>"; };
-		8EE604F01EEB0BD70022CD82 /* FitbookLoginResultWrapper+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FitbookLoginResultWrapper+CoreDataClass.swift"; sourceTree = "<group>"; };
 		8EE604F61EEB1CCC0022CD82 /* FitbookStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FitbookStore.swift; sourceTree = "<group>"; };
 		8EE604FA1EEB23C30022CD82 /* FacebookToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookToken.swift; sourceTree = "<group>"; };
 		8EEFB97A20CD8253006F249E /* SwinjectStoryboard+setup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwinjectStoryboard+setup.swift"; sourceTree = "<group>"; };
@@ -246,7 +247,7 @@
 		8E19DFFF1EE9DF470085084D /* fitbook-iosTests */ = {
 			isa = PBXGroup;
 			children = (
-				8EAEEF741EEB3CA800D51F7A /* main */,
+				8EAEEF741EEB3CA800D51F7A /* Main */,
 				8E19E0021EE9DF470085084D /* Info.plist */,
 			);
 			path = "fitbook-iosTests";
@@ -255,36 +256,47 @@
 		8E54473520CEF38F0016FD37 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				8EE604E11EEADB380022CD82 /* ImagePair+CoreDataClass.swift */,
-				8EE604F01EEB0BD70022CD82 /* FitbookLoginResultWrapper+CoreDataClass.swift */,
-				8EE604EB1EEB00D20022CD82 /* FitbookLoginResult+CoreDataClass.swift */,
-				8EE604DE1EEAD74C0022CD82 /* User+CoreDataClass.swift */,
+				8E54474820CEF9760016FD37 /* ImagePair+CoreDataClass.swift */,
+				8E54474920CEF9760016FD37 /* ImagePair+CoreDataProperties.swift */,
+				8E54473820CEF8AE0016FD37 /* User+CoreDataClass.swift */,
+				8E54473920CEF8AE0016FD37 /* User+CoreDataProperties.swift */,
+				8E54473A20CEF8AE0016FD37 /* FitbookLoginResult+CoreDataClass.swift */,
+				8E54473B20CEF8AE0016FD37 /* FitbookLoginResult+CoreDataProperties.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
 		};
-		8EAEEF741EEB3CA800D51F7A /* main */ = {
+		8E54474E20CF0A400016FD37 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				8EAEEF751EEB3CAF00D51F7A /* map */,
+				8E54474F20CF0A500016FD37 /* FItbookLoginViewModelTest.swift */,
 			);
-			name = main;
+			name = Login;
 			sourceTree = "<group>";
 		};
-		8EAEEF751EEB3CAF00D51F7A /* map */ = {
+		8EAEEF741EEB3CA800D51F7A /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				8EAEEF761EEB3CB700D51F7A /* common */,
+				8EAEEF751EEB3CAF00D51F7A /* Map */,
 			);
-			name = map;
+			name = Main;
 			sourceTree = "<group>";
 		};
-		8EAEEF761EEB3CB700D51F7A /* common */ = {
+		8EAEEF751EEB3CAF00D51F7A /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				8E54474E20CF0A400016FD37 /* Login */,
+				8EAEEF761EEB3CB700D51F7A /* Common */,
+			);
+			name = Map;
+			sourceTree = "<group>";
+		};
+		8EAEEF761EEB3CB700D51F7A /* Common */ = {
 			isa = PBXGroup;
 			children = (
 				8EAEEF771EEB3CD600D51F7A /* FitbookAlamoServiceTest.swift */,
 			);
-			name = common;
+			name = Common;
 			sourceTree = "<group>";
 		};
 		8EE604BD1EEAAD150022CD82 /* Main */ = {
@@ -337,7 +349,7 @@
 				8E7CE6E820CBF23000A8E7F5 /* FitbookLoginDelegate.swift */,
 				8EE604D61EEAC98D0022CD82 /* FacebookLoginStore.swift */,
 				8EE604D81EEAD1060022CD82 /* FacebookLoginResultDelegate.swift */,
-				8EE604DA1EEAD5560022CD82 /* FitbookLoginStore.swift */,
+				8EE604DA1EEAD5560022CD82 /* FitbookLoginViewModel.swift */,
 				8EE604DC1EEAD6A90022CD82 /* UserHelper.swift */,
 				8EE604F61EEB1CCC0022CD82 /* FitbookStore.swift */,
 				8EE604FA1EEB23C30022CD82 /* FacebookToken.swift */,
@@ -690,9 +702,18 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-fitbook-iosTests/Pods-fitbook-iosTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
+				"${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxBlocking.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -726,13 +747,12 @@
 			files = (
 				8E7CE6E720CBE75A00A8E7F5 /* TrainerApi.swift in Sources */,
 				8EE604DD1EEAD6A90022CD82 /* UserHelper.swift in Sources */,
-				8EE604F11EEB0BD70022CD82 /* FitbookLoginResultWrapper+CoreDataClass.swift in Sources */,
 				8E19DFEE1EE9DF470085084D /* MyTabBarController.swift in Sources */,
 				8E54472120CEE4930016FD37 /* fitbook-ios.xcdatamodeld in Sources */,
 				8EE604D91EEAD1060022CD82 /* FacebookLoginResultDelegate.swift in Sources */,
-				8EE604EC1EEB00D20022CD82 /* FitbookLoginResult+CoreDataClass.swift in Sources */,
 				8E07F4351EEBF55C008572D4 /* MoreViewController.swift in Sources */,
 				8E7CE6E520CBE47500A8E7F5 /* FitbookApi.swift in Sources */,
+				8E54474620CEF8AF0016FD37 /* FitbookLoginResult+CoreDataProperties.swift in Sources */,
 				8EEFB98020CD8F32006F249E /* String+localized.swift in Sources */,
 				8EE604CB1EEAAF820022CD82 /* SearchViewController.swift in Sources */,
 				8E07F4401EEC3D07008572D4 /* GymRequestParameters.swift in Sources */,
@@ -740,25 +760,28 @@
 				8EEFB97B20CD8253006F249E /* SwinjectStoryboard+setup.swift in Sources */,
 				8EE604D41EEABC8E0022CD82 /* TrainerViewController.swift in Sources */,
 				8E03B3361EECB7F700933500 /* MyGymsViewController.swift in Sources */,
+				8E54474020CEF8AF0016FD37 /* User+CoreDataClass.swift in Sources */,
 				8EE604F71EEB1CCC0022CD82 /* FitbookStore.swift in Sources */,
 				8E07F43E1EEC3AB5008572D4 /* Location.swift in Sources */,
 				8E07F4371EEC1D8E008572D4 /* MapKitHelper.swift in Sources */,
 				8E16287420CBD69700C9FC45 /* GymApi.swift in Sources */,
 				8EE604D11EEAB1AA0022CD82 /* MapViewController.swift in Sources */,
 				8E19DFEC1EE9DF470085084D /* AppDelegate.swift in Sources */,
+				8E54474220CEF8AF0016FD37 /* User+CoreDataProperties.swift in Sources */,
 				8EE604D71EEAC98D0022CD82 /* FacebookLoginStore.swift in Sources */,
-				8EE604E21EEADB380022CD82 /* ImagePair+CoreDataClass.swift in Sources */,
 				8E07F43A1EEC35A4008572D4 /* GymStore.swift in Sources */,
-				8EE604DB1EEAD5560022CD82 /* FitbookLoginStore.swift in Sources */,
+				8E54474C20CEF9760016FD37 /* ImagePair+CoreDataProperties.swift in Sources */,
+				8EE604DB1EEAD5560022CD82 /* FitbookLoginViewModel.swift in Sources */,
 				8E07F43C1EEC3865008572D4 /* Gym.swift in Sources */,
 				8E03B3381EECBD5F00933500 /* GymJoinResult.swift in Sources */,
 				8EE604EF1EEB033C0022CD82 /* UserDefaultsStore.swift in Sources */,
 				8EE604EA1EEAF3DF0022CD82 /* AlertViewHelper.swift in Sources */,
+				8E54474420CEF8AF0016FD37 /* FitbookLoginResult+CoreDataClass.swift in Sources */,
+				8E54474A20CEF9760016FD37 /* ImagePair+CoreDataClass.swift in Sources */,
 				8E530C6C1EF15CA300092D04 /* TrainerStore.swift in Sources */,
 				8E530C701EF17FF600092D04 /* Trainer.swift in Sources */,
 				8E7CE6E920CBF23100A8E7F5 /* FitbookLoginDelegate.swift in Sources */,
 				8E07F4421EEC3DD7008572D4 /* LocationRequest.swift in Sources */,
-				8EE604DF1EEAD74C0022CD82 /* User+CoreDataClass.swift in Sources */,
 				9314FAC68B4097DCE7CFBCDF /* FitbookTheme.swift in Sources */,
 				9314F2D98C6B8C67D7F1E0FC /* FitbookColors.swift in Sources */,
 			);
@@ -768,12 +791,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E5446F220CEBE560016FD37 /* MoreViewController.swift in Sources */,
 				8EAEEF781EEB3CD600D51F7A /* FitbookAlamoServiceTest.swift in Sources */,
-				8E5446F320CEBE740016FD37 /* MyTabBarController.swift in Sources */,
-				8E5446F420CEBE7F0016FD37 /* AppDelegate.swift in Sources */,
-				8E54472220CEE4930016FD37 /* fitbook-ios.xcdatamodeld in Sources */,
-				9314F58F6B617C203A7D46DE /* MapViewController.swift in Sources */,
+				8E54475120CF0A500016FD37 /* FItbookLoginViewModelTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -965,7 +984,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 25BD4A7D440E64CF845AF9C1 /* Pods-fitbook-iosTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = 28J8R24SUR;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
@@ -983,7 +1002,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = EDDC3CE0B8B549DAA3911ADE /* Pods-fitbook-iosTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = 28J8R24SUR;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";

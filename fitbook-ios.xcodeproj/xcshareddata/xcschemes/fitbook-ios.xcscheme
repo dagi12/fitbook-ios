@@ -38,16 +38,6 @@
                ReferencedContainer = "container:fitbook-ios.xcodeproj">
             </BuildableReference>
          </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8E19E0061EE9DF470085084D"
-               BuildableName = "fitbook-iosUITests.xctest"
-               BlueprintName = "fitbook-iosUITests"
-               ReferencedContainer = "container:fitbook-ios.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

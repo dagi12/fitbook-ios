@@ -9,8 +9,11 @@
 import QuartzCore
 import FacebookCore
 import RxSwift
+import ErykIosCommon
 
-class FitbookLoginStore {
+private let sessionError = NSError(domain: "No session", code: 0, userInfo: nil)
+
+class FitbookLoginViewModel {
 
     let bag = DisposeBag()
     let userHelper: UserHelper
@@ -49,42 +52,38 @@ class FitbookLoginStore {
         userHelper.removeUser()
     }
 
-    func fitbookLoginAfterFacebookSuccess(loginDelegate: FitbookLoginDelegate) {
-        fitbookStore
-            .login(token: FacebookToken(token: AccessToken.current!.authenticationToken))
-            .subscribe(onSuccess: {
-                self.userHelper.setUser(fitbookResult: $0)
-                loginDelegate.fitbookLogin()
-        }).disposed(by: bag)
+    func fitbookLoginAfterFacebookSuccess() -> Completable {
+        return fitbookStore
+                .login(token: FacebookToken(token: AccessToken.current!.authenticationToken))
+                .map { r -> FitbookLoginResult in
+                    self.userHelper.setUser(fitbookResult: r)
+                    return r
+                }
+                .asObservable()
+                .ignoreElements()
     }
 
-    func fitbookRefereshAfterFacebookSuccess(loginDelegate: FitbookLoginDelegate) {
-        fitbookStore
-            .refresh()
-            .subscribe(onSuccess: {
-                self.userHelper.setUser(fitbookResult: $0)
-                loginDelegate.fitbookLogin()
-            }).disposed(by: bag)
+    func fitbookRefereshAfterFacebookSuccess() -> Completable {
+        return fitbookStore
+                .refresh()
+                .map { r -> FitbookLoginResult in
+                    self.userHelper.setUser(fitbookResult: r)
+                    return r
+                }
+                .asCompletable()
     }
 
-    func onlineLoginCheck(loginDelegate: FitbookLoginDelegate) {
-        if !checkFitbookSessionExpired() {
-            loginDelegate.fitbookLogin()
-        } else if !checkFitbookRefreshExpired() {
-            fitbookRefereshAfterFacebookSuccess(loginDelegate: loginDelegate)
-        } else if !checkFacebookSessionExpired() {
-            fitbookLoginAfterFacebookSuccess(loginDelegate: loginDelegate)
-        } else {
-            loginDelegate.fitbookLogout(false)
-        }
-    }
-
-    func checkLogin(loginDelegate: FitbookLoginDelegate) {
+    func checkLogin() -> Completable {
         if userHelper.isLogged() {
-            onlineLoginCheck(loginDelegate: loginDelegate)
-        } else {
-            loginDelegate.fitbookLogout(false)
+            if !checkFitbookSessionExpired() {
+                return Completable.empty()
+            } else if !checkFitbookRefreshExpired() {
+                return fitbookRefereshAfterFacebookSuccess()
+            } else if !checkFacebookSessionExpired() {
+                return fitbookLoginAfterFacebookSuccess()
+            }
         }
+        return Completable.error(sessionError)
     }
 
 }

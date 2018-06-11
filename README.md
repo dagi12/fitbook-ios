@@ -40,14 +40,12 @@ hasło: haslohaslo123
 - wygląd przycisku 1h 15min
 - tint 30min
 - background 30min 
+- enable core data 1h
+- userdefaults -> core data 6h
+- testy 1h
 
 ## To do
-- enable core data
-    - stackoverflow.com/questions/2032818 
-    - medium.com/@shawnbierman/how-to-add-core-data-to-an-existing-xcode-8-and-swift-3-project-508781b3e1c4
-    - rid of set
-    - userdefaults -> core data
-- testy
+- rid of set
 - Activity indicators for long operations
 - delete delegates
 - podciągnij ios-common-template
@@ -65,6 +63,7 @@ hasło: haslohaslo123
     - topnavbar
     - tabbar accent
 - mvvm
+- unowned i weak in closures
 
 ## Linki
 - gdrive Fitbook

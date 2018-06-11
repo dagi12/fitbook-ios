@@ -29,7 +29,7 @@ extension SwinjectStoryboard {
             .autoregister(TrainerStore.self, initializer: TrainerStore.init)
             .inObjectScope(.container)
         defaultContainer
-            .autoregister(FitbookLoginStore.self, initializer: FitbookLoginStore.init)
+            .autoregister(FitbookLoginViewModel.self, initializer: FitbookLoginViewModel.init)
             .inObjectScope(.container)
         defaultContainer
             .autoregister(FitbookStore.self, initializer: FitbookStore.init)
@@ -46,7 +46,7 @@ extension SwinjectStoryboard {
         }
         defaultContainer.storyboardInitCompleted(MapViewController.self) { res, con in
             con.alertHelper = res.resolve(AlertViewHelper.self)
-            con.fitbookStore = res.resolve(FitbookLoginStore.self)
+            con.fitbookStore = res.resolve(FitbookLoginViewModel.self)
             con.gymStore = res.resolve(GymStore.self)
         }
     }

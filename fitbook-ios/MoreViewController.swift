@@ -30,7 +30,7 @@ class MoreViewController: UITableViewController {
 
     private func setUserLabels() {
         if let user = userHelper.getUser() {
-            role.text = MoreViewController.roleLabel(isTrainer: user.isTrainer!)
+            role.text = MoreViewController.roleLabel(isTrainer: user.isTrainer)
             username.text = user.name
         }
     }

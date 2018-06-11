@@ -7,14 +7,33 @@
 //
 import ObjectMapper
 
-class Trainer: User {
+class Trainer: Mappable {
 
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
+    public var phone: String?
+    public var email: String?
+    public var isTrainer: Bool?
+    public var facebookId: String?
+    public var createdAt: NSDate?
+    public var updatedAt: NSDate?
+    public var name: String?
+    public var id: Int16?
+    public var images: ImagePair?
+
+    required public init?(map: Map) {
+
     }
 
-    required init?(map: Map) {
-        super.init(map: map)
+    public func mapping(map: Map) {
+        phone <- map["phone"]
+        email <- map["email"]
+        isTrainer <- map["is_trainer"]
+
+        facebookId <- map["facebook_id"]
+        createdAt <- map["created_at"]
+        updatedAt <- map["updated_at"]
+        images <- map["images"]
+        name <- map["name"]
+        id <- map["id"]
     }
 
 }

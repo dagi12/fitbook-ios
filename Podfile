@@ -21,6 +21,9 @@ target 'fitbook-ios' do
   target 'fitbook-iosTests' do
     inherit! :search_paths
     # Pods for testing
+    pod 'Quick'
+    pod 'Nimble'
+    pod 'RxBlocking'
   end
 
 end

@@ -23,7 +23,7 @@ class MapViewController: UIViewController, FacebookLoginResultDelegate, FitbookL
     private let loginButton: LoginButton = LoginButton(readPermissions: [.publicProfile, .email])
 
     var alertHelper: AlertViewHelper!
-    var fitbookStore: FitbookLoginStore!
+    var fitbookStore: FitbookLoginViewModel!
     var gymStore: GymStore!
 
     private let bag = DisposeBag()
@@ -32,7 +32,7 @@ class MapViewController: UIViewController, FacebookLoginResultDelegate, FitbookL
     @IBOutlet weak var facebookView: UIView!
     @IBOutlet weak var searchButton: UIButton!
 
-    func gymStoreCallback( result: [Gym]) {
+    func gymStoreCallback(result: [Gym]) {
         for gym in result {
             if let anno = gym.getAnnotation() {
                 self.mapView.addAnnotation(anno)
@@ -44,14 +44,21 @@ class MapViewController: UIViewController, FacebookLoginResultDelegate, FitbookL
     @IBAction func findCloseGym(_ sender: UIButton) {
         let parameters = mapKitHelper.getLocationRequest(mapView: mapView)
         gymStore
-            .searchByLocation(parameters: parameters)
-            .subscribe(onSuccess: gymStoreCallback)
-            .disposed(by: bag)
+                .searchByLocation(parameters: parameters)
+                .subscribe(onSuccess: gymStoreCallback)
+                .disposed(by: bag)
     }
 
     func facebookLoginSuccess() {
         alertHelper.showProcess("signing".localized, self)
-        fitbookStore.fitbookLoginAfterFacebookSuccess(loginDelegate: self)
+        fitbookStore
+                .fitbookLoginAfterFacebookSuccess()
+                .subscribe(onCompleted: {
+                    self.fitbookLogin()
+                }, onError: { _ in
+                    self.fitbookLogout(false)
+                })
+                .disposed(by: bag)
     }
 
     func facebookLoginFailed() {
@@ -62,7 +69,6 @@ class MapViewController: UIViewController, FacebookLoginResultDelegate, FitbookL
         facebookView.isHidden = true
         restoreLoggedTabs()
         alertHelper.closeProcess(controller: self)
-
     }
 
     func restoreLoggedTabs() {
@@ -106,7 +112,14 @@ class MapViewController: UIViewController, FacebookLoginResultDelegate, FitbookL
         facebookView.addSubview(loginButton)
         alertHelper.showProcess("signing".localized, self)
         self.initialTabBarViewControllers = self.tabBarController?.viewControllers
-        fitbookStore.checkLogin(loginDelegate: self)
+        fitbookStore
+                .checkLogin()
+                .subscribe(onCompleted: {
+                    self.fitbookLogin()
+                }, onError: { _ in
+                    self.fitbookLogout(false)
+                })
+                .disposed(by: bag)
         mapKitHelper.initMap(mapView: mapView)
     }
 

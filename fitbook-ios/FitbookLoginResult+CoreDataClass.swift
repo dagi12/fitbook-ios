@@ -1,40 +1,29 @@
 //
-//  FitbookLoginResult.swift
+//  FitbookLoginResult+CoreDataClass.swift
 //  fitbook-ios
 //
-//  Created by Eryk Mariankowski on 09.06.2017.
-//  Copyright © 2017 Eryk Mariankowski. All rights reserved.
+//  Created by Eryk Mariankowski on 11.06.2018.
+//  Copyright © 2018 Eryk Mariankowski. All rights reserved.
+//
 //
 
+import CoreData
 import ObjectMapper
 
-@objc(FitbookLoginResult)
-class FitbookLoginResult: NSObject, NSCoding, Mappable {
+public class FitbookLoginResult: NSManagedObject, Mappable {
 
-    var token: String?
-    var user: User?
-    var exp: Int?
-    var iss: Int?
-
-    required init?(map: Map) {
-
+    override init(entity: NSEntityDescription, insertInto context: NSManagedObjectContext?) {
+        super.init(entity: entity, insertInto: context)
     }
 
-    func encode(with aCoder: NSCoder) {
-        aCoder.encode(token, forKey: "token")
-        aCoder.encode(user, forKey: "user")
-        aCoder.encode(exp, forKey: "exp")
-        aCoder.encode(iss, forKey: "iss")
+    required public init?(map: Map) {
+        let ctx = NSManagedObjectContext.defaultContext
+        let entity = NSEntityDescription.entity(forEntityName: "FitbookLoginResult", in: ctx)
+        super.init(entity: entity!, insertInto: ctx)
+        mapping(map: map)
     }
 
-    required init?(coder aDecoder: NSCoder) {
-        self.token = aDecoder.decodeObject(forKey: "token") as? String
-        self.user = aDecoder.decodeObject(forKey: "user") as? User
-        self.exp = aDecoder.decodeObject(forKey: "exp") as? Int
-        self.iss = aDecoder.decodeObject(forKey: "iss") as? Int
-    }
-
-    func mapping(map: Map) {
+    public func mapping(map: Map) {
         token <- map["token"]
         user <- map["user"]
         exp <- map["exp"]

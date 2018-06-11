@@ -7,38 +7,58 @@
 //
 
 import ErykIosCommon
-
-struct Keys {
-    static let fitbookUserKey = "FITBOOK_USER_KEY"
-}
+import CoreData
 
 class UserDefaultsStore {
 
-    let userDefaults = UserDefaults.standard
-
     func setFitbookResult(fitbookResult: FitbookLoginResult) {
-        let wrapper = FitbookLoginResultWrapper(fitbookResult)
-        let encodedData: Data = NSKeyedArchiver.archivedData(withRootObject: wrapper)
-        userDefaults.set(encodedData, forKey: Keys.fitbookUserKey)
+        _ = removeFitbookResult(for: fitbookResult.objectID)
+        let context = NSManagedObjectContext.defaultContext
+        context.insert(fitbookResult.user!)
+        context.insert(fitbookResult)
+        try? context.save()
     }
 
-    func removeFitbookResult() {
-        userDefaults.removeObject(forKey: Keys.fitbookUserKey)
+    func removeFitbookResult(for id: NSManagedObjectID? = nil) -> NSManagedObjectContext? {
+        let context = NSManagedObjectContext.defaultContext
+        if let array = try? context.fetch(FitbookLoginResult.fetchRequest()) {
+            for res in array {
+                let loginResult = res as! FitbookLoginResult
+                if !loginResult.objectID.isEqual(id) {
+                    context.delete(loginResult)
+                }
+            }
+            try? context.save()
+            return context
+        }
+        return nil
     }
 
     func getFitbookResult() -> FitbookLoginResult? {
-        if let data = userDefaults.object(forKey: Keys.fitbookUserKey) {
-            if let castedData = data as? Data {
-                if let wrapper = NSKeyedUnarchiver.unarchiveObject(with: castedData) {
-                    if let resultWrapper = wrapper as? FitbookLoginResultWrapper {
-                        let result = resultWrapper.fitbookLoginResult
-                        BaseUrlStore.sharedInstance.token = result?.token
-                        return result
-                    }
-                }
+        if let result = fitbookResultFromCoreData() as? FitbookLoginResult {
+            BaseUrlStore.sharedInstance.token = result.token
+            return result
+        }
+        return nil
+    }
+
+    func fitbookResultFromCoreData() -> NSManagedObject? {
+        if let result = try? NSManagedObjectContext.defaultContext.fetch(FitbookLoginResult.fetchRequest()) {
+            assert(result.count < 2)
+            if (result.count == 1) {
+                 return result[0] as? NSManagedObject
             }
         }
         return nil
+    }
+
+}
+
+public extension NSManagedObjectContext {
+
+    public static var defaultContext: NSManagedObjectContext {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        return appDelegate.persistentContainer.viewContext
     }
 
 }

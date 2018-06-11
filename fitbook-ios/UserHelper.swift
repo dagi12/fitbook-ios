@@ -30,7 +30,7 @@ class UserHelper {
 
     func removeUser() {
         self.fitbookResult = nil
-        defaultsStore.removeFitbookResult()
+        try? defaultsStore.removeFitbookResult()?.save()
     }
 
     func setUser(fitbookResult: FitbookLoginResult) {

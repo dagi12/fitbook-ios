@@ -1,48 +1,29 @@
 //
-//  User.swift
+//  User+CoreDataClass.swift
 //  fitbook-ios
 //
-//  Created by Eryk Mariankowski on 09.06.2017.
-//  Copyright © 2017 Eryk Mariankowski. All rights reserved.
+//  Created by Eryk Mariankowski on 11.06.2018.
+//  Copyright © 2018 Eryk Mariankowski. All rights reserved.
+//
 //
 
 import ObjectMapper
+import CoreData
 
-@objc(User)
-class User: NSObject, NSCoding, Mappable {
+public class User: NSManagedObject, Mappable {
 
-    var phone: String?
-    var email: String?
-    var isTrainer: Bool?
-
-    var facebookId: String?
-    var createdAt: Date?
-    var updatedAt: Date?
-    var images: ImagePair?
-    var name: String?
-    var identifier: Int?
-
-    func encode(with aCoder: NSCoder) {
-        aCoder.encode(name, forKey: "name")
-        aCoder.encode(identifier, forKey: "id")
-        aCoder.encode(images, forKey: "images")
-        aCoder.encode(email, forKey: "email")
-        aCoder.encode(isTrainer, forKey: "is_trainer")
+    override init(entity: NSEntityDescription, insertInto context: NSManagedObjectContext?) {
+        super.init(entity: entity, insertInto: context)
     }
 
-    required init?(coder aDecoder: NSCoder) {
-        self.name = aDecoder.decodeObject(forKey: "name") as? String
-        self.email = aDecoder.decodeObject(forKey: "email") as? String
-        self.images = aDecoder.decodeObject(forKey: "images") as? ImagePair
-        self.identifier = aDecoder.decodeObject(forKey: "id") as? Int
-        self.isTrainer = aDecoder.decodeObject(forKey: "is_trainer") as? Bool
+    required public init?(map: Map) {
+        let ctx = NSManagedObjectContext.defaultContext
+        let entity = NSEntityDescription.entity(forEntityName: "User", in: ctx)
+        super.init(entity: entity!, insertInto: ctx)
+        mapping(map: map)
     }
 
-    required init?(map: Map) {
-
-    }
-
-    func mapping(map: Map) {
+    public func mapping(map: Map) {
         phone <- map["phone"]
         email <- map["email"]
         isTrainer <- map["is_trainer"]
@@ -52,7 +33,7 @@ class User: NSObject, NSCoding, Mappable {
         updatedAt <- map["updated_at"]
         images <- map["images"]
         name <- map["name"]
-        identifier <- map["id"]
+        id <- map["id"]
     }
 
 }
