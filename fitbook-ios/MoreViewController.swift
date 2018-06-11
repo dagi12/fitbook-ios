@@ -6,7 +6,6 @@
 //  Copyright © 2017 Eryk Mariankowski. All rights reserved.
 //
 
-import Foundation
 import Kingfisher
 import ErykIosCommon
 
@@ -19,7 +18,7 @@ class MoreViewController: UITableViewController {
     @IBOutlet weak var role: UILabel!
     @IBAction func logOutClick(_ sender: UIButton) {
         if let viewController = self.tabBarController as? ViewController {
-            viewController.logoutFromMore()
+            viewController.logout()
         }
     }
 

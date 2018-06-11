@@ -26,6 +26,9 @@
 		8E19E01A1EEA03A90085084D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E19E0191EEA03A90085084D /* MapKit.framework */; };
 		8E530C6C1EF15CA300092D04 /* TrainerStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E530C6B1EF15CA300092D04 /* TrainerStore.swift */; };
 		8E530C701EF17FF600092D04 /* Trainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E530C6F1EF17FF600092D04 /* Trainer.swift */; };
+		8E5446F220CEBE560016FD37 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E07F4341EEBF55C008572D4 /* MoreViewController.swift */; };
+		8E5446F320CEBE740016FD37 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E19DFED1EE9DF470085084D /* ViewController.swift */; };
+		8E5446F420CEBE7F0016FD37 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E19DFEB1EE9DF470085084D /* AppDelegate.swift */; };
 		8E7CE6E520CBE47500A8E7F5 /* FitbookApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7CE6E420CBE47500A8E7F5 /* FitbookApi.swift */; };
 		8E7CE6E720CBE75A00A8E7F5 /* TrainerApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7CE6E620CBE75A00A8E7F5 /* TrainerApi.swift */; };
 		8E7CE6E920CBF23100A8E7F5 /* FitbookLoginDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7CE6E820CBF23000A8E7F5 /* FitbookLoginDelegate.swift */; };
@@ -48,6 +51,7 @@
 		8EEFB97B20CD8253006F249E /* SwinjectStoryboard+setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEFB97A20CD8253006F249E /* SwinjectStoryboard+setup.swift */; };
 		8EEFB98020CD8F32006F249E /* String+localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEFB97F20CD8F32006F249E /* String+localized.swift */; };
 		8EEFB98120CD8F3F006F249E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8EEFB98320CD8F3F006F249E /* Localizable.strings */; };
+		9314F58F6B617C203A7D46DE /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE604D01EEAB1AA0022CD82 /* MapViewController.swift */; };
 		9E804957B28CCCB389BEBE19 /* Pods_fitbook_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 831D8269665DEC42207F6359 /* Pods_fitbook_ios.framework */; };
 /* End PBXBuildFile section */
 
@@ -331,6 +335,7 @@
 				8EE604ED1EEB02D50022CD82 /* Service */,
 				8EE604E81EEAF38F0022CD82 /* Model */,
 				8EE604E71EEAF3370022CD82 /* Alert */,
+				9314F7CF17B1D623A227BBC3 /* Extension */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -374,6 +379,13 @@
 				8EEFB97F20CD8F32006F249E /* String+localized.swift */,
 			);
 			name = Localization;
+			sourceTree = "<group>";
+		};
+		9314F7CF17B1D623A227BBC3 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -735,7 +747,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E5446F220CEBE560016FD37 /* MoreViewController.swift in Sources */,
 				8EAEEF781EEB3CD600D51F7A /* FitbookAlamoServiceTest.swift in Sources */,
+				8E5446F320CEBE740016FD37 /* ViewController.swift in Sources */,
+				8E5446F420CEBE7F0016FD37 /* AppDelegate.swift in Sources */,
+				9314F58F6B617C203A7D46DE /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

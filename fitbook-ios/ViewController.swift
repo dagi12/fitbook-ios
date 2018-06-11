@@ -6,12 +6,17 @@
 //  Copyright © 2017 Eryk Mariankowski. All rights reserved.
 //
 
-import Foundation
 import FacebookLogin
+import ErykIosCommon
 
-class ViewController: UITabBarController {
+class ViewController: UITabBarController, LogoutDelegate {
 
-    func logoutFromMore() {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        Router.sharedInstance.logoutDelegate = self
+    }
+
+    func logout() {
         let index = 0
         self.selectedIndex = index
         let viewController = self.viewControllers?[index] as? MapViewController

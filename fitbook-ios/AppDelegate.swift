@@ -6,7 +6,6 @@
 //  Copyright © 2017 Eryk Mariankowski. All rights reserved.
 //
 
-import Foundation
 import FacebookCore
 import ErykIosCommon
 import Crashlytics
@@ -26,6 +25,15 @@ class AppDelegate: ErykAppDelegate {
         BaseUrlStore.sharedInstance.url = URL(string: "http://fitbook-api.herokuapp.com/api/")
         Fabric.with([Crashlytics.self])
         return true
+    }
+
+    // do not remove facebook login will stop working
+    // swiftlint:disable all
+    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey: Any] = [:]) -> Bool {
+        return SDKApplicationDelegate.shared.application(app,
+                open: url,
+                sourceApplication: (options[.sourceApplication] as? String),
+                annotation: options[.annotation])
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

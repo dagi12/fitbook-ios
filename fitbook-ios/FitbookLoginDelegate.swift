@@ -7,7 +7,7 @@
 //
 
 protocol FitbookLoginDelegate: class {
-    func fitbookLogout(_: Bool?)
+    func fitbookLogout(_: Bool)
 
     func fitbookLogin()
 }

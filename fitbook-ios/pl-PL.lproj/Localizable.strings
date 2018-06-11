@@ -7,3 +7,4 @@
 */
 "signing" = "Logowanie...";
 "facebook_login" = "Logowanie przez facebooka zostało anulowane.";
+"logged_out" = "Wylogowano";

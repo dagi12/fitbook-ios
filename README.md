@@ -35,18 +35,23 @@ hasło: haslohaslo123
 - launchscreen 25min
 - swiftlint 15min
 - log -> xclodgger 15min
+- enable crashanalyzer (crashlytics) 35min
+- global 401 logout 1h 30min
 
 ## To do
-- enable crashanalyzer (crashlytics)
+- nie updatuj pozycji po znalezieniu
+- theme 
+    - wygląd przycisku
+    - background
+    - topnavbar
+    - tabbar accent
+    - softra theme 
 - enable core data
     - stackoverflow.com/questions/2032818 
     - medium.com/@shawnbierman/how-to-add-core-data-to-an-existing-xcode-8-and-swift-3-project-508781b3e1c4
     - rid of set
     - userdefaults -> core data
 - testy
-- theme
-- nie updateuj pozycji
-- global checkFacebookFromCallbackFailure() on 401
 - Activity indicators for long operations
 - delete delegates
 - podciągnij ios-common-template

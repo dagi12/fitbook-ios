@@ -7,9 +7,9 @@ target 'fitbook-ios' do
  
   pod 'Bolts'
   pod 'SwiftLint', '~> 0.25.1'
-  pod 'FacebookCore', '~> 0.3'
-  pod 'FacebookLogin', '~> 0.3'
-  pod 'FacebookShare', '~> 0.3'
+  pod 'FacebookCore', '~> 0.3.1'
+  pod 'FacebookLogin', '~> 0.3.1'
+  pod 'FacebookShare', '~> 0.3.1'
 
   pod 'Fabric'
   pod 'Crashlytics'

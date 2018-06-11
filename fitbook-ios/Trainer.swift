@@ -5,7 +5,6 @@
 //  Created by Eryk Mariankowski on 14.06.2017.
 //  Copyright © 2017 Eryk Mariankowski. All rights reserved.
 //
-import Foundation
 import ObjectMapper
 
 class Trainer: User {

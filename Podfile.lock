@@ -81,9 +81,9 @@ DEPENDENCIES:
   - Crashlytics
   - ErykIosCommon (from `./ErykIosCommon`)
   - Fabric
-  - FacebookCore (~> 0.3)
-  - FacebookLogin (~> 0.3)
-  - FacebookShare (~> 0.3)
+  - FacebookCore (~> 0.3.1)
+  - FacebookLogin (~> 0.3.1)
+  - FacebookShare (~> 0.3.1)
   - SwiftLint (~> 0.25.1)
 
 EXTERNAL SOURCES:
@@ -117,6 +117,6 @@ SPEC CHECKSUMS:
   Whisper: 169760fc4bab0abf24d5529f9276f95c25cf1025
   XCGLogger: c9601cae9a8912de34a58666ba931ed3d624dd31
 
-PODFILE CHECKSUM: dee5fe60441adbeba5bc1062f27483b7f567d590
+PODFILE CHECKSUM: 986f60e52136a39b891a84aa9e8a13674a373ccf
 
 COCOAPODS: 1.4.0

@@ -6,7 +6,6 @@
 //  Copyright © 2018 Eryk Mariankowski. All rights reserved.
 //
 
-import Foundation
 import ErykIosCommon
 import Moya
 
@@ -19,8 +18,10 @@ extension GymApi: BaseTargetType, AccessTokenAuthorizable {
 
     var method: Moya.Method {
         switch self {
-        default:
+        case .myGyms:
             return .get
+        case .searchByLocation:
+            return .post
         }
     }
 

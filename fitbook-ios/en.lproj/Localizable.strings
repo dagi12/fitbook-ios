@@ -7,3 +7,4 @@
 */
 "signing" = "Signing in...";
 "facebook_login" = "Facebook login has been cancelled";
+"logged_out" = "Logged out";

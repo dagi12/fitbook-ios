@@ -6,7 +6,6 @@
 //  Copyright © 2018 Eryk Mariankowski. All rights reserved.
 //
 
-import Foundation
 import Moya
 import ErykIosCommon
 

@@ -75,7 +75,7 @@ class FitbookLoginStore {
         } else if !checkFacebookSessionExpired() {
             fitbookLoginAfterFacebookSuccess(loginDelegate: loginDelegate)
         } else {
-            loginDelegate.fitbookLogout(nil)
+            loginDelegate.fitbookLogout(false)
         }
     }
 
@@ -83,7 +83,7 @@ class FitbookLoginStore {
         if userHelper.isLogged() {
             onlineLoginCheck(loginDelegate: loginDelegate)
         } else {
-            loginDelegate.fitbookLogout(nil)
+            loginDelegate.fitbookLogout(false)
         }
     }
 

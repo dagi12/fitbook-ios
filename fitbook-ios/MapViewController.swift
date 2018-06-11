@@ -6,7 +6,6 @@
 //  Copyright © 2017 Eryk Mariankowski. All rights reserved.
 //
 
-import Foundation
 import FacebookLogin
 import MapKit
 import RxSwift
@@ -83,17 +82,15 @@ class MapViewController: UIViewController, FacebookLoginResultDelegate, FitbookL
         }
     }
 
-    func fitbookLogout(_ manual: Bool?) {
-        if manual ?? false {
-            alertHelper.showInfo("Logged out", self)
+    func fitbookLogout(_ manual: Bool) {
+        if manual {
+            alertHelper.showInfo("logged_out".localized, self)
             LoginManager().logOut()
             fitbookStore.manualLogout()
         }
         facebookView.isHidden = false
         removeLoggedTabs()
-        if manual ?? true {
-            alertHelper.closeProcess(controller: self)
-        }
+        alertHelper.closeProcess(controller: self)
     }
 
     override func viewDidLoad() {
